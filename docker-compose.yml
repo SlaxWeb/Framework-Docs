@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  docs:
+      image: php:7.0-cli
+      ports:
+        - "8000:8000"
+      volumes:
+        - ./slaxweb/:/docs
+      working_dir: "/docs"
+      entrypoint: "php -S 0.0.0.0:8000"

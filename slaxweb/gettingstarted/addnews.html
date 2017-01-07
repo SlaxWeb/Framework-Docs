@@ -1,0 +1,662 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Add news article &mdash; SlaxWeb Framework v0.4.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="SlaxWeb Framework v0.4.0" href="../index.html"/>
+        <link rel="up" title="Getting Started" href="index.html"/>
+        <link rel="next" title="Edit news article" href="editnews.html"/>
+        <link rel="prev" title="Single news page" href="singlenews.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SlaxWeb Framework
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/installation.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#preparing-the-environment">Preparing the environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#install-with-composer">Install with composer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#install-from-prepared-packages">Install from prepared packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/firstglance.html">First glance at the framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#root-directory">Root directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#main-application-directory">Main Application directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#bootstrap-directory">Bootstrap directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#documentation-directory">Documentation directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#public-directory">Public directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#composer-files">Composer Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#autoloader">Autoloader</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#templating">Templating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#template-directory">Template directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#view-directory">View directory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">Model-View-Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/architecture.html">Software Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/architecture.html#services-and-properties">Services and Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/architecture.html#providers">Providers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Getting Started</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="webserver.html">Setting up a WebServer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="webserver.html#nginx-php-fpm">Nginx + PHP-FPM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webserver.html#apache-mod-php">Apache + mod_php</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="webserver.html#hiding-index-php-in-the-url">Hiding index.php in the URL</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="webserver.html#built-in-php-server">Built-in PHP server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webserver.html#slaxweb-app-server">SlaxWeb App Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="webserver.html#getting-started-with-docker">Getting started with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="preparation.html">Prepare the Framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="preparation.html#what-are-components">What are components?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="preparation.html#what-we-will-need">What we will need</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="preparation.html#installing-the-components">Installing the components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="routes.html">Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="routes.html#route-collection-file">Route collection file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routes.html#load-the-collection-file">Load the collection file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routes.html#adding-a-route">Adding a route</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="homepage.html">Home Page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="homepage.html#template-file">Template file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="homepage.html#breaking-up-the-template">Breaking up the template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="homepage.html#preparing-the-view-classes">Preparing the view classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="homepage.html#rendering-the-view">Rendering the view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="newslisting.html">News page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="newslisting.html#preparing-the-database">Preparing the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newslisting.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newslisting.html#template-file">Template file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="newslisting.html#view-class">View class</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="newslisting.html#model-class">Model class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="newslisting.html#bringing-it-all-together">Bringing it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="singlenews.html">Single news page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="singlenews.html#creating-the-controller">Creating the controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singlenews.html#create-the-template">Create the template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="singlenews.html#the-route">The Route</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Add news article</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#template-and-view">Template and View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-the-article">Saving the article</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="editnews.html">Edit news article</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="editnews.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editnews.html#preparing-the-view">Preparing the View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editnews.html#preparing-the-controller">Preparing the controller</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="editnews.html#saving-updated-news-article">Saving updated news article</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../general/index.html">General Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../general/application.html">Application object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/application.html#using-the-application-object">Using the Application object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/application.html#writing-to-application">Writing to Application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/application.html#reading-from-application">Reading from Application</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/application.html#services">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/application.html#service-providers">Service Providers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/application.html#registering-the-service-provider">Registering the Service Provider</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/routing.html">Routing and URLs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#defining-routes">Defining Routes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#matching-the-uris">Matching the URIs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#default-route">Default Route</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#exact-matching-uri">Exact matching URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#url-contains-uri">URL contains URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#multiple-uris">Multiple URIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#regular-expressions">Regular Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#handling-http-methods">Handling HTTP Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#route-action">Route Action</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#request">Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#response">Response</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#segment-based-uri-matching">Segment-based URI matching</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/config.html">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/config.html#configuration-file-structure">Configuration file structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/config.html#loading-configuration-items">Loading configuration items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/config.html#reading-configuration">Reading configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/components.html">Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/components.html#sub-components">Sub-components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/components.html#component-configuration-file">Component configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/components.html#type">Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/components.html#providers">Providers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/components.html#configuration-files">Configuration files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/components.html#id1">Sub-components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/components.html#scripts">Scripts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/slaxer.html">Slaxer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/slaxer.html#component-manipulation">Component manipulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/slaxer.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/slaxer.html#upgrade">Upgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/slaxer.html#remove">Remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/slaxer.html#reconfigure">Reconfigure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/slaxer.html#list">List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/slaxer.html#custom-commands">Custom Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/controllers.html">Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/controllers.html#loader">Loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/controllers.html#using-the-controller">Using the Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/viewtpl.html">Views &amp; Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/viewtpl.html#the-view">The View</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/viewtpl.html#loading-the-view">Loading the View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/viewtpl.html#setting-the-template">Setting the template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/viewtpl.html#view-data">View data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/viewtpl.html#rendering-the-template">Rendering the template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/viewtpl.html#templating">Templating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/viewtpl.html#sub-views">Sub-Views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/viewtpl.html#layouts">Layouts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/model.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/model.html#base-model">Base Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/model.html#writing-a-model">Writing a Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/model.html#loader">Loader</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/logger.html">Logger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../general/hooks.html">Hooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/hooks.html#writing-hook-points">Writing hook points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/hooks.html#writing-hook-definitions">Writing Hook Definitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/hooks.html#register-hook-definitons">Register Hook Definitons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/hooks.html#multiple-hook-definitions">Multiple Hook Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/hooks.html#framework-hooks-points">Framework hooks points</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../general/libraries.html">Libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/libraries.html#registering-libraries">Registering libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Databases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/config.html">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/config.html#connecting-to-a-database">Connecting to a Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#driver">Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#hostname">Hostname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#port">Port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#database">Database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#username-password">Username &amp; Password</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/config.html#base-model-settings">Base Model Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#table-name-guessing">Table name guessing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/basemodel.html">Base Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#using-the-base-model">Using the Base Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#using-the-loader">Using the loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#setting-the-table-name">Setting the table name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#accessing-the-database">Accessing the Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#executing-queries">Executing queries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/execqueries.html">Executing Queries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#run-custom-query">Run custom query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#error-handling">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#query-parameters">Query parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#sequential-parameter-binding">Sequential parameter binding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#named-parameter-binding">Named parameter binding</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#fetching-data">Fetching data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#reading-results">Reading results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#id1">PDO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/querybuilder.html">Query builder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#creating-data">Creating data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#deleting-data">Deleting data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#soft-deletes">Soft deletes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#data-retrieval">Data retrieval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#where-statements">Where statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#where">where</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orwhere">orWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#groupwhere">groupWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orgroupwhere">orGroupWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#nestedwhere">nestedWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#ornestedwhere">orNestedWhere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#joins">Joins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#join">join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joinmodel">joinModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joincond">joinCond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orjoincond">orJoinCond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joincols">joinCols</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#grouping">Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#ordering">Ordering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#limit">Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#sql-functions">SQL functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../components/index.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../components/bootstrap.html">Bootstrap Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#application">Application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/bootstrap.html#hooks">Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#registering-additional-providers">Registering Additional Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#class-reference">Class reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../components/config.html">Config Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/config.html#handler">Handler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#prepending-configuration-item-names">Prepending configuration item names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#specific-handlers">Specific Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#custom-handlers">Custom Handlers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../components/router.html">Router Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#route">Route</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#uri">URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#method">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#action">Action</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#container">Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#dispatcher">Dispatcher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#hooks">Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#request">Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#response">Response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#route-collections">Route Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#adding-a-route">Adding a route</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#services">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#class-reference">Class reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SlaxWeb Framework</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">Getting Started</a> &raquo;</li>
+      
+    <li>Add news article</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/gettingstarted/addnews.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="add-news-article">
+<span id="id1"></span><h1>Add news article<a class="headerlink" href="#add-news-article" title="Permalink to this headline">¶</a></h1>
+<p>Because adding HTML articles by hand into a database can be annoying, and error
+prone, we are going to create a simple page that will allow you to type in the title
+of the news, and the body&#8217;s HTML and save as new news article into the database.
+Of course, by providing only a normal HTML input, the method will not be less error
+prone, but you are free to replace a text HTML editor with a wysiwyg editor of your
+choosing. We will require a route for this page, that will handle both displaying
+of the page and saving the news data to the database. To display a page, we will
+not need a <em>Controller</em> but we will need one for saving the data into the database.</p>
+<div class="section" id="setting-up-the-route">
+<h2>Setting up the route<a class="headerlink" href="#setting-up-the-route" title="Permalink to this headline">¶</a></h2>
+<p>We are going to define one route that will handle both displaying of the page, as
+well as saving the data into the database. We will display the page through HTTP
+method GET, and save data through HTTP method POST. Let&#8217;s go ahead and create it:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_routes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;news/create&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;method&quot;</span>    <span class="o">=&gt;</span>  <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_GET</span> <span class="o">|</span> <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_POST</span><span class="p">,</span>
+    <span class="s2">&quot;action&quot;</span>    <span class="o">=&gt;</span>  <span class="k">function</span> <span class="p">(</span>
+        <span class="nx">Request</span> <span class="nv">$request</span><span class="p">,</span>
+        <span class="nx">Response</span> <span class="nv">$response</span><span class="p">,</span>
+        <span class="nx">Application</span> <span class="nv">$app</span>
+    <span class="p">)</span> <span class="p">{</span>
+        <span class="nv">$view</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;CreateNews&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">getMethod</span><span class="p">()</span> <span class="o">===</span> <span class="s2">&quot;POST&quot;</span>
+            <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="k">new</span> <span class="nx">\App\Controller\News</span><span class="p">(</span><span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;loadModel.service&quot;</span><span class="p">](</span><span class="s2">&quot;News&quot;</span><span class="p">)))</span>
+                <span class="o">-&gt;</span><span class="na">save</span><span class="p">(</span><span class="nv">$request</span><span class="o">-&gt;</span><span class="na">request</span><span class="p">,</span> <span class="nv">$response</span><span class="p">,</span> <span class="nv">$view</span><span class="p">)</span>
+        <span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">addSubView</span><span class="p">(</span><span class="s2">&quot;head&quot;</span><span class="p">,</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;Head&quot;</span><span class="p">))</span>
+            <span class="o">-&gt;</span><span class="na">addSubView</span><span class="p">(</span><span class="s2">&quot;foot&quot;</span><span class="p">,</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;Foot&quot;</span><span class="p">))</span>
+            <span class="o">-&gt;</span><span class="na">render</span><span class="p">();</span>
+    <span class="p">}</span>
+<span class="p">];</span>
+</pre></div>
+</div>
+<p>You have to make sure that the <em>create news</em> route is defined <strong>before</strong> the single
+news page, because the <em>news/create</em> URI will be matched by <em>news/[:params:]</em> first,
+and we do not want that, because we want to show the <em>create news</em> page. Our Route
+will also handle saving of news data into the database, and will not render any
+view, since we will use the Controller to save the data and redirect the user to
+the newly created news article.</p>
+</div>
+<div class="section" id="template-and-view">
+<h2>Template and View<a class="headerlink" href="#template-and-view" title="Permalink to this headline">¶</a></h2>
+<p>Now lets go ahead an prepare the <strong>CreateNews.php</strong> template file which will provide
+a HTML form with the title input, and the article body text area:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?=</span> <span class="nv">$subview_head</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+<span class="x">&lt;div class=&quot;create-news-container&quot;&gt;</span>
+<span class="x">    &lt;h1&gt;Create news article&lt;/h1&gt;</span>
+<span class="x">    &lt;div class=&quot;error&quot; style=&quot;color:red&quot;&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$error</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/div&gt;</span>
+<span class="x">    &lt;form action=&quot;/news/create&quot; method=&quot;POST&quot;&gt;</span>
+<span class="x">        &lt;div class=&quot;row&quot;&gt;</span>
+<span class="x">            &lt;label for=&quot;news-title&quot;&gt;Title:&lt;/label&gt;</span>
+<span class="x">            &lt;input type=&quot;text&quot; name=&quot;title&quot; id=&quot;news-title&quot; value=&quot;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$title</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&quot;&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;div class=&quot;row&quot;&gt;</span>
+<span class="x">            &lt;label for=&quot;news-body&quot;&gt;Body:&lt;/label&gt;</span>
+<span class="x">            &lt;textarea name=&quot;body&quot; id=&quot;news-body&quot;&gt;</span><span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$body</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x">&lt;/textarea&gt;</span>
+<span class="x">        &lt;/div&gt;</span>
+<span class="x">        &lt;input type=&quot;submit&quot; value=&quot;Save&quot;&gt;</span>
+<span class="x">    &lt;/form&gt;</span>
+<span class="x">&lt;/div&gt;</span>
+<span class="cp">&lt;?</span><span class="o">=</span> <span class="nv">$subview_foot</span><span class="p">;</span> <span class="cp">?&gt;</span><span class="x"></span>
+</pre></div>
+</div>
+<p>As you can see, we are also printing a <em>$title</em> and a <em>$body</em> onto the Template
+already, those are there in case an error occurs while saving the article, and we
+can refill the fields as well as show an error. Those are only set when an attempt
+to save the article is made, so the <em>View class</em> will have to set empty ones in the
+<strong>preRender</strong> method if they are not yet set. Let&#8217;s go ahead and create the <strong>CreateNews</strong>
+View Class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">namespace</span> <span class="nx">App\View</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">SlaxWeb\View\Base</span> <span class="k">as</span> <span class="nx">BaseView</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">CreateNews</span> <span class="k">extends</span> <span class="nx">BaseView</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">preRender</span><span class="p">(</span><span class="k">array</span> <span class="nv">$data</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span> <span class="o">??</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saving-the-article">
+<h2>Saving the article<a class="headerlink" href="#saving-the-article" title="Permalink to this headline">¶</a></h2>
+<p>We have everything prepared and so we can define the <strong>save</strong> method in the <strong>News</strong>
+Controller class:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">save</span><span class="p">(</span><span class="nx">Params</span> <span class="nv">$parameters</span><span class="p">,</span> <span class="nx">\SlaxWeb\Router\Response</span> <span class="nv">$response</span><span class="p">,</span> <span class="nx">\App\View\CreateNews</span> <span class="nv">$view</span><span class="p">)</span><span class="o">:</span> <span class="nx">bool</span>
+<span class="p">{</span>
+    <span class="nv">$title</span> <span class="o">=</span> <span class="nv">$parameters</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s2">&quot;title&quot;</span><span class="p">);</span>
+    <span class="nv">$body</span> <span class="o">=</span> <span class="nv">$parameters</span><span class="o">-&gt;</span><span class="na">get</span><span class="p">(</span><span class="s2">&quot;body&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nx">is_empty</span><span class="p">(</span><span class="nv">$title</span><span class="p">)</span> <span class="o">||</span> <span class="nx">is_empty</span><span class="p">(</span><span class="nv">$body</span><span class="p">))</span> <span class="p">{</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;News article data is not valid.&quot;</span><span class="p">;</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$title</span><span class="p">;</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$body</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nv">$this</span><span class="o">-&gt;</span><span class="na">newsModel</span><span class="o">-&gt;</span><span class="na">create</span><span class="p">(</span><span class="nv">$parameters</span><span class="o">-&gt;</span><span class="na">all</span><span class="p">()))</span> <span class="p">{</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;error&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Error saving news article: &quot;</span> <span class="o">.</span> <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">newsModel</span><span class="o">-&gt;</span><span class="na">lastError</span><span class="p">();</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$title</span><span class="p">;</span>
+        <span class="nv">$view</span><span class="o">-&gt;</span><span class="na">viewData</span><span class="p">[</span><span class="s2">&quot;body&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="nv">$body</span><span class="p">;</span>
+        <span class="k">return</span> <span class="k">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nv">$response</span> <span class="o">=</span> <span class="nv">$response</span><span class="o">-&gt;</span><span class="na">redirect</span><span class="p">(</span><span class="s2">&quot;/news&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="k">true</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The Controller just makes a quick check if the article title and body have been
+set in the request data, and triggers an error if they are not. In a real world
+application you will want to use a proper validation here. If the data checks out,
+we simply create a new row in the database, and when no error has occurred we redirect
+the visitor to the news listing page. If an error occurs, then it is presented on the
+web page.</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="editnews.html" class="btn btn-neutral float-right" title="Edit news article" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="singlenews.html" class="btn btn-neutral" title="Single news page" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, SlaxWeb Dev Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.4.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
