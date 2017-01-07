@@ -33,4 +33,4 @@ Contents:
    general/index
    database/index
    components/index
-   Class Map </Framework-Docs/classmap/index.html#http://>
+   Class Map </Framework-Docs/classmap/annotated.html#http://>
