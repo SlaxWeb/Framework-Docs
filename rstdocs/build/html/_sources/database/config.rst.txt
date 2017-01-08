@@ -59,9 +59,9 @@ Port
 ````
 
 Port is the only optional configuration item for the database connection. If **port**
-is omitted from the **connection** configuration, then the default port for your
-database driver will be used. The value of **port** must be a valid integer, otherwise
-the setting will be ignored.
+is omitted from the **connection** configuration, or port is set to *int(0)*, then
+the default port for your database driver will be used. The value of **port** must
+be a valid integer, otherwise the setting will be ignored.
 
 Database
 ````````

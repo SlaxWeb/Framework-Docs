@@ -122,14 +122,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9861cfa720ae08b1e6467accae9d74e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b1ab70681e445212bff1397a1a0fdb5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a2b1ab70681e445212bff1397a1a0fdb5">join</a> (string $type=&quot;INNER JOIN&quot;)</td></tr>
 <tr class="separator:a2b1ab70681e445212bff1397a1a0fdb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae77d88baecce2de86765c1e21762d537"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#ae77d88baecce2de86765c1e21762d537">leftJoin</a> ()</td></tr>
-<tr class="separator:ae77d88baecce2de86765c1e21762d537"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48cb21e5fee4f963d764cac6d9eb87e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a48cb21e5fee4f963d764cac6d9eb87e2">rightJoin</a> ()</td></tr>
-<tr class="separator:a48cb21e5fee4f963d764cac6d9eb87e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9337d092fa3df8bb9a18fbaf09455a50"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a9337d092fa3df8bb9a18fbaf09455a50">fullJoin</a> ()</td></tr>
-<tr class="separator:a9337d092fa3df8bb9a18fbaf09455a50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa193e881e223797e04b14a38bf6cecb3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aa193e881e223797e04b14a38bf6cecb3">crossJoin</a> ()</td></tr>
-<tr class="separator:aa193e881e223797e04b14a38bf6cecb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51d9f3ed74e5411de0de1f2693043d9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a51d9f3ed74e5411de0de1f2693043d9c">joinCond</a> (string $primKey, string $forKey, string $cOpr=&quot;=&quot;)</td></tr>
 <tr class="separator:a51d9f3ed74e5411de0de1f2693043d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7909f59f79e5f0682c939957436e7f42"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a7909f59f79e5f0682c939957436e7f42">orJoinCond</a> (string $primKey, string $forKey, string $cOpr=&quot;=&quot;)</td></tr>
@@ -166,6 +158,20 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>TBL_NAME_LOWERCASE</
 <tr class="memitem:a3869237d2f16d749451efbbb6d2c6d75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3869237d2f16d749451efbbb6d2c6d75"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>CALLBACK_AFTER</b> = false</td></tr>
 <tr class="separator:a3869237d2f16d749451efbbb6d2c6d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b163bc347904c2df68878fa5a18541b"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a0b163bc347904c2df68878fa5a18541b">JOIN_INNER</a> = &quot;INNER JOIN&quot;</td></tr>
+<tr class="separator:a0b163bc347904c2df68878fa5a18541b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d98e4d18f48193d7dc40ddb89d144a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4d98e4d18f48193d7dc40ddb89d144a"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>JOIN_LEFT</b> = &quot;LEFT OUTER JOIN&quot;</td></tr>
+<tr class="separator:ac4d98e4d18f48193d7dc40ddb89d144a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6efe221afd8c5cc1368bf0f91fb08bbf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6efe221afd8c5cc1368bf0f91fb08bbf"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>JOIN_RIGHT</b> = &quot;RIGHT OUTER JOIN&quot;</td></tr>
+<tr class="separator:a6efe221afd8c5cc1368bf0f91fb08bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6f8ab6948cf0ea26cf476aba5f2cb94"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac6f8ab6948cf0ea26cf476aba5f2cb94"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>JOIN_FULL</b> = &quot;FULL OUTER JOIN&quot;</td></tr>
+<tr class="separator:ac6f8ab6948cf0ea26cf476aba5f2cb94"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd42ac08392d672e528290d4fb880b7d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acd42ac08392d672e528290d4fb880b7d"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>JOIN_CROSS</b> = &quot;CROSS JOIN&quot;</td></tr>
+<tr class="separator:acd42ac08392d672e528290d4fb880b7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3caf0b960e282584b403dc8f0d05e15b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3caf0b960e282584b403dc8f0d05e15b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$table</b> = &quot;&quot;</td></tr>
 <tr class="separator:a3caf0b960e282584b403dc8f0d05e15b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -302,24 +308,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa193e881e223797e04b14a38bf6cecb3"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\BaseModel::crossJoin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Cross Join</p>
-<p>Alias for 'join' method with CROSS join as second parameter.</p>
-<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="af9b8fb9ece682b314650a9cdd87c2269"></a>
 <div class="memitem">
 <div class="memproto">
@@ -335,24 +323,6 @@ Protected Attributes</h2></td></tr>
 <p>Delete query</p>
 <p>Run an delete query against the database. Returns bool(true) on success, and bool(false) on error.</p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9337d092fa3df8bb9a18fbaf09455a50"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\BaseModel::fullJoin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Full Join</p>
-<p>Alias for 'join' method with FULL join as second parameter.</p>
-<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
 
 </div>
 </div>
@@ -559,24 +529,6 @@ Protected Attributes</h2></td></tr>
 <p>Get last error</p>
 <p>Retrieves the last occured error from the database library and returns it.</p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae77d88baecce2de86765c1e21762d537"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\BaseModel::leftJoin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Left Join</p>
-<p>Alias for 'join' method with LEFT join as second parameter.</p>
-<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
 
 </div>
 </div>
@@ -857,24 +809,6 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a48cb21e5fee4f963d764cac6d9eb87e2"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\BaseModel::rightJoin </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Right Join</p>
-<p>Alias for 'join' method with RIGHT join as second parameter.</p>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="afbcc6dabb3c3afba863189def45f56da"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1008,6 +942,19 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a0b163bc347904c2df68878fa5a18541b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const SlaxWeb\Database\BaseModel::JOIN_INNER = &quot;INNER JOIN&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Join types </p>
+
+</div>
+</div>
 <a class="anchor" id="a3e94596a055ad04534fe90fee6cd6578"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1027,7 +974,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 8 2017 10:48:53 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 8 2017 21:23:16 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

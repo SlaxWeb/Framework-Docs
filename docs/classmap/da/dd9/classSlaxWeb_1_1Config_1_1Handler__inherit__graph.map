@@ -1,6 +1,5 @@
 <map id="SlaxWeb\Config\Handler" name="SlaxWeb\Config\Handler">
-<area shape="rect" id="node3" href="$dc/d24/classSlaxWeb_1_1Config_1_1PhpHandler.html" title="SlaxWeb\\Config\\PhpHandler" alt="" coords="5,155,195,181"/>
-<area shape="rect" id="node4" href="$dc/d7f/classSlaxWeb_1_1Config_1_1XmlHandler.html" title="SlaxWeb\\Config\\XmlHandler" alt="" coords="219,155,408,181"/>
-<area shape="rect" id="node5" href="$d5/d62/classSlaxWeb_1_1Config_1_1YamlHandler.html" title="SlaxWeb\\Config\\YamlHandler" alt="" coords="433,155,629,181"/>
-<area shape="rect" id="node2" href="$df/dec/interfaceSlaxWeb_1_1Config_1_1HandlerInterface.html" title="SlaxWeb\\Config\\HandlerInterface" alt="" coords="205,5,422,32"/>
+<area shape="rect" id="node2" href="$dc/d24/classSlaxWeb_1_1Config_1_1PhpHandler.html" title="SlaxWeb\\Config\\PhpHandler" alt="" coords="5,80,195,107"/>
+<area shape="rect" id="node3" href="$dc/d7f/classSlaxWeb_1_1Config_1_1XmlHandler.html" title="SlaxWeb\\Config\\XmlHandler" alt="" coords="219,80,408,107"/>
+<area shape="rect" id="node4" href="$d5/d62/classSlaxWeb_1_1Config_1_1YamlHandler.html" title="SlaxWeb\\Config\\YamlHandler" alt="" coords="433,80,629,107"/>
 </map>

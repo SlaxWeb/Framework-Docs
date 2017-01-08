@@ -123,14 +123,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5c580c920e6adb6319de0a9b6cb1f0fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bdf2d421b583d5a6826886721b5ed8f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a6bdf2d421b583d5a6826886721b5ed8f">join</a> (string $table, string $type=&quot;INNER JOIN&quot;)</td></tr>
 <tr class="separator:a6bdf2d421b583d5a6826886721b5ed8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13f930df4e03030a062989afcf5a4b7b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a13f930df4e03030a062989afcf5a4b7b">leftJoin</a> (string $table)</td></tr>
-<tr class="separator:a13f930df4e03030a062989afcf5a4b7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ade56ab93258c1ff32650cd91f067d6c0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#ade56ab93258c1ff32650cd91f067d6c0">rightJoin</a> (string $table)</td></tr>
-<tr class="separator:ade56ab93258c1ff32650cd91f067d6c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45a78b7bd54aab0bca54b1a824c72b66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a45a78b7bd54aab0bca54b1a824c72b66">fullJoin</a> (string $table)</td></tr>
-<tr class="separator:a45a78b7bd54aab0bca54b1a824c72b66"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a694bdda7464a85209faee0b028c858bb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a694bdda7464a85209faee0b028c858bb">crossJoin</a> (string $table)</td></tr>
-<tr class="separator:a694bdda7464a85209faee0b028c858bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74d3426917e07391591a13727b1f63ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a74d3426917e07391591a13727b1f63ed">joinCond</a> (string $primKey, string $forKey, string $cOpr=&quot;=&quot;)</td></tr>
 <tr class="separator:a74d3426917e07391591a13727b1f63ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00719b63934ca303a486bae3424a4093"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a00719b63934ca303a486bae3424a4093">orJoinCond</a> (string $primKey, string $forKey, string $cOpr=&quot;=&quot;)</td></tr>
@@ -185,33 +177,6 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DB_4D</b> = &quot;4d
 <tr class="separator:a2afdb45a3ac58baf28b14806fd327437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a694bdda7464a85209faee0b028c858bb"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\Interfaces\Library::crossJoin </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$table</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Cross Join</p>
-<p>Alias for 'join' method with CROSS join as second parameter.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$table</td><td>Table to join to </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#ad93d154244500a830e07fb4f693706a1">SlaxWeb\DatabasePDO\Library</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a0e88247ef6886abe44f36cf2991432ba"></a>
 <div class="memitem">
 <div class="memproto">
@@ -294,33 +259,6 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DB_4D</b> = &quot;4d
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#aa07847d98572a99e2d82103a864bc50f">SlaxWeb\DatabasePDO\Library</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a45a78b7bd54aab0bca54b1a824c72b66"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\Interfaces\Library::fullJoin </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$table</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Full Join</p>
-<p>Alias for 'join' method with FULL join as second parameter.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$table</td><td>Table to join to </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#a89a4797604c572a05c7261694339ac99">SlaxWeb\DatabasePDO\Library</a>.</p>
 
 </div>
 </div>
@@ -461,7 +399,7 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DB_4D</b> = &quot;4d
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
-<p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#a1e8bbc4d7e3bfa18f8fd660ff9c5afac">SlaxWeb\DatabasePDO\Library</a>.</p>
+<p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#a1be71460cc10a465340deda5b6df8e82">SlaxWeb\DatabasePDO\Library</a>.</p>
 
 </div>
 </div>
@@ -555,33 +493,6 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DB_4D</b> = &quot;4d
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#a672fbfcb667488d309cfa0bac5eb979d">SlaxWeb\DatabasePDO\Library</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a13f930df4e03030a062989afcf5a4b7b"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\Interfaces\Library::leftJoin </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$table</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Left Join</p>
-<p>Alias for 'join' method with LEFT join as second parameter.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$table</td><td>Table to join to </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#a2dc8ecb4047ae949f58c2f86007e5f8b">SlaxWeb\DatabasePDO\Library</a>.</p>
 
 </div>
 </div>
@@ -766,33 +677,6 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DB_4D</b> = &quot;4d
 
 </div>
 </div>
-<a class="anchor" id="ade56ab93258c1ff32650cd91f067d6c0"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Database\Interfaces\Library::rightJoin </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$table</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Right Join</p>
-<p>Alias for 'join' method with RIGHT join as second parameter.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$table</td><td>Table to join to </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-<p>Implemented in <a class="el" href="../../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#abe5113a61ea9ace902ce9787fbf0199c">SlaxWeb\DatabasePDO\Library</a>.</p>
-
-</div>
-</div>
 <a class="anchor" id="a807d03705990bef3fda7f52eda56686d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -941,7 +825,7 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>DB_4D</b> = &quot;4d
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 8 2017 10:48:53 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 8 2017 21:23:16 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

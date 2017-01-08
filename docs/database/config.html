@@ -516,9 +516,9 @@ or a host name.</p>
 <div class="section" id="port">
 <h3>Port<a class="headerlink" href="#port" title="Permalink to this headline">¶</a></h3>
 <p>Port is the only optional configuration item for the database connection. If <strong>port</strong>
-is omitted from the <strong>connection</strong> configuration, then the default port for your
-database driver will be used. The value of <strong>port</strong> must be a valid integer, otherwise
-the setting will be ignored.</p>
+is omitted from the <strong>connection</strong> configuration, or port is set to <em>int(0)</em>, then
+the default port for your database driver will be used. The value of <strong>port</strong> must
+be a valid integer, otherwise the setting will be ignored.</p>
 </div>
 <div class="section" id="database">
 <h3>Database<a class="headerlink" href="#database" title="Permalink to this headline">¶</a></h3>
