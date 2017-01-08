@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['unknownpropertyexception',['UnknownPropertyException',['../dc/d01/classSlaxWeb_1_1Router_1_1Exception_1_1UnknownPropertyException.html',1,'SlaxWeb::Router::Exception']]]
+  ['sample',['Sample',['../df/dc0/classApp_1_1Hook_1_1Sample.html',1,'App::Hook']]],
+  ['sample',['Sample',['../db/d42/classApp_1_1Provider_1_1Sample.html',1,'App::Provider']]],
+  ['servercommand',['ServerCommand',['../d2/d9f/classSlaxWeb_1_1AppServer_1_1ServerCommand.html',1,'SlaxWeb::AppServer']]]
 ];
