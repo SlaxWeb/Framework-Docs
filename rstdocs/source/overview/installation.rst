@@ -6,6 +6,7 @@
 .. _composer basic usage documentation: https://getcomposer.org/doc/01-basic-usage.md
 .. _GitHub Release pages: https://github.com/SlaxWeb/Framework/releases
 
+.. _0.4.0: https://github.com/SlaxWeb/Framework/releases/download/0.4.0/slaxweb-framework-0.4.0.zip
 .. _0.3.1: https://github.com/SlaxWeb/Framework/releases/download/0.3.1/slaxweb-framework-0.3.1.zip
 .. _0.3.0: https://github.com/SlaxWeb/Framework/releases/download/0.3.0/slaxweb-framework-0.3.0.zip
 
@@ -66,8 +67,9 @@ an older version or the next development snapshot, use this command::
 Where **directory** should be a valid directory name and version needs to be one
 of the following:
 
-* **dev-develop** - current development snapshot
-* **0.3.1** - Latest release
+* **dev-master** - current development snapshot
+* **0.4.0** - Latest release
+* **0.3.1**
 * **0.3.0**
 
 .. _install from package:
@@ -81,6 +83,7 @@ There is currently no way of installing the latest development snapshot, refer t
 
 The following versions are available till date:
 
+ * `0.4.0`_
  * `0.3.1`_
  * `0.3.0`_
 
