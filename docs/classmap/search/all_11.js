@@ -1,7 +1,6 @@
 var searchData=
 [
   ['sample',['Sample',['../db/d42/classApp_1_1Provider_1_1Sample.html',1,'App::Provider']]],
-  ['sample',['Sample',['../df/dc0/classApp_1_1Hook_1_1Sample.html',1,'App::Hook']]],
   ['select',['select',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#afbcc6dabb3c3afba863189def45f56da',1,'SlaxWeb\Database\BaseModel\select()'],['../dd/dab/interfaceSlaxWeb_1_1Database_1_1Interfaces_1_1Library.html#a807d03705990bef3fda7f52eda56686d',1,'SlaxWeb\Database\Interfaces\Library\select()'],['../d8/df6/classSlaxWeb_1_1DatabasePDO_1_1Library.html#af65d64386b8adaf9b00d8b0a56af8d4e',1,'SlaxWeb\DatabasePDO\Library\select()'],['../d4/dfc/classSlaxWeb_1_1DatabasePDO_1_1Query_1_1Builder.html#a432ffb86a7ba38124046e6b74da4d4f0',1,'SlaxWeb\DatabasePDO\Query\Builder\select()']]],
   ['send',['send',['../db/d6e/classSlaxWeb_1_1Router_1_1Response.html#abab2da17f2bf551c7e52bcb6e33abedf',1,'SlaxWeb::Router::Response']]],
   ['servercommand',['ServerCommand',['../d2/d9f/classSlaxWeb_1_1AppServer_1_1ServerCommand.html',1,'SlaxWeb::AppServer']]],
