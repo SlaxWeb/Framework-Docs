@@ -98,8 +98,8 @@ Data retrieval
 
 To obtain data the query builder provides the **select** method which will generate
 the *SELECT* SQL statement, execute it and return the **Result** object. More information
-about obtaining data from the **Result** object can be found in the :ref:`database execqueries fetchdata`
-section of the documentation.
+about obtaining data from the **Result** object can be found in the :ref:`database
+execqueries fetchdata` section of the documentation.
 
 You are required to supply an array of the column names that you want in the *SELECT*
 statement as the first and only parameter of the **select** method call. The **select**
@@ -116,7 +116,7 @@ example shows a simple data retrieval query::
 
     <?php
     // code ...
-    $model->select(["col1"]);
+    $result = $model->select(["col1"]);
     // code ...
 
 The above example will generate and execute the following query:
@@ -125,6 +125,13 @@ The above example will generate and execute the following query:
 
     SELECT "col1" FROM "table" WHERE 1=1
 
+A successful execution will return the **Result** object, as well as store it inside
+the *Base Model*. You can obtain data from the returned **Result** object or directly
+from the model itself, using the exact same method. :ref:`database execqueries fetchdata`
+is already covered in the linked documentation, please refer to it for more information.
+
+If you attempt to access results through the model and a successful data retrieval
+was not made before, the model will throw a **\\SlaxWeb\\Database\\Exception\\NoDataException**.
 
 Updating existing data
 ----------------------
