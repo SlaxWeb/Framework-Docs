@@ -244,6 +244,10 @@ configration option, which is empty by default. If this is set to any value, the
 URI must start with this prepend in order to count as a valid URI for Segment-based
 URI matching.
 
+.. NOTE::
+   The Controller segment is automatically converted into *ucfrist*, while the method
+   will automatically be converted to *lcfirst* in segment-based URI matching.
+
 Parameters
 ``````````
 
