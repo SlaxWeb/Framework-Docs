@@ -226,7 +226,11 @@
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#response">Response</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#segment-based-uri-matching">Segment-based URI matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/routing.html#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../general/config.html">Configuration</a><ul>
@@ -548,8 +552,7 @@ in the <strong>softDeleteCol</strong> configuration option.</p>
 <h2>Data retrieval<a class="headerlink" href="#data-retrieval" title="Permalink to this headline">¶</a></h2>
 <p>To obtain data the query builder provides the <strong>select</strong> method which will generate
 the <em>SELECT</em> SQL statement, execute it and return the <strong>Result</strong> object. More information
-about obtaining data from the <strong>Result</strong> object can be found in the <a class="reference internal" href="execqueries.html#database-execqueries-fetchdata"><span class="std std-ref">Fetching data</span></a>
-section of the documentation.</p>
+about obtaining data from the <strong>Result</strong> object can be found in the <a class="reference internal" href="execqueries.html#database-execqueries-fetchdata"><span class="std std-ref">Fetching data</span></a> section of the documentation.</p>
 <p>You are required to supply an array of the column names that you want in the <em>SELECT</em>
 statement as the first and only parameter of the <strong>select</strong> method call. The <strong>select</strong>
 method can also throw the following two exceptions:</p>
@@ -564,7 +567,7 @@ this documentation for more information on building <em>WHERE</em> statements. T
 example shows a simple data retrieval query:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// code ...</span>
-<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">([</span><span class="s2">&quot;col1&quot;</span><span class="p">]);</span>
+<span class="nv">$result</span> <span class="o">=</span> <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">([</span><span class="s2">&quot;col1&quot;</span><span class="p">]);</span>
 <span class="c1">// code ...</span>
 </pre></div>
 </div>
@@ -572,6 +575,12 @@ example shows a simple data retrieval query:</p>
 <div class="highlight-sql"><div class="highlight"><pre><span class="k">SELECT</span> <span class="ss">&quot;col1&quot;</span> <span class="k">FROM</span> <span class="ss">&quot;table&quot;</span> <span class="k">WHERE</span> <span class="mi">1</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
 </div>
+<p>A successful execution will return the <strong>Result</strong> object, as well as store it inside
+the <em>Base Model</em>. You can obtain data from the returned <strong>Result</strong> object or directly
+from the model itself, using the exact same method. <a class="reference internal" href="execqueries.html#database-execqueries-fetchdata"><span class="std std-ref">Fetching data</span></a>
+is already covered in the linked documentation, please refer to it for more information.</p>
+<p>If you attempt to access results through the model and a successful data retrieval
+was not made before, the model will throw a <strong>\SlaxWeb\Database\Exception\NoDataException</strong>.</p>
 </div>
 <div class="section" id="updating-existing-data">
 <h2>Updating existing data<a class="headerlink" href="#updating-existing-data" title="Permalink to this headline">¶</a></h2>

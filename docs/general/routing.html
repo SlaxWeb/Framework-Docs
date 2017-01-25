@@ -226,7 +226,11 @@
 <li class="toctree-l4"><a class="reference internal" href="#response">Response</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#segment-based-uri-matching">Segment-based URI matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#segment-based-uri-matching">Segment-based URI matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a><ul>
@@ -669,10 +673,6 @@ to the <a class="reference internal" href="../components/router.html#router-clas
 </div>
 <div class="section" id="segment-based-uri-matching">
 <span id="gen-topic-routing-segmentbased"></span><h2>Segment-based URI matching<a class="headerlink" href="#segment-based-uri-matching" title="Permalink to this headline">¶</a></h2>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Not implemented yet! Coming in 0.5.0</p>
-</div>
 <p>Segment-based URI matching matches the first part of the URI to a <em>controller</em>,
 the second part to a controller <em>method</em>, and all further segments are converted
 to <em>parameters</em> that are sent to the controller method as input.</p>
@@ -681,11 +681,59 @@ into it at construction. The controller has to be auto-loadable by the framework
 Read more about controllers in the <a class="reference internal" href="controllers.html#gen-topics-controller"><span class="std std-ref">Controllers</span></a> section of the documentation.</p>
 <p>Segment-based URI matching is disabled by default, and has to be enabled in the
 <strong>app.php</strong> configuration file. To enable it, set <strong>segmentBasedMatch</strong> to <strong>true</strong>.</p>
+<p>The <strong>controllerNamespace</strong> configuration option must be set to the correct value
+in the <strong>app.php</strong> configuration file, as the Router will attempt to find Controller
+classes in that namespace. The default controller method may also be changed with
+the <strong>segmentBasedDefaultMethod</strong> configuration option in the same configuration
+file.</p>
+<p>The final option for Segment-based URI matching is the <strong>segmentBasedUriPrepend</strong>
+configration option, which is empty by default. If this is set to any value, the
+URI must start with this prepend in order to count as a valid URI for Segment-based
+URI matching.</p>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<p>The Router takes the first segment after the URI prepend, and uses it as the controller
+class name. The second segment after the URI prepend is used as the controller method.
+If the second segment is not set, the <strong>segmentBasedDefaultMethod</strong> is used as the
+method name by the router. All further segments will be injected into the controller
+method as input parameters.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The example uses the following settings:</p>
+<ul class="simple">
+<li>Enabled: <strong>true</strong></li>
+<li>Controller Namespace: <strong>AppController</strong></li>
+<li>Default Method: <strong>index</strong></li>
+<li>URI Prepend: <strong>segment/based/matching/</strong></li>
+</ul>
+<p><strong>/segment/based/matching/News/get/5</strong>:</p>
+<p>The above URI can be broken down:</p>
+<ul class="simple">
+<li><strong>/segment/based/matching/</strong> - prepend, ignored</li>
+<li><strong>News</strong> - Controller name</li>
+<li><strong>get</strong> - Method name</li>
+<li><strong>5</strong> - First and only parameter</li>
+</ul>
+<p>The Router will now attempt to instantiate the <strong>AppControllerNews</strong> controller
+and call its <strong>get</strong> method with <strong>5</strong> as a parameter value.</p>
+<p><strong>/segment/based/matching/News</strong></p>
+<p>The above URI can be broken down:</p>
+<ul class="simple">
+<li><strong>/segment/based/matching/</strong> - prepend, ignored</li>
+<li><strong>News</strong> - Controller name</li>
+</ul>
+<p>The Router will again attempt to instantiate the <strong>AppControllerNews</strong> controller
+and call the <strong>index</strong> method, as none was supplied by the URI, and it is set up
+as the default method.</p>
+<p><strong>/News/save/6</strong></p>
+<p>The Above URI will not match, because it does not begin with the required prepend.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
 <p class="last">If a Route is defined that matches the incoming request, that route will be used
 instead. Segment-based URI matching is used only if the incoming request does
 not match a defined Route!</p>
+</div>
 </div>
 </div>
 </div>

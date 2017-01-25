@@ -222,9 +222,6 @@ to the :ref:`router class reference` documentation.
 Segment-based URI matching
 --------------------------
 
-.. ATTENTION::
-   Not implemented yet! Coming in 0.5.0
-
 Segment-based URI matching matches the first part of the URI to a *controller*,
 the second part to a controller *method*, and all further segments are converted
 to *parameters* that are sent to the controller method as input.
@@ -235,6 +232,63 @@ Read more about controllers in the :ref:`gen topics controller` section of the d
 
 Segment-based URI matching is disabled by default, and has to be enabled in the
 **app.php** configuration file. To enable it, set **segmentBasedMatch** to **true**.
+
+The **controllerNamespace** configuration option must be set to the correct value
+in the **app.php** configuration file, as the Router will attempt to find Controller
+classes in that namespace. The default controller method may also be changed with
+the **segmentBasedDefaultMethod** configuration option in the same configuration
+file.
+
+The final option for Segment-based URI matching is the **segmentBasedUriPrepend**
+configration option, which is empty by default. If this is set to any value, the
+URI must start with this prepend in order to count as a valid URI for Segment-based
+URI matching.
+
+Parameters
+``````````
+
+The Router takes the first segment after the URI prepend, and uses it as the controller
+class name. The second segment after the URI prepend is used as the controller method.
+If the second segment is not set, the **segmentBasedDefaultMethod** is used as the
+method name by the router. All further segments will be injected into the controller
+method as input parameters.
+
+Examples
+````````
+
+The example uses the following settings:
+
+* Enabled: **true**
+* Controller Namespace: **\App\Controller**
+* Default Method: **index**
+* URI Prepend: **segment/based/matching/**
+
+**/segment/based/matching/News/get/5**:
+
+The above URI can be broken down:
+
+* **/segment/based/matching/** - prepend, ignored
+* **News** - Controller name
+* **get** - Method name
+* **5** - First and only parameter
+
+The Router will now attempt to instantiate the **\App\Controller\News** controller
+and call its **get** method with **5** as a parameter value.
+
+**/segment/based/matching/News**
+
+The above URI can be broken down:
+
+* **/segment/based/matching/** - prepend, ignored
+* **News** - Controller name
+
+The Router will again attempt to instantiate the **\App\Controller\News** controller
+and call the **index** method, as none was supplied by the URI, and it is set up
+as the default method.
+
+**/News/save/6**
+
+The Above URI will not match, because it does not begin with the required prepend.
 
 .. WARNING::
    If a Route is defined that matches the incoming request, that route will be used
