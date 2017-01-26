@@ -142,7 +142,7 @@ example shows a simple update query::
 
     <?php
     // code ...
-    $model->update(["col1" = "foo"]);
+    $model->update(["col1" => "foo"]);
     // code ...
 
 The above example will generate and execute the following query:
