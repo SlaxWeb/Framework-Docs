@@ -19,10 +19,6 @@ URI matching.
 Loader
 ------
 
-.. ATTENTION::
-   The Base Controller and the Loader do not exist yet. They are planned for version
-   0.5.0.
-
 The Controller Loader is a Framework registered service, that will instantiate your
 Controller class, and call an existing **init** method if it exists in your Controller
 with all additional input parameters. It passes the :ref:`gen topics application`
