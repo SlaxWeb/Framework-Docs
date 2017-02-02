@@ -584,11 +584,12 @@ SQL functions
 -------------
 
 The Query Builder also provides possibility to add built in SQL functions to the
-column list in select statements, as *MAX*, *COUNT*, and so on. To do so, you have
-to provide a nested array in the **select** or **joinCols** column lists. The nested
-array has to be associative, it needs to hold the **func** key, which defines the
-SQL function, the column name as the **col** key, and an optional **as** key that
-will define the name alias for that SQL function::
+column list in select, insert, update, and join statements, as *MAX*, *COUNT*, and
+so on. To do so, you have to provide a nested array in the **select**, **insert**,
+**update**, or **joinCols** column lists. The nested array has to be associative,
+it needs to hold the **func** key, which defines the SQL function, the column name
+as the **col** key, and an optional **as** key that will define the name alias for
+that SQL function::
 
     <?php
     // code ...
@@ -605,3 +606,6 @@ The above examples will generate and execute the following query:
         "table"
     WHERE
         1=1
+
+.. NOTE::
+   As of version 0.5 SQL functions are also supported in where statements.
