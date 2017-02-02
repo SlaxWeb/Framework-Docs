@@ -113,5 +113,5 @@ To write your own custom commands, they must extend from the **\\Symfony\\Compon
 information on this, please refer to the `Symfony Console documentation <http://symfony.com/doc/current/components/console.html>`_.
 To make the command usable with Slaxer, you need to register it with the Framework.
 To do so, you will have to make sure that your command class can be autoloaded,
-and add it to the **commandList** configuration item in the **app.php** configuration
+and add it to the **commandList** configuration item in the **provider.php** configuration
 file.

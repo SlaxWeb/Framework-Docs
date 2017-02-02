@@ -56,7 +56,7 @@ Load the collection file
 
 Even when the Route classes are autoloaded, we still need to instruct the framework
 that it needs to instantiate the class and parse our defined routes. To do this,
-we will add the full name of the class into the configuration file **app/Config/app.php**::
+we will add the full name of the class into the configuration file **app/Config/provider.php**::
 
     // ...
     $configuration["routesList"] = [

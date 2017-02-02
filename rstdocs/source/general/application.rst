@@ -157,7 +157,7 @@ Registering the Service Provider
 
 The Framework provides a simple way of registering your additional Service Providers
 with the Application object. You simply need to add the full class name including
-the namespace to the **providerList** configuration array located in the **app.php**
+the namespace to the **providerList** configuration array located in the **provider.php**
 configuration file::
 
     <?php
