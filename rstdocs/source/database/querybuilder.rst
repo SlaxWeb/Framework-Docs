@@ -44,6 +44,29 @@ The above example will generate and execute the following query:
 
 The **create** method returns a *bool* status.
 
+Updating existing data
+----------------------
+
+Updating data is also simply done with the **update** method. It requires an associative
+array of column names as keys and new values as array values as the input argument.
+Upon a successful update, boolean value **true** is returned, or **false** on error.
+
+The **update** method of the query builder will also create the *WHERE* statements
+for the data retrieval query. Refer to :ref:`database querybuilder where` part of
+this documentation for more information on building *WHERE* statements. The bellow
+example shows a simple update query::
+
+    <?php
+    // code ...
+    $model->update(["col1" => "foo"]);
+    // code ...
+
+The above example will generate and execute the following query:
+
+.. code-block:: sql
+
+    UPDATE "table" SET "table"."col1" = 'foo' WHERE 1=1
+
 Deleting data
 -------------
 
@@ -127,29 +150,6 @@ is already covered in the linked documentation, please refer to it for more info
 
 If you attempt to access results through the model and a successful data retrieval
 was not made before, the model will throw a **\\SlaxWeb\\Database\\Exception\\NoDataException**.
-
-Updating existing data
-----------------------
-
-Updating data is also simply done with the **update** method. It requires an associative
-array of column names as keys and new values as array values as the input argument.
-Upon a successful update, boolean value **true** is returned, or **false** on error.
-
-The **update** method of the query builder will also create the *WHERE* statements
-for the data retrieval query. Refer to :ref:`database querybuilder where` part of
-this documentation for more information on building *WHERE* statements. The bellow
-example shows a simple update query::
-
-    <?php
-    // code ...
-    $model->update(["col1" => "foo"]);
-    // code ...
-
-The above example will generate and execute the following query:
-
-.. code-block:: sql
-
-    UPDATE "table" SET "table"."col1" = 'foo' WHERE 1=1
 
 .. _database querybuilder where:
 
