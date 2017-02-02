@@ -35,10 +35,6 @@ and properties that have been defined in it by Service Providers. You can howeve
 also define your own services and properties in it, as long as you make sure it
 is defined before it is used elsewhere in the application.
 
-.. NOTE::
-   Controllers do not yet have a loader. **Available in 0.5.0**. Read more about
-   loading controllers in :ref:`gen topics controller`.
-
 Writing to Application
 ``````````````````````
 
