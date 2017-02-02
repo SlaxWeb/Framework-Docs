@@ -425,9 +425,27 @@ condition.
 joinModel
 `````````
 
-.. ATTENTION::
-   This method is not yet available and is planned for release in version **0.5.0**,
-   the exact functionality is not yet known and therefor not documented.
+The **joinModel** method conveniently extracts the table name from the joining model
+and the primary key, allowing you to skip the **joinCond** call. The method takes
+the Model object as first parameter, second parameter is the foreign key of the
+main table, and the third parameter is the logical operator. The last parameter
+defines the type of join, which defaults to the *INNER JOIN* type.
+
+The **joinModel** requires the joining model to have the **$primaryKey** protected
+property properly set, otherwise a **\\SlaxWeb\\DatabasePDO\\Exception\\NoPrimKeyException**
+is thrown. Example usage::
+
+    <?php
+    // code ...
+    $model->join($otherModel, "foreign_key_column", "=", BaseModel::JOIN_LEFT);
+    // code ...
+
+The above code will generate the following JOIN statement:
+
+.. code-block:: sql
+
+    LEFT OUTTER JOIN "otherModelTable"
+        ON ("table1"."foreign_key_column" = "otherModelTable"."primKey")
 
 joinCond
 ````````
@@ -483,7 +501,7 @@ The above examples will generate and execute the following query:
         "table2"."col5"
     FROM
         "table1"
-    INNER JOIN "table2"
+    LEFT OUTTER JOIN "table2"
         ON ("table1"."col1" = "table2"."col2")
         OR ("table1"."col3" = "table2"."col4")
     WHERE
