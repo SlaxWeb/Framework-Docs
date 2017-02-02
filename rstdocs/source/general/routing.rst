@@ -184,8 +184,8 @@ Route Action
 Route Action is the definition that gets executed when a Request is matched to the
 Route.The Action must be of type callable and gets the following parameters as input:
 
-* *\\SlaxWeb\\Router\\Request* - Request object (**deprecated** - **removed in 0.5.0**)
-* *\\SlaxWeb\\Router\\Response* - Response object (**deprecated** - **removed in 0.5.0**)
+* *\\SlaxWeb\\Router\\Request* - Request object
+* *\\SlaxWeb\\Router\\Response* - Response object
 * *\\SlaxWeb\\Bootstrap\\Application* - :ref:`gen topics application`
 
 .. ATTENTION::
