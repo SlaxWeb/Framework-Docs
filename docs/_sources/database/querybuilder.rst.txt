@@ -44,6 +44,29 @@ The above example will generate and execute the following query:
 
 The **create** method returns a *bool* status.
 
+Updating existing data
+----------------------
+
+Updating data is also simply done with the **update** method. It requires an associative
+array of column names as keys and new values as array values as the input argument.
+Upon a successful update, boolean value **true** is returned, or **false** on error.
+
+The **update** method of the query builder will also create the *WHERE* statements
+for the data retrieval query. Refer to :ref:`database querybuilder where` part of
+this documentation for more information on building *WHERE* statements. The bellow
+example shows a simple update query::
+
+    <?php
+    // code ...
+    $model->update(["col1" => "foo"]);
+    // code ...
+
+The above example will generate and execute the following query:
+
+.. code-block:: sql
+
+    UPDATE "table" SET "table"."col1" = 'foo' WHERE 1=1
+
 Deleting data
 -------------
 
@@ -102,12 +125,7 @@ about obtaining data from the **Result** object can be found in the :ref:`databa
 execqueries fetchdata` section of the documentation.
 
 You are required to supply an array of the column names that you want in the *SELECT*
-statement as the first and only parameter of the **select** method call. The **select**
-method can also throw the following two exceptions:
-
-* **\\SlaxWeb\\Database\\Exception\\QueryException** - error occurred with the query
-* **\\SlaxWeb\\Database\\Exception\\NoDataException** - no data could be obtained
-  from the database or it yielded an invalid result set
+statement as the first and only parameter of the **select** method call.
 
 The **select** method of the query builder will also create the *WHERE* statements
 for the data retrieval query. Refer to :ref:`database querybuilder where` part of
@@ -132,29 +150,6 @@ is already covered in the linked documentation, please refer to it for more info
 
 If you attempt to access results through the model and a successful data retrieval
 was not made before, the model will throw a **\\SlaxWeb\\Database\\Exception\\NoDataException**.
-
-Updating existing data
-----------------------
-
-Updating data is also simply done with the **update** method. It requires an associative
-array of column names as keys and new values as array values as the input argument.
-Upon a successful update, boolean value **true** is returned, or **false** on error.
-
-The **update** method of the query builder will also create the *WHERE* statements
-for the data retrieval query. Refer to :ref:`database querybuilder where` part of
-this documentation for more information on building *WHERE* statements. The bellow
-example shows a simple update query::
-
-    <?php
-    // code ...
-    $model->update(["col1" = "foo"]);
-    // code ...
-
-The above example will generate and execute the following query:
-
-.. code-block:: sql
-
-    UPDATE "table" SET "table"."col1" = 'foo' WHERE 1=1
 
 .. _database querybuilder where:
 
@@ -430,9 +425,28 @@ condition.
 joinModel
 `````````
 
-.. ATTENTION::
-   This method is not yet available and is planned for release in version **0.5.0**,
-   the exact functionality is not yet known and therefor not documented.
+The **joinModel** method conveniently extracts the table name from the joining model
+and the primary key, allowing you to skip the **joinCond** call. The method takes
+the Model object as first parameter, second parameter is the foreign key of the
+main table, and the third parameter defines the type of join, which defaults to
+the *INNER JOIN* type. The final parameter defines the comparison operator which
+defaults to *equals (=)*.
+
+The **joinModel** requires the joining model to have the **$primaryKey** protected
+property properly set, otherwise a **\\SlaxWeb\\DatabasePDO\\Exception\\NoPrimKeyException**
+is thrown. Example usage::
+
+    <?php
+    // code ...
+    $model->join($otherModel, "foreign_key_column", BaseModel::JOIN_LEFT, "=");
+    // code ...
+
+The above code will generate the following JOIN statement:
+
+.. code-block:: sql
+
+    LEFT OUTTER JOIN "otherModelTable"
+        ON ("table1"."foreign_key_column" = "otherModelTable"."primKey")
 
 joinCond
 ````````
@@ -488,7 +502,7 @@ The above examples will generate and execute the following query:
         "table2"."col5"
     FROM
         "table1"
-    INNER JOIN "table2"
+    LEFT OUTTER JOIN "table2"
         ON ("table1"."col1" = "table2"."col2")
         OR ("table1"."col3" = "table2"."col4")
     WHERE
@@ -589,11 +603,12 @@ SQL functions
 -------------
 
 The Query Builder also provides possibility to add built in SQL functions to the
-column list in select statements, as *MAX*, *COUNT*, and so on. To do so, you have
-to provide a nested array in the **select** or **joinCols** column lists. The nested
-array has to be associative, it needs to hold the **func** key, which defines the
-SQL function, the column name as the **col** key, and an optional **as** key that
-will define the name alias for that SQL function::
+column list in select, insert, update, and join statements, as *MAX*, *COUNT*, and
+so on. To do so, you have to provide a nested array in the **select**, **insert**,
+**update**, or **joinCols** column lists. The nested array has to be associative,
+it needs to hold the **func** key, which defines the SQL function, the column name
+as the **col** key, and an optional **as** key that will define the name alias for
+that SQL function::
 
     <?php
     // code ...
@@ -610,3 +625,6 @@ The above examples will generate and execute the following query:
         "table"
     WHERE
         1=1
+
+.. NOTE::
+   As of version 0.5 SQL functions are also supported in where statements.

@@ -184,8 +184,8 @@ Route Action
 Route Action is the definition that gets executed when a Request is matched to the
 Route.The Action must be of type callable and gets the following parameters as input:
 
-* *\\SlaxWeb\\Router\\Request* - Request object (**deprecated** - **removed in 0.5.0**)
-* *\\SlaxWeb\\Router\\Response* - Response object (**deprecated** - **removed in 0.5.0**)
+* *\\SlaxWeb\\Router\\Request* - Request object
+* *\\SlaxWeb\\Router\\Response* - Response object
 * *\\SlaxWeb\\Bootstrap\\Application* - :ref:`gen topics application`
 
 .. ATTENTION::
@@ -243,6 +243,10 @@ The final option for Segment-based URI matching is the **segmentBasedUriPrepend*
 configration option, which is empty by default. If this is set to any value, the
 URI must start with this prepend in order to count as a valid URI for Segment-based
 URI matching.
+
+.. NOTE::
+   The Controller segment is automatically converted into *ucfrist*, while the method
+   will automatically be converted to *lcfirst* in segment-based URI matching.
 
 Parameters
 ``````````

@@ -98,7 +98,7 @@ Register Hook Definitons
 
 Now that the Hook Definitions are defined in the Hook Definition class, it needs
 to be registered with the Framework. To do so, add the full class name of the Hook
-Definition class to the **hooksList** configuration item in the **app/Config/app.php**
+Definition class to the **hooksList** configuration item in the **app/Config/provider.php**
 configuration file.
 
 Multiple Hook Definitions

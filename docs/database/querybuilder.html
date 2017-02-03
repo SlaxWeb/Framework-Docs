@@ -283,6 +283,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../general/response.html">Handling responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../general/response.html#response-object-extensions">Response object extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/response.html#addcontent">addContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../general/response.html#redirect">redirect</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../general/response.html#output-component">Output component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../general/response.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../general/model.html">Models</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../general/model.html#base-model">Base Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../general/model.html#writing-a-model">Writing a Model</a></li>
@@ -350,12 +362,12 @@
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Query builder</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#creating-data">Creating data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#updating-existing-data">Updating existing data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#deleting-data">Deleting data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#soft-deletes">Soft deletes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#data-retrieval">Data retrieval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#updating-existing-data">Updating existing data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#where-statements">Where statements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#where">where</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#orwhere">orWhere</a></li>
@@ -503,6 +515,26 @@ data to be inserted:</p>
 </div>
 <p>The <strong>create</strong> method returns a <em>bool</em> status.</p>
 </div>
+<div class="section" id="updating-existing-data">
+<h2>Updating existing data<a class="headerlink" href="#updating-existing-data" title="Permalink to this headline">¶</a></h2>
+<p>Updating data is also simply done with the <strong>update</strong> method. It requires an associative
+array of column names as keys and new values as array values as the input argument.
+Upon a successful update, boolean value <strong>true</strong> is returned, or <strong>false</strong> on error.</p>
+<p>The <strong>update</strong> method of the query builder will also create the <em>WHERE</em> statements
+for the data retrieval query. Refer to <a class="reference internal" href="#database-querybuilder-where"><span class="std std-ref">Where statements</span></a> part of
+this documentation for more information on building <em>WHERE</em> statements. The bellow
+example shows a simple update query:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s2">&quot;col1&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;foo&quot;</span><span class="p">]);</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+<p>The above example will generate and execute the following query:</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">UPDATE</span> <span class="ss">&quot;table&quot;</span> <span class="k">SET</span> <span class="ss">&quot;table&quot;</span><span class="p">.</span><span class="ss">&quot;col1&quot;</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span> <span class="k">WHERE</span> <span class="mi">1</span><span class="o">=</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="deleting-data">
 <h2>Deleting data<a class="headerlink" href="#deleting-data" title="Permalink to this headline">¶</a></h2>
 <p>Data deletion is as simple as data creation, the <strong>delete</strong> method will generate
@@ -554,13 +586,7 @@ in the <strong>softDeleteCol</strong> configuration option.</p>
 the <em>SELECT</em> SQL statement, execute it and return the <strong>Result</strong> object. More information
 about obtaining data from the <strong>Result</strong> object can be found in the <a class="reference internal" href="execqueries.html#database-execqueries-fetchdata"><span class="std std-ref">Fetching data</span></a> section of the documentation.</p>
 <p>You are required to supply an array of the column names that you want in the <em>SELECT</em>
-statement as the first and only parameter of the <strong>select</strong> method call. The <strong>select</strong>
-method can also throw the following two exceptions:</p>
-<ul class="simple">
-<li><strong>\SlaxWeb\Database\Exception\QueryException</strong> - error occurred with the query</li>
-<li><strong>\SlaxWeb\Database\Exception\NoDataException</strong> - no data could be obtained
-from the database or it yielded an invalid result set</li>
-</ul>
+statement as the first and only parameter of the <strong>select</strong> method call.</p>
 <p>The <strong>select</strong> method of the query builder will also create the <em>WHERE</em> statements
 for the data retrieval query. Refer to <a class="reference internal" href="#database-querybuilder-where"><span class="std std-ref">Where statements</span></a> part of
 this documentation for more information on building <em>WHERE</em> statements. The bellow
@@ -581,26 +607,6 @@ from the model itself, using the exact same method. <a class="reference internal
 is already covered in the linked documentation, please refer to it for more information.</p>
 <p>If you attempt to access results through the model and a successful data retrieval
 was not made before, the model will throw a <strong>\SlaxWeb\Database\Exception\NoDataException</strong>.</p>
-</div>
-<div class="section" id="updating-existing-data">
-<h2>Updating existing data<a class="headerlink" href="#updating-existing-data" title="Permalink to this headline">¶</a></h2>
-<p>Updating data is also simply done with the <strong>update</strong> method. It requires an associative
-array of column names as keys and new values as array values as the input argument.
-Upon a successful update, boolean value <strong>true</strong> is returned, or <strong>false</strong> on error.</p>
-<p>The <strong>update</strong> method of the query builder will also create the <em>WHERE</em> statements
-for the data retrieval query. Refer to <a class="reference internal" href="#database-querybuilder-where"><span class="std std-ref">Where statements</span></a> part of
-this documentation for more information on building <em>WHERE</em> statements. The bellow
-example shows a simple update query:</p>
-<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
-<span class="c1">// code ...</span>
-<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s2">&quot;col1&quot;</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span><span class="p">]);</span>
-<span class="c1">// code ...</span>
-</pre></div>
-</div>
-<p>The above example will generate and execute the following query:</p>
-<div class="highlight-sql"><div class="highlight"><pre><span class="k">UPDATE</span> <span class="ss">&quot;table&quot;</span> <span class="k">SET</span> <span class="ss">&quot;table&quot;</span><span class="p">.</span><span class="ss">&quot;col1&quot;</span> <span class="o">=</span> <span class="s1">&#39;foo&#39;</span> <span class="k">WHERE</span> <span class="mi">1</span><span class="o">=</span><span class="mi">1</span>
-</pre></div>
-</div>
 </div>
 <div class="section" id="where-statements">
 <span id="database-querybuilder-where"></span><h2>Where statements<a class="headerlink" href="#where-statements" title="Permalink to this headline">¶</a></h2>
@@ -853,10 +859,25 @@ condition.</p>
 </div>
 <div class="section" id="joinmodel">
 <h3>joinModel<a class="headerlink" href="#joinmodel" title="Permalink to this headline">¶</a></h3>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">This method is not yet available and is planned for release in version <strong>0.5.0</strong>,
-the exact functionality is not yet known and therefor not documented.</p>
+<p>The <strong>joinModel</strong> method conveniently extracts the table name from the joining model
+and the primary key, allowing you to skip the <strong>joinCond</strong> call. The method takes
+the Model object as first parameter, second parameter is the foreign key of the
+main table, and the third parameter defines the type of join, which defaults to
+the <em>INNER JOIN</em> type. The final parameter defines the comparison operator which
+defaults to <em>equals (=)</em>.</p>
+<p>The <strong>joinModel</strong> requires the joining model to have the <strong>$primaryKey</strong> protected
+property properly set, otherwise a <strong>\SlaxWeb\DatabasePDO\Exception\NoPrimKeyException</strong>
+is thrown. Example usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">join</span><span class="p">(</span><span class="nv">$otherModel</span><span class="p">,</span> <span class="s2">&quot;foreign_key_column&quot;</span><span class="p">,</span> <span class="nx">BaseModel</span><span class="o">::</span><span class="na">JOIN_LEFT</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">);</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+<p>The above code will generate the following JOIN statement:</p>
+<div class="highlight-sql"><div class="highlight"><pre><span class="k">LEFT</span> <span class="n">OUTTER</span> <span class="k">JOIN</span> <span class="ss">&quot;otherModelTable&quot;</span>
+    <span class="k">ON</span> <span class="p">(</span><span class="ss">&quot;table1&quot;</span><span class="p">.</span><span class="ss">&quot;foreign_key_column&quot;</span> <span class="o">=</span> <span class="ss">&quot;otherModelTable&quot;</span><span class="p">.</span><span class="ss">&quot;primKey&quot;</span><span class="p">)</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="joincond">
@@ -906,7 +927,7 @@ list from the joining table.</p>
     <span class="ss">&quot;table2&quot;</span><span class="p">.</span><span class="ss">&quot;col5&quot;</span>
 <span class="k">FROM</span>
     <span class="ss">&quot;table1&quot;</span>
-<span class="k">INNER</span> <span class="k">JOIN</span> <span class="ss">&quot;table2&quot;</span>
+<span class="k">LEFT</span> <span class="n">OUTTER</span> <span class="k">JOIN</span> <span class="ss">&quot;table2&quot;</span>
     <span class="k">ON</span> <span class="p">(</span><span class="ss">&quot;table1&quot;</span><span class="p">.</span><span class="ss">&quot;col1&quot;</span> <span class="o">=</span> <span class="ss">&quot;table2&quot;</span><span class="p">.</span><span class="ss">&quot;col2&quot;</span><span class="p">)</span>
     <span class="k">OR</span> <span class="p">(</span><span class="ss">&quot;table1&quot;</span><span class="p">.</span><span class="ss">&quot;col3&quot;</span> <span class="o">=</span> <span class="ss">&quot;table2&quot;</span><span class="p">.</span><span class="ss">&quot;col4&quot;</span><span class="p">)</span>
 <span class="k">WHERE</span>
@@ -1004,11 +1025,12 @@ functionality is not yet defined, and is therefor not yet documented.</p>
 <div class="section" id="sql-functions">
 <h2>SQL functions<a class="headerlink" href="#sql-functions" title="Permalink to this headline">¶</a></h2>
 <p>The Query Builder also provides possibility to add built in SQL functions to the
-column list in select statements, as <em>MAX</em>, <em>COUNT</em>, and so on. To do so, you have
-to provide a nested array in the <strong>select</strong> or <strong>joinCols</strong> column lists. The nested
-array has to be associative, it needs to hold the <strong>func</strong> key, which defines the
-SQL function, the column name as the <strong>col</strong> key, and an optional <strong>as</strong> key that
-will define the name alias for that SQL function:</p>
+column list in select, insert, update, and join statements, as <em>MAX</em>, <em>COUNT</em>, and
+so on. To do so, you have to provide a nested array in the <strong>select</strong>, <strong>insert</strong>,
+<strong>update</strong>, or <strong>joinCols</strong> column lists. The nested array has to be associative,
+it needs to hold the <strong>func</strong> key, which defines the SQL function, the column name
+as the <strong>col</strong> key, and an optional <strong>as</strong> key that will define the name alias for
+that SQL function:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// code ...</span>
 <span class="nv">$model</span><span class="o">-&gt;</span><span class="na">select</span><span class="p">([[</span><span class="s2">&quot;func&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;count&quot;</span><span class="p">,</span> <span class="s2">&quot;col&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;col1&quot;</span><span class="p">,</span> <span class="s2">&quot;as&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;rowcount&quot;</span><span class="p">]);</span>
@@ -1023,6 +1045,10 @@ will define the name alias for that SQL function:</p>
 <span class="k">WHERE</span>
     <span class="mi">1</span><span class="o">=</span><span class="mi">1</span>
 </pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">As of version 0.5 SQL functions are also supported in where statements.</p>
 </div>
 </div>
 </div>

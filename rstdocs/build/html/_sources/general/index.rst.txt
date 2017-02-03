@@ -16,6 +16,7 @@ General Topics
    slaxer
    controllers
    viewtpl
+   response
    model
    logger
    hooks

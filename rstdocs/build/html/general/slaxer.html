@@ -226,7 +226,11 @@
 <li class="toctree-l4"><a class="reference internal" href="routing.html#response">Response</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="routing.html#segment-based-uri-matching">Segment-based URI matching</a></li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#examples">Examples</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a><ul>
@@ -275,6 +279,18 @@
 <li class="toctree-l3"><a class="reference internal" href="viewtpl.html#templating">Templating</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="viewtpl.html#sub-views">Sub-Views</a></li>
 <li class="toctree-l4"><a class="reference internal" href="viewtpl.html#layouts">Layouts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="response.html">Handling responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="response.html#response-object-extensions">Response object extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#addcontent">addContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#redirect">redirect</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="response.html#output-component">Output component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#configuration">Configuration</a></li>
 </ul>
 </li>
 </ul>
@@ -346,12 +362,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database/querybuilder.html">Query builder</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#creating-data">Creating data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#deleting-data">Deleting data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#soft-deletes">Soft deletes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#data-retrieval">Data retrieval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#where-statements">Where statements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#where">where</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orwhere">orWhere</a></li>
@@ -572,7 +588,7 @@ of the framework.</p>
 information on this, please refer to the <a class="reference external" href="http://symfony.com/doc/current/components/console.html">Symfony Console documentation</a>.
 To make the command usable with Slaxer, you need to register it with the Framework.
 To do so, you will have to make sure that your command class can be autoloaded,
-and add it to the <strong>commandList</strong> configuration item in the <strong>app.php</strong> configuration
+and add it to the <strong>commandList</strong> configuration item in the <strong>provider.php</strong> configuration
 file.</p>
 </div>
 </div>

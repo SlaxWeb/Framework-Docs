@@ -40,7 +40,7 @@ and give it the namespace of **\\App\\Provider**, in our example we will create 
 
 The basic service provider class layout is set, but it is not yet registered with
 the Framework. To do so, add the full class name to the **providerList** configuration
-item in **app/Config/app.php** configuration file::
+item in **app/Config/provider.php** configuration file::
 
     <?php
     // ...

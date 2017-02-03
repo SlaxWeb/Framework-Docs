@@ -283,6 +283,18 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="response.html">Handling responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="response.html#response-object-extensions">Response object extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#addcontent">addContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#redirect">redirect</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="response.html#output-component">Output component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#configuration">Configuration</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="model.html">Models</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="model.html#base-model">Base Model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="model.html#writing-a-model">Writing a Model</a></li>
@@ -350,12 +362,12 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database/querybuilder.html">Query builder</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#creating-data">Creating data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#deleting-data">Deleting data</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#soft-deletes">Soft deletes</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#data-retrieval">Data retrieval</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#where-statements">Where statements</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#where">where</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orwhere">orWhere</a></li>
@@ -639,8 +651,8 @@ through the HTTP GET or the HTTP POST methods.</p>
 <p>Route Action is the definition that gets executed when a Request is matched to the
 Route.The Action must be of type callable and gets the following parameters as input:</p>
 <ul class="simple">
-<li><em>\SlaxWeb\Router\Request</em> - Request object (<strong>deprecated</strong> - <strong>removed in 0.5.0</strong>)</li>
-<li><em>\SlaxWeb\Router\Response</em> - Response object (<strong>deprecated</strong> - <strong>removed in 0.5.0</strong>)</li>
+<li><em>\SlaxWeb\Router\Request</em> - Request object</li>
+<li><em>\SlaxWeb\Router\Response</em> - Response object</li>
 <li><em>\SlaxWeb\Bootstrap\Application</em> - <a class="reference internal" href="application.html#gen-topics-application"><span class="std std-ref">Application object</span></a></li>
 </ul>
 <div class="admonition attention">
@@ -690,6 +702,11 @@ file.</p>
 configration option, which is empty by default. If this is set to any value, the
 URI must start with this prepend in order to count as a valid URI for Segment-based
 URI matching.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Controller segment is automatically converted into <em>ucfrist</em>, while the method
+will automatically be converted to <em>lcfirst</em> in segment-based URI matching.</p>
+</div>
 <div class="section" id="parameters">
 <h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
 <p>The Router takes the first segment after the URI prepend, and uses it as the controller
