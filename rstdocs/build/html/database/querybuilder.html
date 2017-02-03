@@ -551,13 +551,7 @@ the <em>SELECT</em> SQL statement, execute it and return the <strong>Result</str
 about obtaining data from the <strong>Result</strong> object can be found in the <a class="reference internal" href="execqueries.html#database-execqueries-fetchdata"><span class="std std-ref">Fetching data</span></a>
 section of the documentation.</p>
 <p>You are required to supply an array of the column names that you want in the <em>SELECT</em>
-statement as the first and only parameter of the <strong>select</strong> method call. The <strong>select</strong>
-method can also throw the following two exceptions:</p>
-<ul class="simple">
-<li><strong>\SlaxWeb\Database\Exception\QueryException</strong> - error occurred with the query</li>
-<li><strong>\SlaxWeb\Database\Exception\NoDataException</strong> - no data could be obtained
-from the database or it yielded an invalid result set</li>
-</ul>
+statement as the first and only parameter of the <strong>select</strong> method call.</p>
 <p>The <strong>select</strong> method of the query builder will also create the <em>WHERE</em> statements
 for the data retrieval query. Refer to <a class="reference internal" href="#database-querybuilder-where"><span class="std std-ref">Where statements</span></a> part of
 this documentation for more information on building <em>WHERE</em> statements. The bellow
@@ -584,7 +578,7 @@ this documentation for more information on building <em>WHERE</em> statements. T
 example shows a simple update query:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// code ...</span>
-<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s2">&quot;col1&quot;</span> <span class="o">=</span> <span class="s2">&quot;foo&quot;</span><span class="p">]);</span>
+<span class="nv">$model</span><span class="o">-&gt;</span><span class="na">update</span><span class="p">([</span><span class="s2">&quot;col1&quot;</span> <span class="o">=&gt;</span> <span class="s2">&quot;foo&quot;</span><span class="p">]);</span>
 <span class="c1">// code ...</span>
 </pre></div>
 </div>

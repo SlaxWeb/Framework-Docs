@@ -102,12 +102,7 @@ about obtaining data from the **Result** object can be found in the :ref:`databa
 section of the documentation.
 
 You are required to supply an array of the column names that you want in the *SELECT*
-statement as the first and only parameter of the **select** method call. The **select**
-method can also throw the following two exceptions:
-
-* **\\SlaxWeb\\Database\\Exception\\QueryException** - error occurred with the query
-* **\\SlaxWeb\\Database\\Exception\\NoDataException** - no data could be obtained
-  from the database or it yielded an invalid result set
+statement as the first and only parameter of the **select** method call.
 
 The **select** method of the query builder will also create the *WHERE* statements
 for the data retrieval query. Refer to :ref:`database querybuilder where` part of
@@ -140,7 +135,7 @@ example shows a simple update query::
 
     <?php
     // code ...
-    $model->update(["col1" = "foo"]);
+    $model->update(["col1" => "foo"]);
     // code ...
 
 The above example will generate and execute the following query:
