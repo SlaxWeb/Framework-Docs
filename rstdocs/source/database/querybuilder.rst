@@ -428,8 +428,9 @@ joinModel
 The **joinModel** method conveniently extracts the table name from the joining model
 and the primary key, allowing you to skip the **joinCond** call. The method takes
 the Model object as first parameter, second parameter is the foreign key of the
-main table, and the third parameter is the logical operator. The last parameter
-defines the type of join, which defaults to the *INNER JOIN* type.
+main table, and the third parameter defines the type of join, which defaults to
+the *INNER JOIN* type. The final parameter defines the comparison operator which
+defaults to *equals (=)*.
 
 The **joinModel** requires the joining model to have the **$primaryKey** protected
 property properly set, otherwise a **\\SlaxWeb\\DatabasePDO\\Exception\\NoPrimKeyException**
@@ -437,7 +438,7 @@ is thrown. Example usage::
 
     <?php
     // code ...
-    $model->join($otherModel, "foreign_key_column", "=", BaseModel::JOIN_LEFT);
+    $model->join($otherModel, "foreign_key_column", BaseModel::JOIN_LEFT, "=");
     // code ...
 
 The above code will generate the following JOIN statement:
