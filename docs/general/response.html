@@ -292,7 +292,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#output-component">Output component</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#configuration">Configuration</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#output-modes">Output modes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#rendering-templates">Rendering templates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#view-template-output">View/Template output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#json-output">JSON output</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#error-output">Error output</a></li>
 </ul>
@@ -590,7 +590,7 @@ execution is abruptly terminated by calling <em>exit</em> in application code, u
 <span id="gen-topics-response-output-conf-mode"></span><h4>defaultOutputMode<a class="headerlink" href="#defaultoutputmode" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li>Data type: <strong>int</strong> - constants</li>
-<li>Default: <strong>Output::MODE_VIEW</strong> - 1</li>
+<li>Default: <strong>Output::MODE_JSON</strong> - 1</li>
 </ul>
 <p>Defines the default mode in which the Output component operates. See <a class="reference internal" href="#gen-topics-response-output-mode"><span class="std std-ref">Output modes</span></a> for a list of available values.</p>
 </div>
@@ -614,14 +614,14 @@ Applies only after the mode has been changed first.</p>
 </ul>
 <p>The <strong>View/Template output</strong> mode is enabled as soon as a View object is added to
 the Output object. This mode will render the added views as they are added. More
-information can be found bellow in <a class="reference internal" href="#gen-topics-response-rendertpl"><span class="std std-ref">Rendering templates</span></a>.</p>
+information can be found bellow in <a class="reference internal" href="#gen-topics-response-rendertpl"><span class="std std-ref">View/Template output</span></a>.</p>
 <p>The <strong>JSON output</strong> mode can be enabled by explicitly calling the <strong>jsonMode</strong> method
 on the Output object. JSON output data is then accessed over the public <em>json</em> property
 of the Output object. For more information refer to the <a class="reference internal" href="#gen-topics-response-json"><span class="std std-ref">JSON output</span></a> section bellow.</p>
 <p>A default mode may be configured in the configuration as well. See <a class="reference internal" href="#gen-topics-response-output-conf-mode"><span class="std std-ref">defaultOutputMode</span></a>.</p>
 </div>
-<div class="section" id="rendering-templates">
-<span id="gen-topics-response-rendertpl"></span><h3>Rendering templates<a class="headerlink" href="#rendering-templates" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="view-template-output">
+<span id="gen-topics-response-rendertpl"></span><h3>View/Template output<a class="headerlink" href="#view-template-output" title="Permalink to this headline">¶</a></h3>
 <p>Rendering templates is not a particularly hard task in the SlaxWeb Framework. You
 initialize the View with the help of the view loader service, call render method
 with the desired view data, or pass it to the <em>View object</em> directly, and the rendered

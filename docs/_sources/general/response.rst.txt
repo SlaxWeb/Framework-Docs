@@ -117,7 +117,7 @@ defaultOutputMode
 '''''''''''''''''
 
 * Data type: **int** - constants
-* Default: **Output::MODE_VIEW** - 1
+* Default: **Output::MODE_JSON** - 1
 
 Defines the default mode in which the Output component operates. See :ref:`gen topics
 response output mode` for a list of available values.
@@ -156,7 +156,7 @@ response output conf mode`.
 
 .. _gen topics response rendertpl:
 
-Rendering templates
+View/Template output
 ````````````````````
 
 Rendering templates is not a particularly hard task in the SlaxWeb Framework. You
