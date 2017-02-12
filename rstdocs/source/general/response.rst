@@ -101,63 +101,65 @@ object* or the Output component.
    Setting this to bool(**false**) will prevent **ALL** direct output, including
    PHP error messages. This is **NOT** recommended for a development environment!
 
-discardResponseOnExit
-'''''''''''''''''''''
+.. _gen topics response output default handler:
 
-* Data type: **bool**
-* Default: **false**
+defaultHandler
+''''''''''''''
 
-All data set to the *Response* object or the *Output* component is discarded if
-execution is abruptly terminated by calling *exit* in application code, unless the
-*Output* component is enabled and *discardResponseOnExit* is set to bool(**false**).
+* Data type: **string**
+* Default: **view**
 
-.. _gen topics response output conf mode:
+Defines the Output Handler for the Output Manager. The Output component comes with
+existing handlers, but you may use your own. If you wish to use your own just set
+the full class name of your handler bellow, or the name of the service if you have
+registered it with the Application instance, or choose one pre-existing handler
+from the list found in the :ref:`gen topics response output handlers` section of
+the documentation bellow.
 
-defaultOutputMode
-'''''''''''''''''
+.. NOTE::
+   This can be overriden during runtime by setting the "outputHandler" application
+   property.
 
-* Data type: **int** - constants
-* Default: **Output::MODE_JSON** - 1
+.. _gen topics response output handlers:
 
-Defines the default mode in which the Output component operates. See :ref:`gen topics
-response output mode` for a list of available values.
+Output handlers
+```````````````
 
-permitModeChange
-''''''''''''''''
+.. NOTE::
+   File output handler is not yet available and is planned for future releases.
 
-* Data type: **bool**
-* Default: **true**
+Output component uses Output handlers to handle different types of output. The component
+comes with 3 handlers predefined:
 
-Defines if the Output mode may be changed once it has already been set manually.
-Applies only after the mode has been changed first.
+* **view**
+* **json**
+* **file**
 
-.. _gen topics response output mode:
+To define a handler for the component it can be set using the :ref:`gen topics reponse
+output default handler` configuration option or by setting it to the **outputHandler**
+application property. The above options will load the following service into the
+Output component:
 
-Output modes
-````````````
+* Option *view*: **outputViewHandler.service**
+* Option *json*: **outputJsonHandler.service**
+* Option *file*: **outputFileHandler.service**
 
-Output component supports multiple output modes:
-
-* View/Template output - *Output::MODE_VIEW* - int(0)
-* JSON output - *Output::MODE_JSON* - int(1)
-* File output *(not yet supported)* - *Output::MODE_FILE* - int(2)
-
-The **View/Template output** mode is enabled as soon as a View object is added to
-the Output object. This mode will render the added views as they are added. More
-information can be found bellow in :ref:`gen topics response rendertpl`.
-
-The **JSON output** mode can be enabled by explicitly calling the **jsonMode** method
-on the Output object. JSON output data is then accessed over the public *json* property
-of the Output object. For more information refer to the :ref:`gen topics response
-json` section bellow.
-
-A default mode may be configured in the configuration as well. See :ref:`gen topics
-response output conf mode`.
+To use a custom output handler a custom class may be defined, as long as it extends
+the **\\SlaxWeb\\Output\\AbstractHandler** abstract class and define a **render**
+method that will return a *string* that will be added to response content. To use
+the custom class, either set the name of the custom class to the :ref:`gen topics
+response output default handler` configuration option, or the **outputHandler**
+application property. You can also pass the name of a custom service providing the
+custom handler class, or extend/override an existing service defined above.
 
 .. _gen topics response rendertpl:
 
-View/Template output
-````````````````````
+View handler
+````````````
+
+The **View handler** is enabled by setting the :ref:`gen topics response output
+default handler` configuration option to **view** or by setting the same value to
+the **outputHandler** application property.
 
 Rendering templates is not a particularly hard task in the SlaxWeb Framework. You
 initialize the View with the help of the view loader service, call render method
@@ -173,20 +175,20 @@ caching handle populating data to the next rendered views. This is where the **O
 component steps in, you simply add your views to the **Output** object, and add
 view data directly to the **Output** object, and have it handle everything for you.
 
-addView
-'''''''
+add
+'''
 
-*addView* will add the View object to the internal list of Views, and set the output
-mode to **View/Template output**. The Output component will automatically render
-the Views added with this method in the same order, if the mode is still set to
-the *View/Template* mode.
+*add* will add the View object to the internal list of Views, if the **view** output
+handler is set in the configuration option or the **outputHandler** application
+property. The Output component will automatically render the Views added with this
+method in the same order.
 
 Example usage::
 
     <?php
     // load View \App\View\MyView
     $myView = $app["loadView.service"]("MyView");
-    $app["output.service"]->addView($myView);
+    $app["output.service"]->add($myView);
 
 addData
 '''''''
@@ -201,11 +203,11 @@ Example usage::
     <?php
     // load View \App\View\MyView
     $myView = $app["loadView.service"]("MyView");
-    $app["output.service"]->addView($myView);
+    $app["output.service"]->add($myView);
 
     // load View \App\View\SpecialView
     $specialView = $app["loadView.service"]("SpecialView");
-    $app["output.service"]->addView($specialView);
+    $app["output.service"]->add($specialView);
 
     // add data
     $app["output.service"]
@@ -217,22 +219,14 @@ the variable *baz* will be available only in the *SpecialView*.
 
 .. _gen topics response json:
 
-JSON output
-```````````
+JSON handler
+````````````
 
-The **JSON output** mode is enabled by default through configuration, or it can
-be enabled manually by calling the **jsonMode** method on the Output object. When
-in JSON mode, the Output component will automatically set the appropriate headers
-for this mode.
+The **JSON handler** is enabled by setting the :ref:`gen topics response output
+default handler` configuration option to **json** or by setting the same value to
+the **outputHandler** application property.
 
-The Output object uses an external **JSON Handler** class for output data manipulation.
-The handler class implements the **\SlaxWeb\Output\Interfaces\JsonHandler** interface
-that defines the required methods for adding data, errors, and serialization to
-JSON.  The **\SlaxWeb\Output\Handler\Json** class is also provided that implements
-the interface. If additional functionality or structure is required the existing
-handler may be extended, or a completely new one may be defined, as long as it is
-exposed to the DIC with the **jsonOutputHandler.service** name, and it implements
-the above interface.
+The Output handler sets the **application/json** Content-Type for the Response object.
 
 The default handler serializes the data and error arrays to the following basic
 JSON structure:
@@ -244,22 +238,17 @@ JSON structure:
         "error": []
     }
 
-The JSON Handler is available through the **json** property in the Output object.
+The JSON handler has the following properties which can be used to add data and
+error messages to the JSON response.
 
-jsonMode
-''''''''
-
-When the **jsonMode** method is called, the Output objects output mode is set to
-**JSON output**.
-
-addData
-'''''''
+add
+'''
 
 Add an array of data to the handler that will be serialized to the *data* part of
 the JSON in output. Example::
 
     <?php
-    $app["output.service"]->json->addData(["foo" => "bar"]);
+    $app["output.service"]->add(["foo" => "bar"]);
 
 The above code will produce the following output:
 
@@ -281,7 +270,7 @@ by default. The second parameter can override this, by specifying a different HT
 Status code. Example::
 
     <?php
-    $app["output.service"]->json->addError("Not permitted", 403);
+    $app["output.service"]->addError("Not permitted", 403);
 
 The above code will produce the following output:
 
@@ -296,9 +285,3 @@ The above code will produce the following output:
 
 In addition to the output JSON, the response HTTP Status code will be set to 403
 *Forbidden*.
-
-Error output
-````````````
-
-.. NOTE::
-   Not implemented yet. Planed for future releases.
