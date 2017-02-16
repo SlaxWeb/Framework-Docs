@@ -22,10 +22,11 @@ Loader
 The Controller Loader is a Framework registered service, that will instantiate your
 Controller class, and call an existing **init** method if it exists in your Controller
 with all additional input parameters. It passes the :ref:`gen topics application`
-to the constructor of the Controller class. To use the Loader simply access the
-**loadController.service** in the Application object, and pass it the Controllers
-name as the first input parameter. Any further parameters will be passed to the
-**init** method of the Controller if it exists. Example Controller class::
+to the constructor of the Controller class and is later available in the **$app**
+protected property. To use the Loader simply access the **loadController.service**
+in the Application object, and pass it the Controllers name as the first input parameter.
+Any further parameters will be passed to the **init** method of the Controller if
+it exists. Example Controller class::
 
     <?php
     namespace App\Controller;
