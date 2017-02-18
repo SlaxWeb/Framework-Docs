@@ -1,0 +1,566 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Output &mdash; SlaxWeb Framework v0.4.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="SlaxWeb Framework v0.4.0" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SlaxWeb Framework
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/installation.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#preparing-the-environment">Preparing the environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#install-with-composer">Install with composer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#install-from-prepared-packages">Install from prepared packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/firstglance.html">First glance at the framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#root-directory">Root directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#main-application-directory">Main Application directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#bootstrap-directory">Bootstrap directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#documentation-directory">Documentation directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#public-directory">Public directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#composer-files">Composer Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#autoloader">Autoloader</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#templating">Templating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#template-directory">Template directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#view-directory">View directory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">Model-View-Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/architecture.html">Software Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/architecture.html#services-and-properties">Services and Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/architecture.html#providers">Providers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/webserver.html">Setting up a WebServer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#nginx-php-fpm">Nginx + PHP-FPM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#apache-mod-php">Apache + mod_php</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/webserver.html#hiding-index-php-in-the-url">Hiding index.php in the URL</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#built-in-php-server">Built-in PHP server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#slaxweb-app-server">SlaxWeb App Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#getting-started-with-docker">Getting started with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/preparation.html">Prepare the Framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/preparation.html#what-are-components">What are components?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/preparation.html#what-we-will-need">What we will need</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/preparation.html#installing-the-components">Installing the components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/routes.html">Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/routes.html#route-collection-file">Route collection file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/routes.html#load-the-collection-file">Load the collection file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/routes.html#adding-a-route">Adding a route</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/homepage.html">Home Page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/homepage.html#template-file">Template file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/homepage.html#breaking-up-the-template">Breaking up the template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/homepage.html#preparing-the-view-classes">Preparing the view classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/homepage.html#rendering-the-view">Rendering the view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/newslisting.html">News page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#preparing-the-database">Preparing the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#template-file">Template file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/newslisting.html#view-class">View class</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#model-class">Model class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#bringing-it-all-together">Bringing it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/singlenews.html">Single news page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/singlenews.html#creating-the-controller">Creating the controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/singlenews.html#create-the-template">Create the template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/singlenews.html#the-route">The Route</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/addnews.html">Add news article</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/addnews.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/addnews.html#template-and-view">Template and View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/addnews.html#saving-the-article">Saving the article</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/editnews.html">Edit news article</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/editnews.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/editnews.html#preparing-the-view">Preparing the View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/editnews.html#preparing-the-controller">Preparing the controller</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/editnews.html#saving-updated-news-article">Saving updated news article</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">General Topics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="application.html">Application object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="application.html#using-the-application-object">Using the Application object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="application.html#writing-to-application">Writing to Application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="application.html#reading-from-application">Reading from Application</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#services">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#service-providers">Service Providers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="application.html#registering-the-service-provider">Registering the Service Provider</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="routing.html">Routing and URLs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#defining-routes">Defining Routes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#matching-the-uris">Matching the URIs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#default-route">Default Route</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#exact-matching-uri">Exact matching URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#url-contains-uri">URL contains URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#multiple-uris">Multiple URIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#regular-expressions">Regular Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#handling-http-methods">Handling HTTP Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#route-action">Route Action</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#request">Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#response">Response</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="routing.html#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config.html#configuration-file-structure">Configuration file structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#loading-configuration-items">Loading configuration items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#reading-configuration">Reading configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="components.html">Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="components.html#sub-components">Sub-components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html#component-configuration-file">Component configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="components.html#type">Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#providers">Providers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#configuration-files">Configuration files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#id1">Sub-components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#scripts">Scripts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="slaxer.html">Slaxer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="slaxer.html#component-manipulation">Component manipulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#upgrade">Upgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#remove">Remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#reconfigure">Reconfigure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#list">List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="slaxer.html#custom-commands">Custom Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controllers.html#loader">Loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controllers.html#using-the-controller">Using the Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="viewtpl.html">Views &amp; Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="viewtpl.html#the-view">The View</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#loading-the-view">Loading the View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#setting-the-template">Setting the template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#view-data">View data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#rendering-the-template">Rendering the template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="viewtpl.html#templating">Templating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#sub-views">Sub-Views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#layouts">Layouts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="response.html">Handling responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="response.html#response-object-extensions">Response object extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#addcontent">addContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#redirect">redirect</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="response.html#output-component">Output component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#output-handlers">Output handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#view-handler">View handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#json-handler">JSON handler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="model.html#base-model">Base Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model.html#writing-a-model">Writing a Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model.html#loader">Loader</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logger.html">Logger</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logger.html#using-the-logger">Using the logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logger.html#configuring-the-logger">Configuring the logger</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="logger.html#defaultlogger">defaultLogger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logger.html#logfilepath">logFilePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logger.html#loggersettings">loggerSettings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="logger.html#reserved-loggers">Reserved loggers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hooks.html#writing-hook-points">Writing hook points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hooks.html#writing-hook-definitions">Writing Hook Definitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html#register-hook-definitons">Register Hook Definitons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html#multiple-hook-definitions">Multiple Hook Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hooks.html#framework-hooks-points">Framework hooks points</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="libraries.html#registering-libraries">Registering libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Databases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/config.html">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/config.html#connecting-to-a-database">Connecting to a Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#driver">Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#hostname">Hostname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#port">Port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#database">Database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#username-password">Username &amp; Password</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/config.html#base-model-settings">Base Model Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#table-name-guessing">Table name guessing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/basemodel.html">Base Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#using-the-base-model">Using the Base Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#using-the-loader">Using the loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#setting-the-table-name">Setting the table name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#accessing-the-database">Accessing the Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#executing-queries">Executing queries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/execqueries.html">Executing Queries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#run-custom-query">Run custom query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#error-handling">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#query-parameters">Query parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#sequential-parameter-binding">Sequential parameter binding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#named-parameter-binding">Named parameter binding</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#fetching-data">Fetching data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#reading-results">Reading results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#id1">PDO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/querybuilder.html">Query builder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#creating-data">Creating data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#deleting-data">Deleting data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#soft-deletes">Soft deletes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#data-retrieval">Data retrieval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#where-statements">Where statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#where">where</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orwhere">orWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#groupwhere">groupWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orgroupwhere">orGroupWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#nestedwhere">nestedWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#ornestedwhere">orNestedWhere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#joins">Joins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#join">join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joinmodel">joinModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joincond">joinCond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orjoincond">orJoinCond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joincols">joinCols</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#grouping">Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#ordering">Ordering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#limit">Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#sql-functions">SQL functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../components/index.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../components/bootstrap.html">Bootstrap Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#application">Application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/bootstrap.html#hooks">Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#registering-additional-providers">Registering Additional Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#class-reference">Class reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../components/config.html">Config Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/config.html#handler">Handler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#prepending-configuration-item-names">Prepending configuration item names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#specific-handlers">Specific Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#custom-handlers">Custom Handlers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../components/router.html">Router Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#route">Route</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#uri">URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#method">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#action">Action</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#container">Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#dispatcher">Dispatcher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#hooks">Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#request">Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#response">Response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#route-collections">Route Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#adding-a-route">Adding a route</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#services">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#class-reference">Class reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="/Framework-Docs/classmap/annotated.html#http://">Class Map</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SlaxWeb Framework</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+    <li>Output</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/general/output.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="output">
+<span id="gen-topics-output"></span><h1>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">These are only internal notes for future functionality. You should not have landed
+on this page.</p>
+</div>
+<p>Output class for error displaying, load it up with views, and have it render the
+templates automatically when everything else is done. In use automatically when
+installed, stops all other output through output buffering.</p>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, SlaxWeb Dev Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.4.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

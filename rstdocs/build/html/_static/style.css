@@ -1,0 +1,72 @@
+.wy-nav-content {
+    max-width: 100%;
+}
+
+.wy-breadcrumbs li.wy-breadcrumbs-aside {
+    display: none;
+}
+
+.wy-side-nav-search, .wy-nav-top {
+    background-color: #27ae60;
+}
+
+.rst-content .note {
+    background-color: #e7fae9;
+}
+
+.rst-content .note .admonition-title {
+    background-color: #6cde6a;
+}
+
+.rst-content .tip {
+    background-color: #dbfadf;
+}
+
+.rst-content .tip .admonition-title {
+    background-color: #1cbc1a;
+}
+
+.wy-side-nav-search input[type=text] {
+    border-color: #156135;
+}
+
+.wy-nav-side {
+    background-color: #141111;
+}
+
+a {
+    color: #27ae60;
+}
+
+a:visited {
+    color: #109014;
+}
+
+a.icon.icon-home, .wy-nav-top a {
+    color: #fcfcfc;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.n {
+    color: #999;
+}
+
+div[class^='highlight'] pre {
+    color: #686868;
+}
+
+.wy-table-odd td, .wy-table-striped tr:nth-child(2n-1) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
+    background-color: #f3f6f4
+}
+
+.wy-table-bordered-all td, .rst-content table.docutils td {
+    border-bottom: 1px solid #e1e5e3;
+    border-left: 1px solid #e1e5e3;
+}
+
+.codeblock div[class^='highlight'], pre.literal-block div[class^='highlight'], .rst-content .literal-block div[class^='highlight'], div[class^='highlight'] div[class^='highlight'] {
+    background-color: #141111;
+}

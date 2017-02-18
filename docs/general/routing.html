@@ -1,0 +1,839 @@
+
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Routing and URLs &mdash; SlaxWeb Framework v0.4.0</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="SlaxWeb Framework v0.4.0" href="../index.html"/>
+        <link rel="up" title="General Topics" href="index.html"/>
+        <link rel="next" title="Configuration" href="config.html"/>
+        <link rel="prev" title="Application object" href="application.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> SlaxWeb Framework
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../overview/index.html">Overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview/requirements.html">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/installation.html">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#preparing-the-environment">Preparing the environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#install-with-composer">Install with composer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/installation.html#install-from-prepared-packages">Install from prepared packages</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/firstglance.html">First glance at the framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#root-directory">Root directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#main-application-directory">Main Application directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#bootstrap-directory">Bootstrap directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#documentation-directory">Documentation directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#public-directory">Public directory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#composer-files">Composer Files</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#autoloader">Autoloader</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#urls">URLs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/firstglance.html#templating">Templating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#template-directory">Template directory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../overview/firstglance.html#view-directory">View directory</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/mvc.html">Model-View-Controller</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#models">Models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#views">Views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/mvc.html#controllers">Controllers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/architecture.html">Software Architecture</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../overview/architecture.html#services-and-properties">Services and Properties</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../overview/architecture.html#providers">Providers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gettingstarted/index.html">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/webserver.html">Setting up a WebServer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#nginx-php-fpm">Nginx + PHP-FPM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#apache-mod-php">Apache + mod_php</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/webserver.html#hiding-index-php-in-the-url">Hiding index.php in the URL</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#built-in-php-server">Built-in PHP server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#slaxweb-app-server">SlaxWeb App Server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/webserver.html#getting-started-with-docker">Getting started with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/preparation.html">Prepare the Framework</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/preparation.html#what-are-components">What are components?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/preparation.html#what-we-will-need">What we will need</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/preparation.html#installing-the-components">Installing the components</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/routes.html">Routes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/routes.html#route-collection-file">Route collection file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/routes.html#load-the-collection-file">Load the collection file</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/routes.html#adding-a-route">Adding a route</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/homepage.html">Home Page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/homepage.html#template-file">Template file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/homepage.html#breaking-up-the-template">Breaking up the template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/homepage.html#preparing-the-view-classes">Preparing the view classes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/homepage.html#rendering-the-view">Rendering the view</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/newslisting.html">News page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#preparing-the-database">Preparing the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#template-file">Template file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/newslisting.html#view-class">View class</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#model-class">Model class</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/newslisting.html#bringing-it-all-together">Bringing it all together</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/singlenews.html">Single news page</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/singlenews.html#creating-the-controller">Creating the controller</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/singlenews.html#create-the-template">Create the template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/singlenews.html#the-route">The Route</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/addnews.html">Add news article</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/addnews.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/addnews.html#template-and-view">Template and View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/addnews.html#saving-the-article">Saving the article</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gettingstarted/editnews.html">Edit news article</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/editnews.html#setting-up-the-route">Setting up the route</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/editnews.html#preparing-the-view">Preparing the View</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gettingstarted/editnews.html#preparing-the-controller">Preparing the controller</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../gettingstarted/editnews.html#saving-updated-news-article">Saving updated news article</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="application.html">Application object</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="application.html#using-the-application-object">Using the Application object</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="application.html#writing-to-application">Writing to Application</a></li>
+<li class="toctree-l4"><a class="reference internal" href="application.html#reading-from-application">Reading from Application</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#services">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="application.html#service-providers">Service Providers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="application.html#registering-the-service-provider">Registering the Service Provider</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Routing and URLs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#defining-routes">Defining Routes</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#example">Example</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#matching-the-uris">Matching the URIs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#default-route">Default Route</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#exact-matching-uri">Exact matching URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#url-contains-uri">URL contains URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#multiple-uris">Multiple URIs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#regular-expressions">Regular Expressions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#handling-http-methods">Handling HTTP Methods</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#route-action">Route Action</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#request">Request</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#response">Response</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#segment-based-uri-matching">Segment-based URI matching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="config.html#configuration-file-structure">Configuration file structure</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#loading-configuration-items">Loading configuration items</a></li>
+<li class="toctree-l3"><a class="reference internal" href="config.html#reading-configuration">Reading configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="components.html">Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="components.html#sub-components">Sub-components</a></li>
+<li class="toctree-l3"><a class="reference internal" href="components.html#component-configuration-file">Component configuration file</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="components.html#type">Type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#providers">Providers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#configuration-files">Configuration files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#id1">Sub-components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="components.html#scripts">Scripts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="slaxer.html">Slaxer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="slaxer.html#component-manipulation">Component manipulation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#upgrade">Upgrade</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#remove">Remove</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#reconfigure">Reconfigure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="slaxer.html#list">List</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="slaxer.html#custom-commands">Custom Commands</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="controllers.html">Controllers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="controllers.html#loader">Loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="controllers.html#using-the-controller">Using the Controller</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="viewtpl.html">Views &amp; Templates</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="viewtpl.html#the-view">The View</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#loading-the-view">Loading the View</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#setting-the-template">Setting the template</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#view-data">View data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#rendering-the-template">Rendering the template</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="viewtpl.html#templating">Templating</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#sub-views">Sub-Views</a></li>
+<li class="toctree-l4"><a class="reference internal" href="viewtpl.html#layouts">Layouts</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="response.html">Handling responses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="response.html#response-object-extensions">Response object extensions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#addcontent">addContent</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#redirect">redirect</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="response.html#output-component">Output component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="response.html#configuration">Configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#output-handlers">Output handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#view-handler">View handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="response.html#json-handler">JSON handler</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="model.html#base-model">Base Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model.html#writing-a-model">Writing a Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="model.html#loader">Loader</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="logger.html">Logger</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="logger.html#using-the-logger">Using the logger</a></li>
+<li class="toctree-l3"><a class="reference internal" href="logger.html#configuring-the-logger">Configuring the logger</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="logger.html#defaultlogger">defaultLogger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logger.html#logfilepath">logFilePath</a></li>
+<li class="toctree-l4"><a class="reference internal" href="logger.html#loggersettings">loggerSettings</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="logger.html#reserved-loggers">Reserved loggers</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="hooks.html">Hooks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="hooks.html#writing-hook-points">Writing hook points</a></li>
+<li class="toctree-l3"><a class="reference internal" href="hooks.html#writing-hook-definitions">Writing Hook Definitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html#register-hook-definitons">Register Hook Definitons</a></li>
+<li class="toctree-l4"><a class="reference internal" href="hooks.html#multiple-hook-definitions">Multiple Hook Definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="hooks.html#framework-hooks-points">Framework hooks points</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="libraries.html#registering-libraries">Registering libraries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../database/index.html">Databases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../database/install.html">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../database/config.html">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/config.html#connecting-to-a-database">Connecting to a Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#driver">Driver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#hostname">Hostname</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#port">Port</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#database">Database</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#username-password">Username &amp; Password</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/config.html#base-model-settings">Base Model Settings</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/config.html#table-name-guessing">Table name guessing</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/basemodel.html">Base Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#using-the-base-model">Using the Base Model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#using-the-loader">Using the loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#setting-the-table-name">Setting the table name</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#accessing-the-database">Accessing the Database</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#executing-queries">Executing queries</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/execqueries.html">Executing Queries</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#run-custom-query">Run custom query</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#error-handling">Error handling</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#query-parameters">Query parameters</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#sequential-parameter-binding">Sequential parameter binding</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#named-parameter-binding">Named parameter binding</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#fetching-data">Fetching data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/execqueries.html#reading-results">Reading results</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#id1">PDO</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/querybuilder.html">Query builder</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#creating-data">Creating data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#updating-existing-data">Updating existing data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#deleting-data">Deleting data</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#soft-deletes">Soft deletes</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#data-retrieval">Data retrieval</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#where-statements">Where statements</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#where">where</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orwhere">orWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#groupwhere">groupWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orgroupwhere">orGroupWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#nestedwhere">nestedWhere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#ornestedwhere">orNestedWhere</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#joins">Joins</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#join">join</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joinmodel">joinModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joincond">joinCond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#orjoincond">orJoinCond</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#joincols">joinCols</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#grouping">Grouping</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#ordering">Ordering</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#limit">Limit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#sql-functions">SQL functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../components/index.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../components/bootstrap.html">Bootstrap Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#application">Application</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/bootstrap.html#hooks">Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#registering-additional-providers">Registering Additional Providers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/bootstrap.html#class-reference">Class reference</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../components/config.html">Config Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/config.html#handler">Handler</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#prepending-configuration-item-names">Prepending configuration item names</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#specific-handlers">Specific Handlers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/config.html#custom-handlers">Custom Handlers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../components/router.html">Router Component</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#route">Route</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#uri">URI</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#method">Method</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#action">Action</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#container">Container</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#dispatcher">Dispatcher</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#hooks">Hooks</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#request">Request</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#response">Response</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#route-collections">Route Collections</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../components/router.html#adding-a-route">Adding a route</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#services">Services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../components/router.html#class-reference">Class reference</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="/Framework-Docs/classmap/annotated.html#http://">Class Map</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">SlaxWeb Framework</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="index.html">General Topics</a> &raquo;</li>
+      
+    <li>Routing and URLs</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/general/routing.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="routing-and-urls">
+<span id="gen-topics-routing"></span><h1>Routing and URLs<a class="headerlink" href="#routing-and-urls" title="Permalink to this headline">¶</a></h1>
+<p>With the SlaxWeb Framework you design the URLs as you want and need them. The Framework
+does not limit you in any way. All you need to make sure, is that the requested
+URI matches a defined route URI.</p>
+<p>A valid Route therefore requires 3 essential elements:</p>
+<ul class="simple">
+<li>URI</li>
+<li>HTTP Method</li>
+<li>Action</li>
+</ul>
+<p>The <em>URI</em> may be a full <em>URI</em> name, or a RegExp pattern. The <a class="reference internal" href="../components/router.html#router-component"><span class="std std-ref">Router Component</span></a>
+tries to match the Request <em>URI</em> with the Routes <em>URI</em> when looking for the correct
+piece of code that needs to be executed for that Request.</p>
+<p>The <em>HTTP Method</em> defines a Route only for that given <em>HTTP Method(s)</em>. If the <em>HTTP
+Method</em> of the Request and the Route do not match, then the Route is not considered
+a match for the Request.</p>
+<p>The <em>Action</em> must be of type <strong>Callable</strong>. You use the <em>Action</em> to define the behaviour
+of your application for the given Request.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last"><strong>Segment-based</strong> URI matching can be enabled as described bellow.</p>
+</div>
+<div class="section" id="defining-routes">
+<h2>Defining Routes<a class="headerlink" href="#defining-routes" title="Permalink to this headline">¶</a></h2>
+<p>The Routes in SlaxWeb Framework are defined in the <strong>Routes Collection</strong> class file.
+The Framework comes pre-installed with <strong>DefaultCollection</strong> collection class that
+can be found in <em>app/Routes/DefaultCollection.php</em> file. You can define further
+<em>Routes</em> directly in that class, or create a new collection class that extends from
+the <strong>\SlaxWeb\Router\Service\RouteCollection</strong> class.</p>
+<div class="admonition tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">Read the Configuration segment of the General Topics to learn how to register
+new providers with the framework.</p>
+</div>
+<p>The Route Collection class must define a <strong>define</strong> method. The <strong>define</strong> method
+is called when the Route Collection Service Provider class is registered with the
+Application Service Repository. The <strong>define</strong> method definition should add the
+route definitions that you wish to include in your application to the <strong>routes</strong>
+array.</p>
+<div class="section" id="example">
+<span id="route-example"></span><h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>This is an example route definition in the <strong>DefaultCollection</strong> class, the defined
+Route will match a request made to <strong>example.com/my/first/route</strong>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">namespace</span> <span class="nx">App\Routes</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">SlaxWeb\Router\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">SlaxWeb\Router\Request</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">SlaxWeb\Router\Response</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">SlaxWeb\Bootstrap\Application</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultCollection</span> <span class="k">extends</span> <span class="nx">\SlaxWeb\Router\Service\RouteCollection</span>
+<span class="p">{</span>
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">define</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;my/first/route&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;method&quot;</span>    <span class="o">=&gt;</span>  <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_ANY</span><span class="p">,</span>
+            <span class="s2">&quot;action&quot;</span>    <span class="o">=&gt;</span>  <span class="k">function</span> <span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">Response</span> <span class="nv">$response</span><span class="p">,</span> <span class="nx">Application</span> <span class="nv">$app</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// ... route definition ...</span>
+            <span class="p">}</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="matching-the-uris">
+<h2>Matching the URIs<a class="headerlink" href="#matching-the-uris" title="Permalink to this headline">¶</a></h2>
+<p>In the examples we will be using the <strong>example.com</strong> example domain, the domain
+does not matter for Routing, as a Route can not be defined for a specific domain,
+but a single Route is valid for all domains. To see how to define a Route in the
+Route Collection see the <a class="reference internal" href="#route-example"><span class="std std-ref">Example</span></a> above.</p>
+<div class="section" id="default-route">
+<h3>Default Route<a class="headerlink" href="#default-route" title="Permalink to this headline">¶</a></h3>
+<p>The default route handles a Request that has no URI attached to the URI, meaning
+the Request contains only the domain, <strong>example.com</strong>. To define such a Route, the
+<em>uri</em> part of the Route has to be an empty string:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exact-matching-uri">
+<h3>Exact matching URI<a class="headerlink" href="#exact-matching-uri" title="Permalink to this headline">¶</a></h3>
+<p>The Router component will automatically add start of string and end of string RegExp
+tokens, which means that if you just define a full URI, the Router will match only
+that specific URI. The following example:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;news/list&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>Will match only <strong>example.com/news/list</strong>. It will not match anything else,
+even if the leading URI is the same.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Router will automatically add an optional trailing slash to the Routes URI,
+so the above example will match <strong>example.com/news/list</strong> as well as <strong>example.com/news/list/</strong>.
+If you do not wish to have such behaviour, disable it in the Configuration!</p>
+</div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">Automatic optional trailing slash as explained in the <em>NOTE</em> above is not yet
+implemented!</p>
+</div>
+</div>
+<div class="section" id="url-contains-uri">
+<h3>URL contains URI<a class="headerlink" href="#url-contains-uri" title="Permalink to this headline">¶</a></h3>
+<p>To match all URLs containing the routes URI we need to prepend and append the URI
+with the URI definition with the RegExp <em>non-gredy match zero or more of anything</em>
+token to the URI definition:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;.*?news/list.*?&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>The above URI will match any of the following URLs:</p>
+<ul class="simple">
+<li>example.com/news/list</li>
+<li>example.com/ <strong>anything/</strong> news/list <strong>/anything</strong></li>
+<li>example.com/news/list <strong>/anything</strong></li>
+<li>example.com/ <strong>anything/</strong> news/list</li>
+</ul>
+<p>To match URLs which only start or end with the defined URI, simply remove the RegExp
+token from the end or the beginning of the URI definition.</p>
+</div>
+<div class="section" id="multiple-uris">
+<h3>Multiple URIs<a class="headerlink" href="#multiple-uris" title="Permalink to this headline">¶</a></h3>
+<p>If you want a single Route definition to handle multiple URLs, all you have to do
+is define multiple URIs in the Route separated by a pipe:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;news/list|news&quot;</span><span class="p">,</span>
+</pre></div>
+</div>
+<p>This way, your Route will now handle Requests with the <strong>example.com/news</strong> and
+<strong>example.com/news/list</strong> URLs. The Router still automatically injects the start
+of string and end of string RegExp tokens to all defined URIs.</p>
+</div>
+<div class="section" id="regular-expressions">
+<h3>Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permalink to this headline">¶</a></h3>
+<p>If you are versed in Regular Expressions, you can use it freely in route definitions,
+but is not covered in the documentation.</p>
+</div>
+</div>
+<div class="section" id="handling-http-methods">
+<h2>Handling HTTP Methods<a class="headerlink" href="#handling-http-methods" title="Permalink to this headline">¶</a></h2>
+<p>Routes can be limited to one or more HTTP Methods with the <em>method</em> key in the Route
+definition in the <strong>RouteCollection</strong> class. In the above example the <strong>METHOD_ANY</strong>
+constant is used, which does not limit the Route to any particular HTTP Method,
+but simply allows all. The following HTTP Method constants are defined:</p>
+<ul class="simple">
+<li>METHOD_GET</li>
+<li>METHOD_POST</li>
+<li>METHOD_PUT</li>
+<li>METHOD_DELETE</li>
+<li>METHOD_ANY</li>
+</ul>
+<p>If the method should handle <em>GET</em> and <em>POST</em> requests, you need to define them both
+with the logical OR operator. Example:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="s2">&quot;method&quot;</span>    <span class="o">=&gt;</span>  <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_GET</span> <span class="o">|</span> <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_POST</span>
+</pre></div>
+</div>
+<p>The above example will match the defined URI for requests that either come with
+through the HTTP GET or the HTTP POST methods.</p>
+</div>
+<div class="section" id="route-action">
+<h2>Route Action<a class="headerlink" href="#route-action" title="Permalink to this headline">¶</a></h2>
+<p>Route Action is the definition that gets executed when a Request is matched to the
+Route.The Action must be of type callable and gets the following parameters as input:</p>
+<ul class="simple">
+<li><em>\SlaxWeb\Router\Request</em> - Request object</li>
+<li><em>\SlaxWeb\Router\Response</em> - Response object</li>
+<li><em>\SlaxWeb\Bootstrap\Application</em> - <a class="reference internal" href="application.html#gen-topics-application"><span class="std std-ref">Application object</span></a></li>
+</ul>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p class="last">The Request and Response objects are not deprecated, only the input parameters
+are deprecated. In the future only the Application object will be injected, as
+both Request and Response objects can be obtained through the Application object.</p>
+</div>
+<div class="section" id="request">
+<h3>Request<a class="headerlink" href="#request" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Request</strong> element of the Router Component reuses the <strong>Request</strong> element of
+the <a class="reference external" href="http://symfony.com/doc/current/components/http_foundation.html">Symfony 3 HTTP Foundation Component</a>.
+By clicking on the link you will be taken to the Symfony 3 documentation that you
+can use for reference on using the <strong>Request</strong> element of the Router Component.
+The SlaxWeb Framework extends the <strong>Request</strong> element of the Symfony Component to
+allow for easier additions to the request query parameters.</p>
+</div>
+<div class="section" id="response">
+<h3>Response<a class="headerlink" href="#response" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Response</strong> element of the Router Component reuses the <strong>Response</strong> element
+of the <a class="reference external" href="http://symfony.com/doc/current/components/http_foundation.html">Symfony 3 HTTP Foundation Component</a>.
+By clicking on the link you will be taken to the Symfony 3 documentation that you
+can use for reference on using the <strong>Response</strong> element of the Router Component.</p>
+<p>The SlaxWeb Framework extends the <strong>Response</strong> element of the Symfony Component
+to provide you with simpler ways of redirecting the visitor within the SlaxWeb Framework
+application, and simplify adding of your own content to the <em>Response</em>. To do so
+two additional methods are provided, <strong>redirect</strong> and <strong>addContent</strong>. Please refer
+to the <a class="reference internal" href="../components/router.html#router-class-reference"><span class="std std-ref">Class reference</span></a> documentation.</p>
+</div>
+</div>
+<div class="section" id="segment-based-uri-matching">
+<span id="gen-topic-routing-segmentbased"></span><h2>Segment-based URI matching<a class="headerlink" href="#segment-based-uri-matching" title="Permalink to this headline">¶</a></h2>
+<p>Segment-based URI matching matches the first part of the URI to a <em>controller</em>,
+the second part to a controller <em>method</em>, and all further segments are converted
+to <em>parameters</em> that are sent to the controller method as input.</p>
+<p>When the controller class is initialised, the <strong>Application object</strong> is injected
+into it at construction. The controller has to be auto-loadable by the framework.
+Read more about controllers in the <a class="reference internal" href="controllers.html#gen-topics-controller"><span class="std std-ref">Controllers</span></a> section of the documentation.</p>
+<p>Segment-based URI matching is disabled by default, and has to be enabled in the
+<strong>app.php</strong> configuration file. To enable it, set <strong>segmentBasedMatch</strong> to <strong>true</strong>.</p>
+<p>The <strong>controllerNamespace</strong> configuration option must be set to the correct value
+in the <strong>app.php</strong> configuration file, as the Router will attempt to find Controller
+classes in that namespace. The default controller method may also be changed with
+the <strong>segmentBasedDefaultMethod</strong> configuration option in the same configuration
+file.</p>
+<p>The final option for Segment-based URI matching is the <strong>segmentBasedUriPrepend</strong>
+configration option, which is empty by default. If this is set to any value, the
+URI must start with this prepend in order to count as a valid URI for Segment-based
+URI matching.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The Controller segment is automatically converted into <em>ucfrist</em>, while the method
+will automatically be converted to <em>lcfirst</em> in segment-based URI matching.</p>
+</div>
+<div class="section" id="parameters">
+<h3>Parameters<a class="headerlink" href="#parameters" title="Permalink to this headline">¶</a></h3>
+<p>The Router takes the first segment after the URI prepend, and uses it as the controller
+class name. The second segment after the URI prepend is used as the controller method.
+If the second segment is not set, the <strong>segmentBasedDefaultMethod</strong> is used as the
+method name by the router. All further segments will be injected into the controller
+method as input parameters.</p>
+</div>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<p>The example uses the following settings:</p>
+<ul class="simple">
+<li>Enabled: <strong>true</strong></li>
+<li>Controller Namespace: <strong>AppController</strong></li>
+<li>Default Method: <strong>index</strong></li>
+<li>URI Prepend: <strong>segment/based/matching/</strong></li>
+</ul>
+<p><strong>/segment/based/matching/News/get/5</strong>:</p>
+<p>The above URI can be broken down:</p>
+<ul class="simple">
+<li><strong>/segment/based/matching/</strong> - prepend, ignored</li>
+<li><strong>News</strong> - Controller name</li>
+<li><strong>get</strong> - Method name</li>
+<li><strong>5</strong> - First and only parameter</li>
+</ul>
+<p>The Router will now attempt to instantiate the <strong>AppControllerNews</strong> controller
+and call its <strong>get</strong> method with <strong>5</strong> as a parameter value.</p>
+<p><strong>/segment/based/matching/News</strong></p>
+<p>The above URI can be broken down:</p>
+<ul class="simple">
+<li><strong>/segment/based/matching/</strong> - prepend, ignored</li>
+<li><strong>News</strong> - Controller name</li>
+</ul>
+<p>The Router will again attempt to instantiate the <strong>AppControllerNews</strong> controller
+and call the <strong>index</strong> method, as none was supplied by the URI, and it is set up
+as the default method.</p>
+<p><strong>/News/save/6</strong></p>
+<p>The Above URI will not match, because it does not begin with the required prepend.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">If a Route is defined that matches the incoming request, that route will be used
+instead. Segment-based URI matching is used only if the incoming request does
+not match a defined Route!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="config.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="application.html" class="btn btn-neutral" title="Application object" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, SlaxWeb Dev Team.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.4.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
