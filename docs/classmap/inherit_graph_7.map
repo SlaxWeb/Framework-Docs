@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$d1/d84/classSlaxWeb_1_1Config_1_1Handler.html" title="SlaxWeb\\Config\\Handler" alt="" coords="5,56,172,83"/>
-<area shape="rect" id="node2" href="$dc/d24/classSlaxWeb_1_1Config_1_1PhpHandler.html" title="SlaxWeb\\Config\\PhpHandler" alt="" coords="223,5,413,32"/>
-<area shape="rect" id="node3" href="$dc/d7f/classSlaxWeb_1_1Config_1_1XmlHandler.html" title="SlaxWeb\\Config\\XmlHandler" alt="" coords="223,56,413,83"/>
-<area shape="rect" id="node4" href="$d5/d62/classSlaxWeb_1_1Config_1_1YamlHandler.html" title="SlaxWeb\\Config\\YamlHandler" alt="" coords="220,107,416,133"/>
-</map>
