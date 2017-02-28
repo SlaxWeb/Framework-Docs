@@ -217,6 +217,26 @@ application, and simplify adding of your own content to the *Response*. To do so
 two additional methods are provided, **redirect** and **addContent**. Please refer
 to the :ref:`router class reference` documentation.
 
+Route specific hooks
+--------------------
+
+The router component, or more specifically, the Router Dispatcher executes a generic
+before and after dispatch hooks before a request route is dispatched, and immediately
+after. More information about those hook calls can be found in the :ref:`components
+router hooks` section of the Router Component documentation.
+
+The Router however supports executing Route specific before and after dispatch hooks
+instead of the generic ones. To do so, the *Route* object provides a method **setHook**
+method to set them. It accepts a string name as the first parameter, and an optional
+*bool* value as the second paramater, when set to **true** the hook will be used
+as an *after* hook. Example::
+
+    <?php
+    // code ...
+    $route->setHook("myRouteBeforeDispatchHook");
+    $route->setHook("myRouteAfterDispatchHook", true);
+    // code ...
+
 .. _gen topic routing segmentbased:
 
 Segment-based URI matching
