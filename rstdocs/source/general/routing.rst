@@ -237,6 +237,53 @@ as an *after* hook. Example::
     $route->setHook("myRouteAfterDispatchHook", true);
     // code ...
 
+The above example shows how to add a hook directly to the Route object. The Route
+Collections also provide such functionality, where you can define a before and/or
+after dispatch hook per Route definition, or you can set a before and/or after dispatch
+hook name to the Collections property, and that hook will automatically be set for
+all Routes defined in that collection, unless they define one on their own::
+
+    <?php
+    namespace App\Routes;
+
+    use SlaxWeb\Router\Route;
+    use SlaxWeb\Router\Request;
+    use SlaxWeb\Router\Response;
+    use SlaxWeb\Bootstrap\Application;
+
+    class DefaultCollection extends \SlaxWeb\Router\Service\RouteCollection
+    {
+        protected $beforeDispatch = "myCollection.beforeDispatch";
+        protected $afterDispatch = "myCollection.afterDispatch";
+
+        public function define()
+        {
+            $this->routes[] = [
+                "uri"       =>  "my/collection/hook",
+                "method"    =>  Route::METHOD_ANY,
+                "action"    =>  function (Request $request, Response $response, Application $app) {
+                    // ... route definition ...
+                }
+            ];
+
+            $this->routes[] = [
+                "uri"               =>  "my/special/hook",
+                "method"            =>  Route::METHOD_ANY,
+                "beforeDispatch"    =>  "myRoute.beforeDispatch",
+                "action"            =>  function (Request $request, Response $response, Application $app) {
+                    // ... route definition ...
+                }
+            ];
+        }
+    }
+
+In the above example, the **my/collection/hook** route will execute the *myCollection.beforeDispatch*
+and the *myCollection.afterDispatch* if the request matches that route. However
+if the request matches the second route, **my/special/hook** then the *myRoute.beforeDispatch*
+will be executed that is defined by the Route definition, but the *myCollection.afterDispatch*
+will be executed anyway, since no after dispatch hook is defined specifically for
+that Route.
+
 .. _gen topic routing segmentbased:
 
 Segment-based URI matching
