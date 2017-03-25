@@ -101,6 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a226ad9190c2cd973810b87a6b3e9767d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a7af13db76bd8c03d0a40131a2c5aaa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d84/classSlaxWeb_1_1Router_1_1Route.html#a0a7af13db76bd8c03d0a40131a2c5aaa">set404Route</a> (callable $action)</td></tr>
 <tr class="separator:a0a7af13db76bd8c03d0a40131a2c5aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a938649fccc52d0db4846a9a858b0db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d84/classSlaxWeb_1_1Router_1_1Route.html#a9a938649fccc52d0db4846a9a858b0db">setHook</a> (string $hook, bool $after=false)</td></tr>
+<tr class="separator:a9a938649fccc52d0db4846a9a858b0db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -134,6 +136,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a828e5722af5e81acce9cf66035f9b9a4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a828e5722af5e81acce9cf66035f9b9a4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$is404</b> = false</td></tr>
 <tr class="separator:a828e5722af5e81acce9cf66035f9b9a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90a415bf30870ddb54dc524d5a403aaa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a90a415bf30870ddb54dc524d5a403aaa"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeDispatch</b> = &quot;&quot;</td></tr>
+<tr class="separator:a90a415bf30870ddb54dc524d5a403aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22b190a4d88284f7f41294e064720d1f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a22b190a4d88284f7f41294e064720d1f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$afterDispatch</b> = &quot;&quot;</td></tr>
+<tr class="separator:a22b190a4d88284f7f41294e064720d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa29fb7bc669d9a411285112d8648032b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa29fb7bc669d9a411285112d8648032b"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$_getSetPrepend</b> = &quot;&quot;</td></tr>
 <tr class="separator:aa29fb7bc669d9a411285112d8648032b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -207,6 +215,42 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">callable</td><td class="paramname">$action</td><td><a class="el" href="../../de/d84/classSlaxWeb_1_1Router_1_1Route.html">Route</a> action </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a9a938649fccc52d0db4846a9a858b0db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\Router\Route::setHook </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$hook</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$after</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set hook</p>
+<p>Sets a hook name for the before or after dispatch hook name to be executed before or after the <a class="el" href="../../de/d84/classSlaxWeb_1_1Router_1_1Route.html">Route</a> has been dispatched. Takes the name of the hook as the first argument, and a bool value as the second. If ommited or set to false, the hook name will be used before dispatch event, and after dispatch event if set to true.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$hook</td><td>Name of the hook to be executed </td></tr>
+    <tr><td class="paramtype">bool</td><td class="paramname">$after</td><td>Defines if the hook is to be executed before or after dispatch, default bool(false) </td></tr>
   </table>
   </dd>
 </dl>
@@ -299,7 +343,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 18 2017 17:48:00 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

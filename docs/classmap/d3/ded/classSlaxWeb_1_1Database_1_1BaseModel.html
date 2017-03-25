@@ -95,11 +95,18 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="title">SlaxWeb\Database\BaseModel Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+<div class="dynheader">
+Inheritance diagram for SlaxWeb\Database\BaseModel:</div>
+<div class="dyncontent">
+<div class="center"><img src="../../d9/d85/classSlaxWeb_1_1Database_1_1BaseModel__inherit__graph.png" border="0" usemap="#SlaxWeb_0CDatabase_0CBaseModel_inherit__map" alt="Inheritance graph"/></div>
+<map name="SlaxWeb_0CDatabase_0CBaseModel_inherit__map" id="SlaxWeb_0CDatabase_0CBaseModel_inherit__map">
+<area shape="rect" id="node2" href="../../df/d4e/classSlaxWeb_1_1Cache_1_1Database_1_1Model.html" title="SlaxWeb\\Cache\\Database\l\\Model" alt="" coords="19,80,196,121"/></map>
+<center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aed32cd892253b19f428c5a3660c22254"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aed32cd892253b19f428c5a3660c22254">__construct</a> (Logger $logger, Config $config, Inflector $inflector, Database $db)</td></tr>
-<tr class="separator:aed32cd892253b19f428c5a3660c22254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26f2526aa3bd77af9c89098e308613fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a26f2526aa3bd77af9c89098e308613fa">__construct</a> (Logger $logger, Config $config, Inflector $inflector, <a class="el" href="../../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html">Builder</a> $queryBuilder, Database $db)</td></tr>
+<tr class="separator:a26f2526aa3bd77af9c89098e308613fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c17d52aeea80f8b96be3c7670d1ba0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a71c17d52aeea80f8b96be3c7670d1ba0">getPrimKey</a> ()</td></tr>
 <tr class="separator:a71c17d52aeea80f8b96be3c7670d1ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abafaad674636668f1966ee57ef226f4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#abafaad674636668f1966ee57ef226f4e">create</a> (array $data)</td></tr>
@@ -193,6 +200,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a721273a621688af3a874227b6088cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad008afdc5e34b09ebffa65e55d4af5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aad008afdc5e34b09ebffa65e55d4af5a">setSoftDelete</a> ()</td></tr>
 <tr class="separator:aad008afdc5e34b09ebffa65e55d4af5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae3d4ffda26babfce15e25df0423839ff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#ae3d4ffda26babfce15e25df0423839ff">setTimestampConfig</a> ()</td></tr>
+<tr class="separator:ae3d4ffda26babfce15e25df0423839ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
@@ -208,6 +217,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:aaba450bd9cc106de1570a7dd02285c96"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaba450bd9cc106de1570a7dd02285c96"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$inflector</b> = null</td></tr>
 <tr class="separator:aaba450bd9cc106de1570a7dd02285c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa59a67fd67c51500b43264e4c4cad3cf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aa59a67fd67c51500b43264e4c4cad3cf"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$qBuilder</b> = null</td></tr>
+<tr class="separator:aa59a67fd67c51500b43264e4c4cad3cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a669beace0d215eb23d61ad1a1f17f075"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a669beace0d215eb23d61ad1a1f17f075"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$db</b> = null</td></tr>
 <tr class="separator:a669beace0d215eb23d61ad1a1f17f075"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,6 +235,18 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a808c0f64f3e41680f1815519d900ac8a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a808c0f64f3e41680f1815519d900ac8a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$delValType</b> = 0</td></tr>
 <tr class="separator:a808c0f64f3e41680f1815519d900ac8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5819a937e55d02c137684f06fcc00e3d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5819a937e55d02c137684f06fcc00e3d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$timestamps</b> = null</td></tr>
+<tr class="separator:a5819a937e55d02c137684f06fcc00e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8619aaf61a2994db442734bf41697815"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8619aaf61a2994db442734bf41697815"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$createdColumn</b> = &quot;&quot;</td></tr>
+<tr class="separator:a8619aaf61a2994db442734bf41697815"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0fd723fbb9ec267fb8544af5653c7b9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae0fd723fbb9ec267fb8544af5653c7b9"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$updatedColumn</b> = &quot;&quot;</td></tr>
+<tr class="separator:ae0fd723fbb9ec267fb8544af5653c7b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8dcf21ea1e883a526339079ad19f18e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dcf21ea1e883a526339079ad19f18e4"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$timestampFunction</b> = &quot;&quot;</td></tr>
+<tr class="separator:a8dcf21ea1e883a526339079ad19f18e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0f160c8e9e593cb8d9d77d159912e991"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f160c8e9e593cb8d9d77d159912e991"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$beforeInit</b> = []</td></tr>
 <tr class="separator:a0f160c8e9e593cb8d9d77d159912e991"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,7 +279,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a252c173607167a1e8652db85b958f4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="aed32cd892253b19f428c5a3660c22254"></a>
+<a class="anchor" id="a26f2526aa3bd77af9c89098e308613fa"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -280,6 +304,12 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html">Builder</a>&#160;</td>
+          <td class="paramname"><em>$queryBuilder</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">Database&#160;</td>
           <td class="paramname"><em>$db</em>&#160;</td>
         </tr>
@@ -297,6 +327,7 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramtype">\Psr\Log\LoggerInterface</td><td class="paramname">$logger</td><td>PSR-7 compliant logger object </td></tr>
     <tr><td class="paramtype">\SlaxWeb\Config\Container</td><td class="paramname">$config</td><td>Configuration container object </td></tr>
     <tr><td class="paramtype">\ICanBoogie\Inflector</td><td class="paramname">$inflector</td><td>Inflector object for pluralization and word transformations </td></tr>
+    <tr><td class="paramtype">\SlaxWeb\Database\Query\Builder</td><td class="paramname">$queryBuilder</td><td>Query Builder instance </td></tr>
     <tr><td class="paramtype">\SlaxWeb\Database\Interface\Library</td><td class="paramname">$db</td><td>Database library object </td></tr>
   </table>
   </dd>
@@ -985,6 +1016,32 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae3d4ffda26babfce15e25df0423839ff"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\Database\BaseModel::setTimestampConfig </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set Timestamp Config</p>
+<p>Sets the timestamp configuration to the class properties. Any previously user set values to the configuration properties are not overwritten.</p>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aad0367e0038d35137da7204d830c0f9e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1112,7 +1169,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 18 2017 17:48:00 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

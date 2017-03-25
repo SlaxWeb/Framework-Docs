@@ -226,6 +226,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#response">Response</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#route-specific-hooks">Route specific hooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../general/routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#parameters">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#examples">Examples</a></li>
@@ -401,7 +402,13 @@
 <li class="toctree-l3"><a class="reference internal" href="#grouping">Grouping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ordering">Ordering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#limit">Limit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#timestamps">Timestamps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#enabled">enabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#createdcolumn">createdColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#updatedcolumn">updatedColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#function">function</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#sql-functions">SQL functions</a></li>
 </ul>
 </li>
@@ -568,11 +575,6 @@ table:</p>
 </div>
 <div class="section" id="soft-deletes">
 <h3>Soft deletes<a class="headerlink" href="#soft-deletes" title="Permalink to this headline">¶</a></h3>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Soft deletes are planed for future releases and are as of yet not possible, but
-will function as described.</p>
-</div>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
 <p class="last">Soft deletes are possible only with the <a class="reference internal" href="basemodel.html#database-basemodel"><span class="std std-ref">Base Model</span></a>, the Database
@@ -1031,8 +1033,68 @@ calling the <strong>select</strong>, <strong>update</strong>, or <strong>delete<
 <h2>Timestamps<a class="headerlink" href="#timestamps" title="Permalink to this headline">¶</a></h2>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
-<p class="last">Timestamps are planed for future releases and are as of yet not possible, exact
-functionality is not yet defined, and is therefor not yet documented.</p>
+<p class="last">Timestamps are possible only with the <a class="reference internal" href="basemodel.html#database-basemodel"><span class="std std-ref">Base Model</span></a>, the Database
+Library does not support it!</p>
+</div>
+<p>The <em>Timestamp</em> feature has to be enabled in the <strong>database.php</strong> configuration
+file to have the component automatically stamp the rows when they are created and
+updated. The column names and values can be configured through the configuration.
+The configuration is valid for all models, but all values can also be overriden
+in each model. Bellow you can find a list of options for the <em>Timestamps</em> that can
+be edited in the <strong>timestamp</strong> configuration option in the <strong>database.php</strong> configuration
+file.</p>
+<div class="section" id="enabled">
+<h3>enabled<a class="headerlink" href="#enabled" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>bool</strong></li>
+<li>Default: <strong>false</strong></li>
+</ul>
+<p>The <em>enabled</em> option turns <em>Timestamping</em> on and off.</p>
+<p>To enable or disabled timestamping only in a specific model, set its <strong>$timestamps</strong>
+protected property to either <em>bool(true)</em> or <em>bool(false)</em></p>
+</div>
+<div class="section" id="createdcolumn">
+<h3>createdColumn<a class="headerlink" href="#createdcolumn" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>string</strong></li>
+<li>Default: <strong>created_at</strong></li>
+</ul>
+<p>The name of the column for the <em>created</em> timestamp. When a row is created, the <em>database</em>
+component will write the timestamp to this column.</p>
+<p>To alter this in a specific model, you can override this setting by definint a string
+value to the <strong>$createdColumn</strong> protected property.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can set both the <strong>createdColumn</strong> and <strong>updatedColumn</strong> to the same value
+to keep timestamps in only one column in the database.</p>
+</div>
+</div>
+<div class="section" id="updatedcolumn">
+<h3>updatedColumn<a class="headerlink" href="#updatedcolumn" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>string</strong></li>
+<li>Default: <strong>updated_at</strong></li>
+</ul>
+<p>The name of the column for the <em>updated</em> timestamp. When a row is updated, the <em>database</em>
+component will write the timestamp to this column.</p>
+<p>To alter this in a specific model, you can override this setting by definint a string
+value to the <strong>$updatedColumn</strong> protected property.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">You can set both the <strong>createdColumn</strong> and <strong>updatedColumn</strong> to the same value
+to keep timestamps in only one column in the database.</p>
+</div>
+</div>
+<div class="section" id="function">
+<h3>function<a class="headerlink" href="#function" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>string</strong></li>
+<li>Default: <strong>NOW()</strong></li>
+</ul>
+<p>The SQL function to be used as the value of the timestamp. No other method of timestamping
+is supported.</p>
+<p>If you wish to alter the function for a specific model you can do so by setting
+a string value to the <strong>timestampFunction</strong> protected property.</p>
 </div>
 </div>
 <div class="section" id="sql-functions">

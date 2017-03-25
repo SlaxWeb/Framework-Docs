@@ -226,6 +226,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#response">Response</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../general/routing.html#route-specific-hooks">Route specific hooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../general/routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#parameters">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../general/routing.html#examples">Examples</a></li>
@@ -401,7 +402,13 @@
 <li class="toctree-l3"><a class="reference internal" href="querybuilder.html#grouping">Grouping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="querybuilder.html#ordering">Ordering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="querybuilder.html#limit">Limit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="querybuilder.html#timestamps">Timestamps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="querybuilder.html#enabled">enabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="querybuilder.html#createdcolumn">createdColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="querybuilder.html#updatedcolumn">updatedColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="querybuilder.html#function">function</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="querybuilder.html#sql-functions">SQL functions</a></li>
 </ul>
 </li>
@@ -702,8 +709,15 @@ if the requested column is not found in the current row in the result set.</p>
 <div class="section" id="id1">
 <h2>PDO<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <p>If direct access to the <a class="reference external" href="http://www.php.net/pdo">PDO</a> object is required, you can
-obtain it from the <a class="reference internal" href="../general/application.html#gen-topics-application"><span class="std std-ref">Application object</span></a> under the name <strong>pdo.service</strong>,
-however, this documentation does not cover the documentation for PDO, as it is already
+obtain it from the <a class="reference internal" href="../general/application.html#gen-topics-application"><span class="std std-ref">Application object</span></a> under the name <strong>pdo.service</strong>
+protected service definition:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$pdo</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;pdo.service&quot;</span><span class="p">]();</span>
+<span class="c1">/// code ...</span>
+</pre></div>
+</div>
+<p>However, this documentation does not cover the documentation for PDO, as it is already
 freely available on the PHP website <a class="reference external" href="http://www.php.net/pdo">http://www.php.net/pdo</a>.</p>
 </div>
 </div>

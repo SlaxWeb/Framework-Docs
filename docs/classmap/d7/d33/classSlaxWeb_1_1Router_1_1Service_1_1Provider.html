@@ -87,7 +87,6 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d9/dca/classSlaxWeb_1_1Router_1_1Service_1_1Provider-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SlaxWeb\Router\Service\Provider Class Reference</div>  </div>
@@ -97,28 +96,17 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 Inheritance diagram for SlaxWeb\Router\Service\Provider:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../db/da2/classSlaxWeb_1_1Router_1_1Service_1_1Provider__inherit__graph.png" border="0" usemap="#SlaxWeb_0CRouter_0CService_0CProvider_inherit__map" alt="Inheritance graph"/></div>
-<map name="SlaxWeb_0CRouter_0CService_0CProvider_inherit__map" id="SlaxWeb_0CRouter_0CService_0CProvider_inherit__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for SlaxWeb\Router\Service\Provider:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d4/d6f/classSlaxWeb_1_1Router_1_1Service_1_1Provider__coll__graph.png" border="0" usemap="#SlaxWeb_0CRouter_0CService_0CProvider_coll__map" alt="Collaboration graph"/></div>
-<map name="SlaxWeb_0CRouter_0CService_0CProvider_coll__map" id="SlaxWeb_0CRouter_0CService_0CProvider_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa6cda91883f31a4125824a1ad36bcbcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/classSlaxWeb_1_1Router_1_1Service_1_1Provider.html#aa6cda91883f31a4125824a1ad36bcbcd">register</a> (Application $app)</td></tr>
 <tr class="separator:aa6cda91883f31a4125824a1ad36bcbcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cb15e8e2fb9569cfb1907aa7c24ef98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/classSlaxWeb_1_1Router_1_1Service_1_1Provider.html#a6cb15e8e2fb9569cfb1907aa7c24ef98">register</a> (Container $container)</td></tr>
-<tr class="separator:a6cb15e8e2fb9569cfb1907aa7c24ef98"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae5196411da6d43a830be009f949da5b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d33/classSlaxWeb_1_1Router_1_1Service_1_1Provider.html#ae5196411da6d43a830be009f949da5b4">setAppProperties</a> (Container $container)</td></tr>
-<tr class="separator:ae5196411da6d43a830be009f949da5b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="aa6cda91883f31a4125824a1ad36bcbcd"></a>
@@ -146,71 +134,13 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6cb15e8e2fb9569cfb1907aa7c24ef98"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Router\Service\Provider::register </td>
-          <td>(</td>
-          <td class="paramtype">Container&#160;</td>
-          <td class="paramname"><em>$container</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Register provider</p>
-<p>Register the Hooks Service <a class="el" href="../../d7/d33/classSlaxWeb_1_1Router_1_1Service_1_1Provider.html">Provider</a> to the DIC.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">\Pimple\Container</td><td class="paramname">$container</td><td>DIC </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ae5196411da6d43a830be009f949da5b4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">SlaxWeb\Router\Service\Provider::setAppProperties </td>
-          <td>(</td>
-          <td class="paramtype">Container&#160;</td>
-          <td class="paramname"><em>$container</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Set application properties</p>
-<p>Sets the Router related data to application properties.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">\Pimple\Container</td><td class="paramname">$container</td><td>DIC </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/opt/slax0rDev/slaxweb/bootstrap/src/Service/Provider.php</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 18 2017 17:48:00 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

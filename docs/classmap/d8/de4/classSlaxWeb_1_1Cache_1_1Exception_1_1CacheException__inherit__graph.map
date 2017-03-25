@@ -1,0 +1,7 @@
+<map id="SlaxWeb\Cache\Exception\CacheException" name="SlaxWeb\Cache\Exception\CacheException">
+<area shape="rect" id="node3" href="$da/df5/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheDataExpiredException.html" title="SlaxWeb\\Cache\\Exception\l\\CacheDataExpiredException" alt="" coords="374,5,569,47"/>
+<area shape="rect" id="node4" href="$d6/d7d/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheDataInvalidException.html" title="SlaxWeb\\Cache\\Exception\l\\CacheDataInvalidException" alt="" coords="377,71,565,112"/>
+<area shape="rect" id="node5" href="$d1/d76/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheDataNotFoundException.html" title="SlaxWeb\\Cache\\Exception\l\\CacheDataNotFoundException" alt="" coords="368,136,575,177"/>
+<area shape="rect" id="node6" href="$d7/d90/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheStoreNotWritableException.html" title="SlaxWeb\\Cache\\Exception\l\\CacheStoreNotWritableException" alt="" coords="360,201,583,243"/>
+<area shape="rect" id="node7" href="$d9/dd1/classSlaxWeb_1_1Cache_1_1Exception_1_1WriteException.html" title="SlaxWeb\\Cache\\Exception\l\\WriteException" alt="" coords="382,267,561,308"/>
+</map>

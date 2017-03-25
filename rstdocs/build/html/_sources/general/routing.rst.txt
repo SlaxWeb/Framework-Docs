@@ -217,6 +217,73 @@ application, and simplify adding of your own content to the *Response*. To do so
 two additional methods are provided, **redirect** and **addContent**. Please refer
 to the :ref:`router class reference` documentation.
 
+Route specific hooks
+--------------------
+
+The router component, or more specifically, the Router Dispatcher executes a generic
+before and after dispatch hooks before a request route is dispatched, and immediately
+after. More information about those hook calls can be found in the :ref:`components
+router hooks` section of the Router Component documentation.
+
+The Router however supports executing Route specific before and after dispatch hooks
+instead of the generic ones. To do so, the *Route* object provides a method **setHook**
+method to set them. It accepts a string name as the first parameter, and an optional
+*bool* value as the second paramater, when set to **true** the hook will be used
+as an *after* hook. Example::
+
+    <?php
+    // code ...
+    $route->setHook("myRouteBeforeDispatchHook");
+    $route->setHook("myRouteAfterDispatchHook", true);
+    // code ...
+
+The above example shows how to add a hook directly to the Route object. The Route
+Collections also provide such functionality, where you can define a before and/or
+after dispatch hook per Route definition, or you can set a before and/or after dispatch
+hook name to the Collections property, and that hook will automatically be set for
+all Routes defined in that collection, unless they define one on their own::
+
+    <?php
+    namespace App\Routes;
+
+    use SlaxWeb\Router\Route;
+    use SlaxWeb\Router\Request;
+    use SlaxWeb\Router\Response;
+    use SlaxWeb\Bootstrap\Application;
+
+    class DefaultCollection extends \SlaxWeb\Router\Service\RouteCollection
+    {
+        protected $beforeDispatch = "myCollection.beforeDispatch";
+        protected $afterDispatch = "myCollection.afterDispatch";
+
+        public function define()
+        {
+            $this->routes[] = [
+                "uri"       =>  "my/collection/hook",
+                "method"    =>  Route::METHOD_ANY,
+                "action"    =>  function (Request $request, Response $response, Application $app) {
+                    // ... route definition ...
+                }
+            ];
+
+            $this->routes[] = [
+                "uri"               =>  "my/special/hook",
+                "method"            =>  Route::METHOD_ANY,
+                "beforeDispatch"    =>  "myRoute.beforeDispatch",
+                "action"            =>  function (Request $request, Response $response, Application $app) {
+                    // ... route definition ...
+                }
+            ];
+        }
+    }
+
+In the above example, the **my/collection/hook** route will execute the *myCollection.beforeDispatch*
+and the *myCollection.afterDispatch* if the request matches that route. However
+if the request matches the second route, **my/special/hook** then the *myRoute.beforeDispatch*
+will be executed that is defined by the Route definition, but the *myCollection.afterDispatch*
+will be executed anyway, since no after dispatch hook is defined specifically for
+that Route.
+
 .. _gen topic routing segmentbased:
 
 Segment-based URI matching

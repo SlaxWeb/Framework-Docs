@@ -92,10 +92,6 @@ Soft deletes
 ````````````
 
 .. ATTENTION::
-   Soft deletes are planed for future releases and are as of yet not possible, but
-   will function as described.
-
-.. ATTENTION::
    Soft deletes are possible only with the :ref:`database basemodel`, the Database
    Library does not support it!
 
@@ -596,8 +592,71 @@ Timestamps
 ----------
 
 .. ATTENTION::
-   Timestamps are planed for future releases and are as of yet not possible, exact
-   functionality is not yet defined, and is therefor not yet documented.
+   Timestamps are possible only with the :ref:`database basemodel`, the Database
+   Library does not support it!
+
+The *Timestamp* feature has to be enabled in the **database.php** configuration
+file to have the component automatically stamp the rows when they are created and
+updated. The column names and values can be configured through the configuration.
+The configuration is valid for all models, but all values can also be overriden
+in each model. Bellow you can find a list of options for the *Timestamps* that can
+be edited in the **timestamp** configuration option in the **database.php** configuration
+file.
+
+enabled
+```````
+
+* Data type: **bool**
+* Default: **false**
+
+The *enabled* option turns *Timestamping* on and off.
+
+To enable or disabled timestamping only in a specific model, set its **$timestamps**
+protected property to either *bool(true)* or *bool(false)*
+
+createdColumn
+`````````````
+
+* Data type: **string**
+* Default: **created_at**
+
+The name of the column for the *created* timestamp. When a row is created, the *database*
+component will write the timestamp to this column.
+
+To alter this in a specific model, you can override this setting by definint a string
+value to the **$createdColumn** protected property.
+
+.. NOTE::
+   You can set both the **createdColumn** and **updatedColumn** to the same value
+   to keep timestamps in only one column in the database.
+
+updatedColumn
+`````````````
+
+* Data type: **string**
+* Default: **updated_at**
+
+The name of the column for the *updated* timestamp. When a row is updated, the *database*
+component will write the timestamp to this column.
+
+To alter this in a specific model, you can override this setting by definint a string
+value to the **$updatedColumn** protected property.
+
+.. NOTE::
+   You can set both the **createdColumn** and **updatedColumn** to the same value
+   to keep timestamps in only one column in the database.
+
+function
+````````
+
+* Data type: **string**
+* Default: **NOW()**
+
+The SQL function to be used as the value of the timestamp. No other method of timestamping
+is supported.
+
+If you wish to alter the function for a specific model you can do so by setting
+a string value to the **timestampFunction** protected property.
 
 SQL functions
 -------------

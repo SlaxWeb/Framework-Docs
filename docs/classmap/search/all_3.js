@@ -1,8 +1,14 @@
 var searchData=
 [
+  ['cachedataexpiredexception',['CacheDataExpiredException',['../da/df5/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheDataExpiredException.html',1,'SlaxWeb::Cache::Exception']]],
+  ['cachedatainvalidexception',['CacheDataInvalidException',['../d6/d7d/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheDataInvalidException.html',1,'SlaxWeb::Cache::Exception']]],
+  ['cachedatanotfoundexception',['CacheDataNotFoundException',['../d1/d76/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheDataNotFoundException.html',1,'SlaxWeb::Cache::Exception']]],
+  ['cacheexception',['CacheException',['../d1/d06/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheException.html',1,'SlaxWeb::Cache::Exception']]],
+  ['cachestorenotwritableexception',['CacheStoreNotWritableException',['../d7/d90/classSlaxWeb_1_1Cache_1_1Exception_1_1CacheStoreNotWritableException.html',1,'SlaxWeb::Cache::Exception']]],
   ['callback_5fbefore',['CALLBACK_BEFORE',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a5b9cdaffe17ad047b0f40dffd2c56821',1,'SlaxWeb::Database::BaseModel']]],
   ['checkcomposer',['checkComposer',['../da/d9a/classSlaxWeb_1_1Slaxer_1_1Component_1_1BaseCommand.html#af838a1275061117cb3b8bbd4a073936d',1,'SlaxWeb::Slaxer::Component::BaseCommand']]],
   ['checkcontainer',['checkContainer',['../de/d3d/classSlaxWeb_1_1Router_1_1Dispatcher.html#a28a4dc066a43ee47c3a064d3002d61ef',1,'SlaxWeb::Router::Dispatcher']]],
+  ['checkdata',['checkData',['../db/d27/classSlaxWeb_1_1Cache_1_1AbstractHandler.html#a3a90f0a661e8fc47440c08bacb1342cf',1,'SlaxWeb::Cache::AbstractHandler']]],
   ['columnnotfounderrorexception',['ColumnNotFoundErrorException',['../d1/dca/classSlaxWeb_1_1Database_1_1Exception_1_1ColumnNotFoundErrorException.html',1,'SlaxWeb::Database::Exception']]],
   ['componentexists',['componentExists',['../da/d9a/classSlaxWeb_1_1Slaxer_1_1Component_1_1BaseCommand.html#ad85b8a361e0f4eb24bba6ce468b8d3d5',1,'SlaxWeb::Slaxer::Component::BaseCommand']]],
   ['config_5floaded',['CONFIG_LOADED',['../d1/d84/classSlaxWeb_1_1Config_1_1Handler.html#a6ba278c2e515143514325aea582d572c',1,'SlaxWeb::Config::Handler']]],
@@ -10,13 +16,12 @@ var searchData=
   ['config_5fresource_5fnot_5ffound',['CONFIG_RESOURCE_NOT_FOUND',['../d1/d84/classSlaxWeb_1_1Config_1_1Handler.html#a35ba77715e6469328aebc0fbbb26cd6f',1,'SlaxWeb::Config::Handler']]],
   ['configcomponent',['configComponent',['../da/d9a/classSlaxWeb_1_1Slaxer_1_1Component_1_1BaseCommand.html#a3096a144606f93583960373ee62b559b',1,'SlaxWeb::Slaxer::Component::BaseCommand']]],
   ['configparseexception',['ConfigParseException',['../d3/df9/classSlaxWeb_1_1Config_1_1Exception_1_1ConfigParseException.html',1,'SlaxWeb::Config::Exception']]],
+  ['configprovider',['ConfigProvider',['../d3/d81/classSlaxWeb_1_1Bootstrap_1_1Service_1_1ConfigProvider.html',1,'SlaxWeb::Bootstrap::Service']]],
   ['configresourcenotfoundexception',['ConfigResourceNotFoundException',['../dc/d52/classSlaxWeb_1_1Config_1_1Exception_1_1ConfigResourceNotFoundException.html',1,'SlaxWeb::Config::Exception']]],
-  ['configurationexception',['ConfigurationException',['../d9/de4/classSlaxWeb_1_1Logger_1_1Exception_1_1ConfigurationException.html',1,'SlaxWeb::Logger::Exception']]],
   ['configure',['configure',['../d2/d9f/classSlaxWeb_1_1AppServer_1_1ServerCommand.html#a6374281fa33a1ed3975b3083823f0948',1,'SlaxWeb\AppServer\ServerCommand\configure()'],['../de/dd9/classSlaxWeb_1_1Slaxer_1_1Component_1_1InstallCommand.html#a905946e4a997f504b38e7e669693b753',1,'SlaxWeb\Slaxer\Component\InstallCommand\configure()'],['../d6/d69/classSlaxWeb_1_1Slaxer_1_1Component_1_1RemoveCommand.html#a8b1480fcca6a7c64dce420de4ffdd462',1,'SlaxWeb\Slaxer\Component\RemoveCommand\configure()'],['../d6/d69/classSlaxWeb_1_1Slaxer_1_1Component_1_1RemoveCommand.html#a8b1480fcca6a7c64dce420de4ffdd462',1,'SlaxWeb\Slaxer\Component\RemoveCommand\configure()']]],
-  ['container',['Container',['../d5/d9e/classSlaxWeb_1_1Router_1_1Container.html',1,'SlaxWeb::Router']]],
-  ['container',['Container',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html',1,'SlaxWeb::Hooks']]],
-  ['container',['container',['../dd/db9/classSlaxWeb_1_1Router_1_1Factory.html#a7c78bea29afdc41af1381acd838aad6f',1,'SlaxWeb::Router::Factory']]],
   ['container',['Container',['../d2/dbd/classSlaxWeb_1_1Config_1_1Container.html',1,'SlaxWeb::Config']]],
-  ['convert',['convert',['../d2/deb/classSlaxWeb_1_1DatabasePDO_1_1Query_1_1Where_1_1Group.html#a0bb84034b7f4aeccb26c23116f99b953',1,'SlaxWeb\DatabasePDO\Query\Where\Group\convert()'],['../d3/dac/classSlaxWeb_1_1DatabasePDO_1_1Query_1_1Where_1_1Predicate.html#abd4e00164eb430f8bca8d8d5d577c2b5',1,'SlaxWeb\DatabasePDO\Query\Where\Predicate\convert()']]],
+  ['container',['Container',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html',1,'SlaxWeb::Hooks']]],
+  ['container',['Container',['../d5/d9e/classSlaxWeb_1_1Router_1_1Container.html',1,'SlaxWeb::Router']]],
+  ['convert',['convert',['../d3/dc6/classSlaxWeb_1_1Database_1_1Query_1_1Where_1_1Group.html#a4e4a0a32914ca8d6f5f530b2fe5d8b89',1,'SlaxWeb\Database\Query\Where\Group\convert()'],['../d2/d4a/classSlaxWeb_1_1Database_1_1Query_1_1Where_1_1Predicate.html#af69667a25f83c8a497cd4edcde4e5a54',1,'SlaxWeb\Database\Query\Where\Predicate\convert()']]],
   ['create',['create',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#abafaad674636668f1966ee57ef226f4e',1,'SlaxWeb\Database\BaseModel\create()'],['../dd/ddc/classSlaxWeb_1_1Hooks_1_1Hook.html#af266dff4c8b74e1fa925d363f1daeb4b',1,'SlaxWeb\Hooks\Hook\create()']]]
 ];

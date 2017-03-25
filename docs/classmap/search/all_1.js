@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['abstracthandler',['AbstractHandler',['../db/d27/classSlaxWeb_1_1Cache_1_1AbstractHandler.html',1,'SlaxWeb::Cache']]],
   ['abstracthandler',['AbstractHandler',['../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html',1,'SlaxWeb::Output']]],
   ['abstractloader',['AbstractLoader',['../d2/d1b/classSlaxWeb_1_1View_1_1AbstractLoader.html',1,'SlaxWeb::View']]],
   ['add',['add',['../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#a3a1be8dbce01d10796d40190e3c6f5dd',1,'SlaxWeb\Output\Handler\Json\add()'],['../d0/da5/classSlaxWeb_1_1Output_1_1Handler_1_1View.html#a9738a4f48fc756c3937bbd107a2a22b2',1,'SlaxWeb\Output\Handler\View\add()'],['../d5/d9e/classSlaxWeb_1_1Router_1_1Container.html#a9971166e96b602d328a7f52a4d1836e8',1,'SlaxWeb\Router\Container\add()']]],

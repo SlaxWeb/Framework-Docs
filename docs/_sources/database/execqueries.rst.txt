@@ -220,6 +220,13 @@ PDO
 ---
 
 If direct access to the `PDO <http://www.php.net/pdo>`_ object is required, you can
-obtain it from the :ref:`gen topics application` under the name **pdo.service**,
-however, this documentation does not cover the documentation for PDO, as it is already
+obtain it from the :ref:`gen topics application` under the name **pdo.service**
+protected service definition::
+
+    <?php
+    // code ...
+    $pdo = $app["pdo.service"]();
+    /// code ...
+
+However, this documentation does not cover the documentation for PDO, as it is already
 freely available on the PHP website http://www.php.net/pdo.

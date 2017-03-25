@@ -112,6 +112,8 @@ The **Dispatcher** class is accessible through the Application Service Repositor
 
     $dispatcher = $app["routeDispatcher.service"];
 
+.. _components router hooks:
+
 Hooks
 `````
 

@@ -226,6 +226,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#response">Response</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#route-specific-hooks">Route specific hooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#segment-based-uri-matching">Segment-based URI matching</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#parameters">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#examples">Examples</a></li>
@@ -401,7 +402,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#grouping">Grouping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#ordering">Ordering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#limit">Limit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#enabled">enabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#createdcolumn">createdColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#updatedcolumn">updatedColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#function">function</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#sql-functions">SQL functions</a></li>
 </ul>
 </li>
@@ -695,6 +702,70 @@ application, and simplify adding of your own content to the <em>Response</em>. T
 two additional methods are provided, <strong>redirect</strong> and <strong>addContent</strong>. Please refer
 to the <a class="reference internal" href="../components/router.html#router-class-reference"><span class="std std-ref">Class reference</span></a> documentation.</p>
 </div>
+</div>
+<div class="section" id="route-specific-hooks">
+<h2>Route specific hooks<a class="headerlink" href="#route-specific-hooks" title="Permalink to this headline">¶</a></h2>
+<p>The router component, or more specifically, the Router Dispatcher executes a generic
+before and after dispatch hooks before a request route is dispatched, and immediately
+after. More information about those hook calls can be found in the <a class="reference internal" href="../components/router.html#components-router-hooks"><span class="std std-ref">Hooks</span></a> section of the Router Component documentation.</p>
+<p>The Router however supports executing Route specific before and after dispatch hooks
+instead of the generic ones. To do so, the <em>Route</em> object provides a method <strong>setHook</strong>
+method to set them. It accepts a string name as the first parameter, and an optional
+<em>bool</em> value as the second paramater, when set to <strong>true</strong> the hook will be used
+as an <em>after</em> hook. Example:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$route</span><span class="o">-&gt;</span><span class="na">setHook</span><span class="p">(</span><span class="s2">&quot;myRouteBeforeDispatchHook&quot;</span><span class="p">);</span>
+<span class="nv">$route</span><span class="o">-&gt;</span><span class="na">setHook</span><span class="p">(</span><span class="s2">&quot;myRouteAfterDispatchHook&quot;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+<p>The above example shows how to add a hook directly to the Route object. The Route
+Collections also provide such functionality, where you can define a before and/or
+after dispatch hook per Route definition, or you can set a before and/or after dispatch
+hook name to the Collections property, and that hook will automatically be set for
+all Routes defined in that collection, unless they define one on their own:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="k">namespace</span> <span class="nx">App\Routes</span><span class="p">;</span>
+
+<span class="k">use</span> <span class="nx">SlaxWeb\Router\Route</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">SlaxWeb\Router\Request</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">SlaxWeb\Router\Response</span><span class="p">;</span>
+<span class="k">use</span> <span class="nx">SlaxWeb\Bootstrap\Application</span><span class="p">;</span>
+
+<span class="k">class</span> <span class="nc">DefaultCollection</span> <span class="k">extends</span> <span class="nx">\SlaxWeb\Router\Service\RouteCollection</span>
+<span class="p">{</span>
+    <span class="k">protected</span> <span class="nv">$beforeDispatch</span> <span class="o">=</span> <span class="s2">&quot;myCollection.beforeDispatch&quot;</span><span class="p">;</span>
+    <span class="k">protected</span> <span class="nv">$afterDispatch</span> <span class="o">=</span> <span class="s2">&quot;myCollection.afterDispatch&quot;</span><span class="p">;</span>
+
+    <span class="k">public</span> <span class="k">function</span> <span class="nf">define</span><span class="p">()</span>
+    <span class="p">{</span>
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;my/collection/hook&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;method&quot;</span>    <span class="o">=&gt;</span>  <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_ANY</span><span class="p">,</span>
+            <span class="s2">&quot;action&quot;</span>    <span class="o">=&gt;</span>  <span class="k">function</span> <span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">Response</span> <span class="nv">$response</span><span class="p">,</span> <span class="nx">Application</span> <span class="nv">$app</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// ... route definition ...</span>
+            <span class="p">}</span>
+        <span class="p">];</span>
+
+        <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s2">&quot;uri&quot;</span>               <span class="o">=&gt;</span>  <span class="s2">&quot;my/special/hook&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;method&quot;</span>            <span class="o">=&gt;</span>  <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_ANY</span><span class="p">,</span>
+            <span class="s2">&quot;beforeDispatch&quot;</span>    <span class="o">=&gt;</span>  <span class="s2">&quot;myRoute.beforeDispatch&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;action&quot;</span>            <span class="o">=&gt;</span>  <span class="k">function</span> <span class="p">(</span><span class="nx">Request</span> <span class="nv">$request</span><span class="p">,</span> <span class="nx">Response</span> <span class="nv">$response</span><span class="p">,</span> <span class="nx">Application</span> <span class="nv">$app</span><span class="p">)</span> <span class="p">{</span>
+                <span class="c1">// ... route definition ...</span>
+            <span class="p">}</span>
+        <span class="p">];</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>In the above example, the <strong>my/collection/hook</strong> route will execute the <em>myCollection.beforeDispatch</em>
+and the <em>myCollection.afterDispatch</em> if the request matches that route. However
+if the request matches the second route, <strong>my/special/hook</strong> then the <em>myRoute.beforeDispatch</em>
+will be executed that is defined by the Route definition, but the <em>myCollection.afterDispatch</em>
+will be executed anyway, since no after dispatch hook is defined specifically for
+that Route.</p>
 </div>
 <div class="section" id="segment-based-uri-matching">
 <span id="gen-topic-routing-segmentbased"></span><h2>Segment-based URI matching<a class="headerlink" href="#segment-based-uri-matching" title="Permalink to this headline">¶</a></h2>

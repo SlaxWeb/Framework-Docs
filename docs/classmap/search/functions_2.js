@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['buildcollist',['buildColList',['../d4/dfc/classSlaxWeb_1_1DatabasePDO_1_1Query_1_1Builder.html#a00102e5df3a5dac447227ec9ce33253a',1,'SlaxWeb::DatabasePDO::Query::Builder']]]
+  ['buildcollist',['buildColList',['../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html#a46f333d1f3fd6c9cf1e2ad6daa92e62a',1,'SlaxWeb::Database::Query::Builder']]]
 ];
