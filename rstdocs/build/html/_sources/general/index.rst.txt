@@ -20,4 +20,5 @@ General Topics
    model
    logger
    hooks
+   cache
    libraries

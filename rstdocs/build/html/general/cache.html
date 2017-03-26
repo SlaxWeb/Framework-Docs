@@ -10,7 +10,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>General Topics &mdash; SlaxWeb Framework v0.4.0</title>
+  <title>Cache &mdash; SlaxWeb Framework v0.4.0</title>
   
 
   
@@ -38,8 +38,9 @@
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="SlaxWeb Framework v0.4.0" href="../index.html"/>
-        <link rel="next" title="Application object" href="application.html"/>
-        <link rel="prev" title="Edit news article" href="../gettingstarted/editnews.html"/> 
+        <link rel="up" title="General Topics" href="index.html"/>
+        <link rel="next" title="Libraries" href="libraries.html"/>
+        <link rel="prev" title="Hooks" href="hooks.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -192,7 +193,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">General Topics</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">General Topics</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="application.html">Application object</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="application.html#using-the-application-object">Using the Application object</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="application.html#writing-to-application">Writing to Application</a></li>
@@ -325,18 +326,18 @@
 <li class="toctree-l3"><a class="reference internal" href="hooks.html#framework-hooks-points">Framework hooks points</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="cache.html">Cache</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="cache.html#configuration">Configuration</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cache.html#handler">handler</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cache.html#location">location</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cache.html#maxage">maxAge</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Cache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#handler">handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#location">location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#maxage">maxAge</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="cache.html#using-the-cache">Using the cache</a></li>
-<li class="toctree-l3"><a class="reference internal" href="cache.html#write-and-read">Write and read</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="cache.html#write">write</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cache.html#read">read</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cache.html#remove">remove</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-the-cache">Using the cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#write-and-read">Write and read</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#write">write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#read">read</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove">remove</a></li>
 </ul>
 </li>
 </ul>
@@ -503,11 +504,13 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../index.html">Docs</a> &raquo;</li>
       
-    <li>General Topics</li>
+          <li><a href="index.html">General Topics</a> &raquo;</li>
+      
+    <li>Cache</li>
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="../_sources/general/index.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/general/cache.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -517,85 +520,146 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="general-topics">
-<span id="gen-topics"></span><h1>General Topics<a class="headerlink" href="#general-topics" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="application.html">Application object</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="application.html#using-the-application-object">Using the Application object</a></li>
-<li class="toctree-l2"><a class="reference internal" href="application.html#services">Services</a></li>
-<li class="toctree-l2"><a class="reference internal" href="application.html#service-providers">Service Providers</a></li>
+  <div class="section" id="cache">
+<span id="gen-topics-cache"></span><h1>Cache<a class="headerlink" href="#cache" title="Permalink to this headline">¶</a></h1>
+<p>The Cache component offers caching capabilities for utilisation in your application.
+The component helps with simple storing and retrieval of data from the cache, with
+possibilities to swap out caching storages almost painlessly, as well as it provides
+options to write further extensions for caching storages that are not supported
+by the Cache component. Along with that, sub-components are provided that help with
+caching of specific parts of your application almost transparently, like caching
+queries or views.</p>
+<p>The Cache component is not a core component and must thus be installed with the
+<a class="reference internal" href="slaxer.html#gen-topics-slaxer"><span class="std std-ref">Slaxer</span></a> command line tool:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">./</span><span class="nx">slaxwe</span> <span class="nx">component</span><span class="o">:</span><span class="nx">install</span> <span class="nx">cache</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">At this moment only the Database Cache sub-component is available. The View/Template
+Cache sub-component is planed for future relases.</p>
+</div>
+<div class="section" id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The Cache component comes with a <strong>cache.php</strong> configuration file. The following
+settings can be configured there:</p>
+<div class="section" id="handler">
+<h3>handler<a class="headerlink" href="#handler" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>string</strong></li>
+<li>Default: <strong>file</strong></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="routing.html">Routing and URLs</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="routing.html#defining-routes">Defining Routes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html#matching-the-uris">Matching the URIs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html#handling-http-methods">Handling HTTP Methods</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html#route-action">Route Action</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html#route-specific-hooks">Route specific hooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="routing.html#segment-based-uri-matching">Segment-based URI matching</a></li>
+<p>The cache handler used by the cache component to store the data. The following handlers
+are provided:</p>
+<ul class="simple">
+<li>file</li>
+<li>memcached</li>
+<li>redis</li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="config.html#configuration-file-structure">Configuration file structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#loading-configuration-items">Loading configuration items</a></li>
-<li class="toctree-l2"><a class="reference internal" href="config.html#reading-configuration">Reading configuration</a></li>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">At the moment only the &#8216;file&#8217; handler is available. Other handlers are planned
+for future releases.</p>
+</div>
+</div>
+<div class="section" id="location">
+<h3>location<a class="headerlink" href="#location" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>string</strong></li>
+<li>Default: <strong>__DIR__/../Cache/</strong></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="components.html">Components</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="components.html#sub-components">Sub-components</a></li>
-<li class="toctree-l2"><a class="reference internal" href="components.html#component-configuration-file">Component configuration file</a></li>
+<p>The location depends on the handler. For <strong>file</strong> handler it is the absolute path
+to the directory where the Cache component may write to.</p>
+</div>
+<div class="section" id="maxage">
+<h3>maxAge<a class="headerlink" href="#maxage" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Data type: <strong>int</strong></li>
+<li>Default: <strong>3600</strong></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="slaxer.html">Slaxer</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="slaxer.html#component-manipulation">Component manipulation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="slaxer.html#custom-commands">Custom Commands</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="controllers.html">Controllers</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="controllers.html#loader">Loader</a></li>
-<li class="toctree-l2"><a class="reference internal" href="controllers.html#using-the-controller">Using the Controller</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="viewtpl.html">Views &amp; Templates</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="viewtpl.html#the-view">The View</a></li>
-<li class="toctree-l2"><a class="reference internal" href="viewtpl.html#templating">Templating</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="response.html">Handling responses</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="response.html#response-object-extensions">Response object extensions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="response.html#output-component">Output component</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="model.html">Models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="model.html#base-model">Base Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model.html#writing-a-model">Writing a Model</a></li>
-<li class="toctree-l2"><a class="reference internal" href="model.html#loader">Loader</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="logger.html">Logger</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="logger.html#using-the-logger">Using the logger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logger.html#configuring-the-logger">Configuring the logger</a></li>
-<li class="toctree-l2"><a class="reference internal" href="logger.html#reserved-loggers">Reserved loggers</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hooks.html">Hooks</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hooks.html#writing-hook-points">Writing hook points</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hooks.html#writing-hook-definitions">Writing Hook Definitions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="hooks.html#framework-hooks-points">Framework hooks points</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="cache.html">Cache</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="cache.html#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cache.html#using-the-cache">Using the cache</a></li>
-<li class="toctree-l2"><a class="reference internal" href="cache.html#write-and-read">Write and read</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="libraries.html">Libraries</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="libraries.html#registering-libraries">Registering libraries</a></li>
-</ul>
-</li>
-</ul>
+<p>Maximum age for data in the cache. This value is used as default for all data stored
+in the cache, but can be overridden for each one specifically. Maximum age is defined
+in seconds with a default value of int(3600), equivalent for one hour. If the maximum
+age is set to int(0), then the data will never expire.</p>
+</div>
+</div>
+<div class="section" id="using-the-cache">
+<h2>Using the cache<a class="headerlink" href="#using-the-cache" title="Permalink to this headline">¶</a></h2>
+<p>The cache component is available under the <strong>cache.service</strong> name in the service
+container, and is obtainable like any other service:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$cache</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;cache.service&quot;</span><span class="p">];</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+<p>When the cache service is retrieved it is also instantiated, along with its handler.
+If an instantiation error occurs with the handler, it will throw an exception at
+this point.</p>
+</div>
+<div class="section" id="write-and-read">
+<h2>Write and read<a class="headerlink" href="#write-and-read" title="Permalink to this headline">¶</a></h2>
+<p>All operations on the cache are done directly on the main cache object returned
+from the <strong>cache.service</strong>. It provides simple methods to <strong>write</strong>, <strong>read</strong>, and
+<strong>remove</strong> from cache.</p>
+<p>All entries require a unique string name for the cache. In case of the file storage
+it needs to be a valid filesystem name. Through this name, the data is also retrieved
+or removed from the cache.</p>
+<div class="section" id="write">
+<h3>write<a class="headerlink" href="#write" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>write</strong> method takes the name of the data to cache as the first parameter,
+the second parameter holds the actual data. This data may be anything, as the manager
+will serialize the data before storing.</p>
+<p>The third, and final parameter is optional and may override the default configured
+maximum age for the data. The value is in seconds, any negative value will use the
+default configured maximum age from the <strong>cache.php</strong> configuration file, a int(0)
+value will keep the data in the cache indefinitely, unless removed manually.</p>
+<p>Example usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$foo</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Foo</span><span class="p">;</span>
+<span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span> <span class="o">=</span> <span class="s2">&quot;baz&quot;</span><span class="p">;</span>
+<span class="nv">$cache</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;cache.service&quot;</span><span class="p">];</span>
+<span class="nv">$cache</span><span class="o">-&gt;</span><span class="na">write</span><span class="p">(</span><span class="s2">&quot;myFooObject&quot;</span><span class="p">,</span> <span class="nv">$foo</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="read">
+<h3>read<a class="headerlink" href="#read" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>read</strong> method takes only the name of the cached data as the parameter, and
+tries to obtain it from the cache. It may throw an <strong>\SlaxWeb\Cache\Exception\CacheDataNotFoundException</strong>
+if the data is not found, or the <strong>\SlaxWeb\Cache\Exception\CacheDataExpiredException</strong>
+if the data has already expired, or the <strong>\SlaxWeb\Cache\Exception\CacheDataInvalidException</strong>
+if the data in the cache is no unserializable, which should happen only if the cache
+was manually manipulated with. All the exceptions extend from the <strong>\SlaxWeb\Cache\Exception\CacheException</strong>
+class.</p>
+<p>The <strong>read</strong> method will return the unserialized data, and may therefore be of different types.
+Example usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$cache</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;cache.service&quot;</span><span class="p">];</span>
+<span class="nv">$foo</span> <span class="o">=</span> <span class="nv">$cache</span><span class="o">-&gt;</span><span class="na">read</span><span class="p">(</span><span class="s2">&quot;myFooObject&quot;</span><span class="p">);</span>
+<span class="k">echo</span> <span class="nv">$foo</span><span class="o">-&gt;</span><span class="na">bar</span><span class="p">;</span> <span class="c1">// will output &quot;baz&quot;</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="remove">
+<h3>remove<a class="headerlink" href="#remove" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>remove</strong> method takes the full or partial name of the cached data, and a <em>partial</em>
+flag as the second parameter. If the <em>partial</em> flag is set to true, then all the
+data that contains the input <em>name</em> in its name is removed.</p>
+<p>Example usage:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// code ...</span>
+<span class="nv">$cache</span> <span class="o">=</span> <span class="nv">$app</span><span class="p">[</span><span class="s2">&quot;cache.service&quot;</span><span class="p">];</span>
+<span class="nv">$cache</span><span class="o">-&gt;</span><span class="na">remove</span><span class="p">(</span><span class="s2">&quot;myFooObject&quot;</span><span class="p">);</span>
+<span class="nv">$cache</span><span class="o">-&gt;</span><span class="na">remove</span><span class="p">(</span><span class="s2">&quot;Foo&quot;</span><span class="p">,</span> <span class="k">true</span><span class="p">);</span> <span class="c1">// would remove &quot;myFooObject&quot; as well since it contains &quot;Foo&quot;</span>
+<span class="c1">// code ...</span>
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 
@@ -606,10 +670,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="application.html" class="btn btn-neutral float-right" title="Application object" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="libraries.html" class="btn btn-neutral float-right" title="Libraries" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../gettingstarted/editnews.html" class="btn btn-neutral" title="Edit news article" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="hooks.html" class="btn btn-neutral" title="Hooks" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
