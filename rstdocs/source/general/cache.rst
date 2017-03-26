@@ -26,6 +26,11 @@ The Cache component is not a core component and must thus be installed with the
    At this moment only the Database Cache sub-component is available. The View/Template
    Cache sub-component is planed for future relases.
 
+.. WARNING::
+   The cache does **NOT** secure or encrypt the data in any way and is stored as
+   a PHP serialized string. If you wish to store sensitive data in the cache you
+   need to make sure you do so in a secure manner!
+
 Configuration
 -------------
 
