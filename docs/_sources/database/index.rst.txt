@@ -15,5 +15,6 @@ for fast and easy interactions with a Database through a simple PHP syntax.
    install
    config
    basemodel
+   caching
    execqueries
    querybuilder

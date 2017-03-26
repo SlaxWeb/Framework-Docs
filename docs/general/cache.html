@@ -375,6 +375,15 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../database/caching.html">Query Caching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#using-the-model">Using the model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#custom-cache-name">Custom cache name</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/caching.html#automatic-removal-on-update">Automatic removal on update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#skipping-cache">Skipping cache</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../database/execqueries.html">Executing Queries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#run-custom-query">Run custom query</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/execqueries.html#error-handling">Error handling</a></li>
@@ -538,6 +547,12 @@ queries or views.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">At this moment only the Database Cache sub-component is available. The View/Template
 Cache sub-component is planed for future relases.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">The cache does <strong>NOT</strong> secure or encrypt the data in any way and is stored as
+a PHP serialized string. If you wish to store sensitive data in the cache you
+need to make sure you do so in a secure manner!</p>
 </div>
 <div class="section" id="configuration">
 <h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
