@@ -184,6 +184,9 @@ main views parameters with the **subview_** prepending the name of the Sub View.
 In our example the Sub View would be available in the **subview_login** template
 variable.
 
+Multiple Sub Views added to the main view are concatenated into the same template
+variable in the order that they were added.
+
 Sub-Templates
 '''''''''''''
 
