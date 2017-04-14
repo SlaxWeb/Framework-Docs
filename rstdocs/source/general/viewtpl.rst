@@ -202,7 +202,7 @@ example we will load the homepage view, and use the *DefaultLayout* as the layou
     <?php
     // ...
     $layout = $application["loadView.service"]("DefaultLayout");
-    $homepage = $application["loadView.service"]("HomePage");
+    $homepage = $application["loadView.service"]("HomePage", false);
     $homepage->setLayout($layout)->render();
 
 As you can see, we use the View Loader service to load the Layout View class, just
@@ -210,3 +210,20 @@ as if loading a regular view. The Layout View in fact is just a regular view, wh
 makes it a layout is the way we use it. The main view will then render the main
 view, store it in a variable, and inject it into the layout view before rendering
 the layout template.
+
+Default layout
+''''''''''''''
+
+In the **view.php** configuration file a default layout may be set. If a default
+layout is set, and the second parameter to the **loadView.service** or the **loadTemplate.service**
+is omitted or set to *true*, the loader will automatically load and set the default
+layout for that view.
+
+Layout View
+'''''''''''
+
+Just as by normal templates, the View class can be omitted for the Layout Template.
+If the loader does not find the Layout View Class it will use the **\\SlaxWeb\\View\\Base**
+class as the View class. If special processing is required for the layout template
+then a class with the same name must be found in the **classNamespace**(**view.php**)
+defined namespace.
