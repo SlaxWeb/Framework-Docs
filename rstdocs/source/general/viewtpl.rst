@@ -57,6 +57,7 @@ Example::
     <?php
     // ...
     $view = $application["loadView.service"]("My/View");
+    // ...
 
 This will attempt to instantiate the **\\App\\View\\My\\View** class, and return
 it to you, so you may add more data to it, or trigger the rendering of the template.
@@ -65,6 +66,26 @@ Read on to find out more about Views.
 If the second parameter is omitted and **defaultLayout** in the **view.php** configuration
 file is set, the loader will attempt to load the :ref:`gen topics viewtpl layout`
 View and already set it to your View as the Layout.
+
+Avoiding the View
+'''''''''''''''''
+
+The View Class can be avoided completely if it is not required, and the only purpose
+is to load a template that will require no upfront preparation of view data. The
+View component already provides the *Base* View Class which already holds all the
+necesarry functionality to properly load and render the desired template. To load
+a Template without creating a View Class the :ref:`gen topics application` provides
+a **loadTemplate.service** which can be used just as the **loadView.service**::
+
+    <?php
+    // ...
+    $view = $application["loadTemplate.service"]("My/View");
+    // ...
+
+Loading the template directly will instantiate the **\\SlaxWeb\\View\\Base** class
+and set the template to its object. Further operations remain all the same, the
+Template still has to be rendered manually or with the :ref:`gen topics response
+output`.
 
 Setting the template
 ````````````````````
