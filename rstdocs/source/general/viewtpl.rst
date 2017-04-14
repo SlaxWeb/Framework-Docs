@@ -184,6 +184,23 @@ main views parameters with the **subview_** prepending the name of the Sub View.
 In our example the Sub View would be available in the **subview_login** template
 variable.
 
+Sub-Templates
+'''''''''''''
+
+Sub Templates are the same as the Sub Views, except they do not require their own
+View class, since they reuse the already available base View class **\\SlaxWeb\\View\\Base**.
+This makes loading simpler and faster since you do not need to invoke the View loader
+service to load a view, and instantiate a class. Example::
+
+    <?php
+    // ...
+    $homepage = $application["loadView.service"]("HomePage");
+    $homepage->addSubView("login", "Login")->render();
+
+Code is also a bit shorter, and there is no need to create an empty View class just
+to load a simple Sub Template. They are loaded into the same View variable, so the
+above example will also be available as **subview_login** in your main template.
+
 .. _gen topics viewtpl layout:
 
 Layouts
