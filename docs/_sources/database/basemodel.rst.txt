@@ -98,3 +98,51 @@ the Database Library directly, and without the Query Builder. The Database Libra
 is available in the Base Models **$db** protected property. For more detail on executing
 queries with the **database** component, refer to the :ref:`database execqueries`
 documentation.
+
+Callback hooks
+--------------
+
+The Base Model executes a number of callbacks through the Hooks system. Before a
+Base Model method is executed a so called *before* hook is executed, and after the
+method has finished executing an so called *after* hook is executed. By the default
+the Hook name is constructed of the word **model**, the base class name of the model,
+the type of callback, **before** or **after**, and the models method. Example::
+
+    <?php
+    namespace App\Model
+
+    class MyModel extends \SlaxWeb\Database\BaseModel
+    {
+    }
+
+When calling the **select** method on the above model, the following hooks would
+be executed:
+
+* **model.mymodel.before.select** - Before the method is executed
+* **model.mymodel.after.select** - After the method finished execution
+
+.. NOTE::
+   The callbacks are executed only on the following functions: **__construct** (named **init**),
+   **create**, **select**, **update**, and **delete**. Other methods like *where*
+   etc. do not execute callbacks.
+
+Custom model name
+`````````````````
+
+The second part of the full hook name is populated by the models base name, but
+it can be overridden. To replace the model name with a custom value, it needs to
+be set in the **$hookName** protected property of the model. Example::
+
+    <?php
+    namespace App\Model
+
+    class MyModel extends \SlaxWeb\Database\BaseModel
+    {
+        protected $hookName = "overridenHook";
+    }
+
+When calling the **select** method on the above model, the following hooks would
+be executed:
+
+* **model.overridenHook.before.select** - Before the method is executed
+* **model.overridenHook.after.select** - After the method finished execution

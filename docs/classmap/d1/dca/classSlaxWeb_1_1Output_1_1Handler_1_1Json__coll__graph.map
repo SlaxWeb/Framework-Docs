@@ -1,3 +1,4 @@
 <map id="SlaxWeb\Output\Handler\Json" name="SlaxWeb\Output\Handler\Json">
-<area shape="rect" id="node2" href="$de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html" title="SlaxWeb\\Output\\AbstractHandler" alt="" coords="5,5,221,32"/>
+<area shape="rect" id="node2" href="$de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html" title="SlaxWeb\\Output\\AbstractHandler" alt="" coords="5,13,221,39"/>
+<area shape="rect" id="node3" href="$df/d13/interfaceSlaxWeb_1_1Output_1_1Interfaces_1_1ErrorHandler.html" title="SlaxWeb\\Output\\Interfaces\l\\ErrorHandler" alt="" coords="246,5,426,47"/>
 </map>

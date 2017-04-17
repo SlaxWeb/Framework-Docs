@@ -97,8 +97,8 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a03d71cefc47eff6477d6743afbb46b2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a03d71cefc47eff6477d6743afbb46b2a">__construct</a> (swoole_http_server $http, array $config)</td></tr>
-<tr class="separator:a03d71cefc47eff6477d6743afbb46b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01e51253b157db727686002def5c9b13"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a01e51253b157db727686002def5c9b13">__construct</a> (swoole_http_server $http, App $app)</td></tr>
+<tr class="separator:a01e51253b157db727686002def5c9b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca357f31495799c07ff33d28be11e791"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#aca357f31495799c07ff33d28be11e791">start</a> ()</td></tr>
 <tr class="separator:aca357f31495799c07ff33d28be11e791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff7629eef70deb23907cea9b1c1e883c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#aff7629eef70deb23907cea9b1c1e883c">_onServerStart</a> ($server)</td></tr>
@@ -112,20 +112,28 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a82211303052af7c19b7a3255a780b9db"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a82211303052af7c19b7a3255a780b9db">_prepSwooleConfig</a> (array $config)</td></tr>
 <tr class="separator:a82211303052af7c19b7a3255a780b9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62a5b4917bd5ff5bed90d78e95e5c64b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a62a5b4917bd5ff5bed90d78e95e5c64b">setRequestData</a> (swoole_http_request $request)</td></tr>
+<tr class="separator:a62a5b4917bd5ff5bed90d78e95e5c64b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15a3c533b7fcb3d03b97a863e653fe1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a15a3c533b7fcb3d03b97a863e653fe1d">_serveStaticFile</a> (string $file, swoole_http_response $response)</td></tr>
 <tr class="separator:a15a3c533b7fcb3d03b97a863e653fe1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a425e3a36875e767dedd5a7f34ce6b539"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a425e3a36875e767dedd5a7f34ce6b539"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$app</b> = null</td></tr>
+<tr class="separator:a425e3a36875e767dedd5a7f34ce6b539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb030a8310f0b55b3d3e38d3b6ea644f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adb030a8310f0b55b3d3e38d3b6ea644f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$_http</b> = null</td></tr>
 <tr class="separator:adb030a8310f0b55b3d3e38d3b6ea644f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a570b712c9c0aa28a878b24d04a5a0124"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a570b712c9c0aa28a878b24d04a5a0124"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$logger</b> = null</td></tr>
+<tr class="separator:a570b712c9c0aa28a878b24d04a5a0124"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18bcecc517453a6eda2834a21f5e4ff6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a18bcecc517453a6eda2834a21f5e4ff6"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$_config</b> = []</td></tr>
 <tr class="separator:a18bcecc517453a6eda2834a21f5e4ff6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a03d71cefc47eff6477d6743afbb46b2a"></a>
+<a class="anchor" id="a01e51253b157db727686002def5c9b13"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -138,8 +146,8 @@ Protected Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">array&#160;</td>
-          <td class="paramname"><em>$config</em>&#160;</td>
+          <td class="paramtype">App&#160;</td>
+          <td class="paramname"><em>$app</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -153,7 +161,7 @@ Protected Attributes</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramtype">swoole_http_server</td><td class="paramname">$http</td><td>Swoole Http Server </td></tr>
-    <tr><td class="paramtype">array</td><td class="paramname">$config</td><td><a class="el" href="../../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html">WebServer</a> config </td></tr>
+    <tr><td class="paramtype">\SlaxWeb\Bootstrap\Application</td><td class="paramname">$app</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -317,6 +325,39 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a62a5b4917bd5ff5bed90d78e95e5c64b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\AppServer\WebServer::setRequestData </td>
+          <td>(</td>
+          <td class="paramtype">swoole_http_request&#160;</td>
+          <td class="paramname"><em>$request</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set Request to superglobal</p>
+<p>Sets the $_SERVER superglobal values from the swoole request object.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">swoole_http_request</td><td class="paramname">$request</td><td>Incoming Request Object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aca357f31495799c07ff33d28be11e791"></a>
 <div class="memitem">
 <div class="memproto">
@@ -340,7 +381,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

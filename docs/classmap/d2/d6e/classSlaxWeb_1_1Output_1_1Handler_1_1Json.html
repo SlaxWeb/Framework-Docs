@@ -98,14 +98,14 @@ Inheritance diagram for SlaxWeb\Output\Handler\Json:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../da/da1/classSlaxWeb_1_1Output_1_1Handler_1_1Json__inherit__graph.png" border="0" usemap="#SlaxWeb_0COutput_0CHandler_0CJson_inherit__map" alt="Inheritance graph"/></div>
 <map name="SlaxWeb_0COutput_0CHandler_0CJson_inherit__map" id="SlaxWeb_0COutput_0CHandler_0CJson_inherit__map">
-<area shape="rect" id="node2" href="../../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html" title="SlaxWeb\\Output\\AbstractHandler" alt="" coords="5,5,221,32"/></map>
+<area shape="rect" id="node2" href="../../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html" title="SlaxWeb\\Output\\AbstractHandler" alt="" coords="5,13,221,39"/><area shape="rect" id="node3" href="../../df/d13/interfaceSlaxWeb_1_1Output_1_1Interfaces_1_1ErrorHandler.html" title="SlaxWeb\\Output\\Interfaces\l\\ErrorHandler" alt="" coords="246,5,426,47"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for SlaxWeb\Output\Handler\Json:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d1/dca/classSlaxWeb_1_1Output_1_1Handler_1_1Json__coll__graph.png" border="0" usemap="#SlaxWeb_0COutput_0CHandler_0CJson_coll__map" alt="Collaboration graph"/></div>
 <map name="SlaxWeb_0COutput_0CHandler_0CJson_coll__map" id="SlaxWeb_0COutput_0CHandler_0CJson_coll__map">
-<area shape="rect" id="node2" href="../../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html" title="SlaxWeb\\Output\\AbstractHandler" alt="" coords="5,5,221,32"/></map>
+<area shape="rect" id="node2" href="../../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html" title="SlaxWeb\\Output\\AbstractHandler" alt="" coords="5,13,221,39"/><area shape="rect" id="node3" href="../../df/d13/interfaceSlaxWeb_1_1Output_1_1Interfaces_1_1ErrorHandler.html" title="SlaxWeb\\Output\\Interfaces\l\\ErrorHandler" alt="" coords="246,5,426,47"/></map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -114,8 +114,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab316ec131099b8adb156fc54c4106fce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a1be8dbce01d10796d40190e3c6f5dd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#a3a1be8dbce01d10796d40190e3c6f5dd">add</a> (array $data)</td></tr>
 <tr class="separator:a3a1be8dbce01d10796d40190e3c6f5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7cbb678d798b7e10d360908aeed106d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#af7cbb678d798b7e10d360908aeed106d">addError</a> (string $error, int $code=500)</td></tr>
-<tr class="separator:af7cbb678d798b7e10d360908aeed106d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf40f8ac978922c1d9386ebf7585e131"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#adf40f8ac978922c1d9386ebf7585e131">addError</a> (string $error, int $code=500, array $errorData=[])</td></tr>
+<tr class="separator:adf40f8ac978922c1d9386ebf7585e131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f4cf2ecf4252f3bbb1c094ca1a52437"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#a4f4cf2ecf4252f3bbb1c094ca1a52437">render</a> ()</td></tr>
 <tr class="separator:a4f4cf2ecf4252f3bbb1c094ca1a52437"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSlaxWeb_1_1Output_1_1AbstractHandler"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSlaxWeb_1_1Output_1_1AbstractHandler')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html">SlaxWeb\Output\AbstractHandler</a></td></tr>
@@ -171,7 +171,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="af7cbb678d798b7e10d360908aeed106d"></a>
+<a class="anchor" id="adf40f8ac978922c1d9386ebf7585e131"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -185,7 +185,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>$code</em> = <code>500</code>&#160;</td>
+          <td class="paramname"><em>$code</em> = <code>500</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$errorData</em> = <code>[]</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -194,16 +200,8 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Add error to response</p>
-<p>When an error is added, the status code is automatically set to $code, which defaults to int(500). This method only adds the error message to the local error container. The output still needs to be written to response with the Output <a class="el" href="../../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html">Manager</a> object.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$error</td><td>Error message to add to container </td></tr>
-    <tr><td class="paramtype">int</td><td class="paramname">$code</td><td>HTTP Status code that is automatically set to the response object, default int(500) </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
+
+<p>Implements <a class="el" href="../../df/d13/interfaceSlaxWeb_1_1Output_1_1Interfaces_1_1ErrorHandler.html#a0a9b87ab6fe3ad36c935bb8c7cb15780">SlaxWeb\Output\Interfaces\ErrorHandler</a>.</p>
 
 </div>
 </div>
@@ -253,7 +251,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

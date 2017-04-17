@@ -102,6 +102,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a993b5dd78ee6213bdf4c30f02e92bd70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a72e536a21ea8a9f754ab6d3d37f49857"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html#a72e536a21ea8a9f754ab6d3d37f49857">__call</a> (string $name, array $args)</td></tr>
 <tr class="separator:a72e536a21ea8a9f754ab6d3d37f49857"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab47e87031e1366fca102451a4af2347d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html#ab47e87031e1366fca102451a4af2347d">setEnabled</a> (bool $enabled=true)</td></tr>
+<tr class="separator:ab47e87031e1366fca102451a4af2347d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5f99a7e36efeedce9c422b7d7d30b154"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html#a5f99a7e36efeedce9c422b7d7d30b154">setHandler</a> (<a class="el" href="../../de/d28/classSlaxWeb_1_1Output_1_1AbstractHandler.html">AbstractHandler</a> $handler)</td></tr>
 <tr class="separator:a5f99a7e36efeedce9c422b7d7d30b154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58f96eff0ee1ae6766e1f13e2fc68853"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html#a58f96eff0ee1ae6766e1f13e2fc68853">setHandlerGetter</a> (callable $getter)</td></tr>
@@ -296,7 +298,7 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000003">Todo:</a></b></dt><dd>log the error in appropriate level </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000008">Todo:</a></b></dt><dd>log the error in appropriate level </dd></dl>
 
 </div>
 </div>
@@ -349,6 +351,31 @@ Protected Attributes</h2></td></tr>
 <p>Initialise manager</p>
 <p>Registers a shutdown handler function, and a error handler function for handling execution termination, and allows for the desired output. After the handlers are registered, output buffering is started.</p>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ab47e87031e1366fca102451a4af2347d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\Output\Manager::setEnabled </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>$enabled</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Set enabled</p>
+<p>Sets the enabled flag to on or off, depending on the input parameter. When set to true, the output manager will be enabled.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">bool</td><td class="paramname">$enabled</td><td>Enabled flag, default bool(true) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>self </dd></dl>
 
 </div>
 </div>
@@ -474,7 +501,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

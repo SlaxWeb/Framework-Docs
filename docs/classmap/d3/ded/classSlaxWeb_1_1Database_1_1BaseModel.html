@@ -105,8 +105,8 @@ Inheritance diagram for SlaxWeb\Database\BaseModel:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a26f2526aa3bd77af9c89098e308613fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a26f2526aa3bd77af9c89098e308613fa">__construct</a> (Logger $logger, Config $config, Inflector $inflector, <a class="el" href="../../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html">Builder</a> $queryBuilder, Database $db)</td></tr>
-<tr class="separator:a26f2526aa3bd77af9c89098e308613fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ceaf014c02cab0d847a7f6d9405e80"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#ac5ceaf014c02cab0d847a7f6d9405e80">__construct</a> (Logger $logger, Config $config, Inflector $inflector, <a class="el" href="../../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html">Builder</a> $queryBuilder, Database $db, HooksContainer $hooks)</td></tr>
+<tr class="separator:ac5ceaf014c02cab0d847a7f6d9405e80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c17d52aeea80f8b96be3c7670d1ba0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a71c17d52aeea80f8b96be3c7670d1ba0">getPrimKey</a> ()</td></tr>
 <tr class="separator:a71c17d52aeea80f8b96be3c7670d1ba0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abafaad674636668f1966ee57ef226f4e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#abafaad674636668f1966ee57ef226f4e">create</a> (array $data)</td></tr>
@@ -164,11 +164,11 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>TBL_NAME_UPPERCASE</
 <tr class="memitem:a7ec4913032ea5da727690f40a93fe007"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ec4913032ea5da727690f40a93fe007"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>TBL_NAME_LOWERCASE</b> = 5</td></tr>
 <tr class="separator:a7ec4913032ea5da727690f40a93fe007"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b9cdaffe17ad047b0f40dffd2c56821"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a5b9cdaffe17ad047b0f40dffd2c56821">CALLBACK_BEFORE</a> = true</td></tr>
-<tr class="separator:a5b9cdaffe17ad047b0f40dffd2c56821"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3869237d2f16d749451efbbb6d2c6d75"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3869237d2f16d749451efbbb6d2c6d75"></a>
-const&#160;</td><td class="memItemRight" valign="bottom"><b>CALLBACK_AFTER</b> = false</td></tr>
-<tr class="separator:a3869237d2f16d749451efbbb6d2c6d75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607730793a145f451d2a1ae931c2e01b"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a607730793a145f451d2a1ae931c2e01b">HOOK_BEFORE</a> = &quot;before&quot;</td></tr>
+<tr class="separator:a607730793a145f451d2a1ae931c2e01b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851e48efa27e5fd6ed35a33b313d1baf"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a851e48efa27e5fd6ed35a33b313d1baf"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>HOOK_AFTER</b> = &quot;after&quot;</td></tr>
+<tr class="separator:a851e48efa27e5fd6ed35a33b313d1baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b163bc347904c2df68878fa5a18541b"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a0b163bc347904c2df68878fa5a18541b">JOIN_INNER</a> = &quot;INNER JOIN&quot;</td></tr>
 <tr class="separator:a0b163bc347904c2df68878fa5a18541b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4d98e4d18f48193d7dc40ddb89d144a"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4d98e4d18f48193d7dc40ddb89d144a"></a>
@@ -194,8 +194,10 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>SDEL_VAL_TIMESTAMP</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a6beb5aa9869de9124e2304def4378de9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a6beb5aa9869de9124e2304def4378de9">invokeCallback</a> (string $name, bool $before=self::CALLBACK_BEFORE)</td></tr>
-<tr class="separator:a6beb5aa9869de9124e2304def4378de9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab9d5a34c5defd9880098b3f190e459"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a4ab9d5a34c5defd9880098b3f190e459">invokeHook</a> (string $modelMethod, string $before=self::HOOK_BEFORE)</td></tr>
+<tr class="separator:a4ab9d5a34c5defd9880098b3f190e459"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ed73eed6901f99dc35543ef93e948c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a35ed73eed6901f99dc35543ef93e948c">getClassName</a> ()</td></tr>
+<tr class="separator:a35ed73eed6901f99dc35543ef93e948c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a721273a621688af3a874227b6088cfec"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a721273a621688af3a874227b6088cfec">setTable</a> ()</td></tr>
 <tr class="separator:a721273a621688af3a874227b6088cfec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad008afdc5e34b09ebffa65e55d4af5a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aad008afdc5e34b09ebffa65e55d4af5a">setSoftDelete</a> ()</td></tr>
@@ -247,39 +249,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a8dcf21ea1e883a526339079ad19f18e4"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dcf21ea1e883a526339079ad19f18e4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$timestampFunction</b> = &quot;&quot;</td></tr>
 <tr class="separator:a8dcf21ea1e883a526339079ad19f18e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f160c8e9e593cb8d9d77d159912e991"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f160c8e9e593cb8d9d77d159912e991"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeInit</b> = []</td></tr>
-<tr class="separator:a0f160c8e9e593cb8d9d77d159912e991"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52c47cd2feeea75e9acef177adc560c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52c47cd2feeea75e9acef177adc560c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterInit</b> = []</td></tr>
-<tr class="separator:a52c47cd2feeea75e9acef177adc560c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5eb9aeb3f3a0737444c2265ea49f8e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c5eb9aeb3f3a0737444c2265ea49f8e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeCreate</b> = []</td></tr>
-<tr class="separator:a5c5eb9aeb3f3a0737444c2265ea49f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca328e6cbfb430e11c60a98e4878f87"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca328e6cbfb430e11c60a98e4878f87"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterCreate</b> = []</td></tr>
-<tr class="separator:a8ca328e6cbfb430e11c60a98e4878f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a846c03e06bdb39f9540824f635893733"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a846c03e06bdb39f9540824f635893733"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeRead</b> = []</td></tr>
-<tr class="separator:a846c03e06bdb39f9540824f635893733"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76213d307a75940b8367fba1cbfc269d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76213d307a75940b8367fba1cbfc269d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterRead</b> = []</td></tr>
-<tr class="separator:a76213d307a75940b8367fba1cbfc269d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498e3f9566df3935237241c4dfa71aec"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a498e3f9566df3935237241c4dfa71aec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeUpdate</b> = []</td></tr>
-<tr class="separator:a498e3f9566df3935237241c4dfa71aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7375e2b0cfdc12ad5ba769cd9ab397b0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7375e2b0cfdc12ad5ba769cd9ab397b0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterUpdate</b> = []</td></tr>
-<tr class="separator:a7375e2b0cfdc12ad5ba769cd9ab397b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f5ffca382e25ba16f0cb83d169b038f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f5ffca382e25ba16f0cb83d169b038f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeDelete</b> = []</td></tr>
-<tr class="separator:a7f5ffca382e25ba16f0cb83d169b038f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a252c173607167a1e8652db85b958f4bc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a252c173607167a1e8652db85b958f4bc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterDelete</b> = []</td></tr>
-<tr class="separator:a252c173607167a1e8652db85b958f4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0757912f01b92de85e424209cd8c295e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0757912f01b92de85e424209cd8c295e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$hooks</b> = null</td></tr>
+<tr class="separator:a0757912f01b92de85e424209cd8c295e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5020952fa6494e5d957c450f03a73ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5020952fa6494e5d957c450f03a73ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$hookName</b> = null</td></tr>
+<tr class="separator:ae5020952fa6494e5d957c450f03a73ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a26f2526aa3bd77af9c89098e308613fa"></a>
+<a class="anchor" id="ac5ceaf014c02cab0d847a7f6d9405e80"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -311,7 +289,13 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">Database&#160;</td>
-          <td class="paramname"><em>$db</em>&#160;</td>
+          <td class="paramname"><em>$db</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">HooksContainer&#160;</td>
+          <td class="paramname"><em>$hooks</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -329,6 +313,7 @@ Protected Attributes</h2></td></tr>
     <tr><td class="paramtype">\ICanBoogie\Inflector</td><td class="paramname">$inflector</td><td>Inflector object for pluralization and word transformations </td></tr>
     <tr><td class="paramtype">\SlaxWeb\Database\Query\Builder</td><td class="paramname">$queryBuilder</td><td>Query Builder instance </td></tr>
     <tr><td class="paramtype">\SlaxWeb\Database\Interface\Library</td><td class="paramname">$db</td><td>Database library object </td></tr>
+    <tr><td class="paramtype">\SlaxWeb\Hooks\Container</td><td class="paramname">$hooks</td><td>HooksContainer hooks container object </td></tr>
   </table>
   </dd>
 </dl>
@@ -376,6 +361,30 @@ Protected Attributes</h2></td></tr>
 <p>Delete query</p>
 <p>Run an delete query against the database. Returns bool(true) on success, and bool(false) on error.</p>
 <dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a35ed73eed6901f99dc35543ef93e948c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\Database\BaseModel::getClassName </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Returns curent, lowercased class name without namespace. </p><dl class="section return"><dt>Returns</dt><dd>string Lowercased class name. </dd></dl>
 
 </div>
 </div>
@@ -447,7 +456,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6beb5aa9869de9124e2304def4378de9"></a>
+<a class="anchor" id="a4ab9d5a34c5defd9880098b3f190e459"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -455,16 +464,16 @@ Protected Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">SlaxWeb\Database\BaseModel::invokeCallback </td>
+          <td class="memname">SlaxWeb\Database\BaseModel::invokeHook </td>
           <td>(</td>
           <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>$name</em>, </td>
+          <td class="paramname"><em>$modelMethod</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>$before</em> = <code>self::CALLBACK_BEFORE</code>&#160;</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>$before</em> = <code>self::HOOK_BEFORE</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -478,12 +487,12 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Invoke callback</p>
-<p>Invokes the the callback in the order that they are stored in the callback array for a passed in callback type. All additional parameters are sent to the invoked callback.</p>
+<p>Invoke hook</p>
+<p>Invokes the hook specified by the name. The whole hook name consists of string model, class name or custom hook name stored in the protected property hookName, before or after concatenated with the modelMethod. Example: "model.user.before.init" for a user model.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td>Name of the callback </td></tr>
-    <tr><td class="paramtype">bool</td><td class="paramname">$before</td><td>Invoke 'before' callables of '$name' callback, default self::CALLBACK_BEFORE </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$modelMethod</td><td>Model method name. </td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$before</td><td>Invoke 'before' '$modelMethod' hook, default self::HOOK_BEFORE </td></tr>
   </table>
   </dd>
 </dl>
@@ -1111,16 +1120,16 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a5b9cdaffe17ad047b0f40dffd2c56821"></a>
+<a class="anchor" id="a607730793a145f451d2a1ae931c2e01b"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const SlaxWeb\Database\BaseModel::CALLBACK_BEFORE = true</td>
+          <td class="memname">const SlaxWeb\Database\BaseModel::HOOK_BEFORE = &quot;before&quot;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Callback invokation type </p>
+<p>Hook invokation type </p>
 
 </div>
 </div>
@@ -1169,7 +1178,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -121,8 +121,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a53fce285ba97847af2be074d0f723063"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d4e/classSlaxWeb_1_1Cache_1_1Database_1_1Model.html#a53fce285ba97847af2be074d0f723063">update</a> (array $columns)</td></tr>
 <tr class="separator:a53fce285ba97847af2be074d0f723063"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSlaxWeb_1_1Database_1_1BaseModel')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html">SlaxWeb\Database\BaseModel</a></td></tr>
-<tr class="memitem:a26f2526aa3bd77af9c89098e308613fa inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a26f2526aa3bd77af9c89098e308613fa">__construct</a> (Logger $logger, Config $config, Inflector $inflector, <a class="el" href="../../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html">Builder</a> $queryBuilder, Database $db)</td></tr>
-<tr class="separator:a26f2526aa3bd77af9c89098e308613fa inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5ceaf014c02cab0d847a7f6d9405e80 inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#ac5ceaf014c02cab0d847a7f6d9405e80">__construct</a> (Logger $logger, Config $config, Inflector $inflector, <a class="el" href="../../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html">Builder</a> $queryBuilder, Database $db, HooksContainer $hooks)</td></tr>
+<tr class="separator:ac5ceaf014c02cab0d847a7f6d9405e80 inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71c17d52aeea80f8b96be3c7670d1ba0 inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a71c17d52aeea80f8b96be3c7670d1ba0">getPrimKey</a> ()</td></tr>
 <tr class="separator:a71c17d52aeea80f8b96be3c7670d1ba0 inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abafaad674636668f1966ee57ef226f4e inherit pub_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#abafaad674636668f1966ee57ef226f4e">create</a> (array $data)</td></tr>
@@ -169,9 +169,9 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a4922c359a49c2ec80dbdf1d26079576c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4922c359a49c2ec80dbdf1d26079576c"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$cache</b> = null</td></tr>
 <tr class="separator:a4922c359a49c2ec80dbdf1d26079576c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98ec9f6aebc893b73469e3f14a46c0e8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a98ec9f6aebc893b73469e3f14a46c0e8"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$cachename</b> = &quot;&quot;</td></tr>
-<tr class="separator:a98ec9f6aebc893b73469e3f14a46c0e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07a7ca07bfe8e077f74dfab77a28e19c"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07a7ca07bfe8e077f74dfab77a28e19c"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$cacheName</b> = &quot;&quot;</td></tr>
+<tr class="separator:a07a7ca07bfe8e077f74dfab77a28e19c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55bafeaae0930d9ac95ad3daa61ca8b2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a55bafeaae0930d9ac95ad3daa61ca8b2"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$skipCache</b> = true</td></tr>
 <tr class="separator:a55bafeaae0930d9ac95ad3daa61ca8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,36 +218,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a8dcf21ea1e883a526339079ad19f18e4 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8dcf21ea1e883a526339079ad19f18e4"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>$timestampFunction</b> = &quot;&quot;</td></tr>
 <tr class="separator:a8dcf21ea1e883a526339079ad19f18e4 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f160c8e9e593cb8d9d77d159912e991 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0f160c8e9e593cb8d9d77d159912e991"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeInit</b> = []</td></tr>
-<tr class="separator:a0f160c8e9e593cb8d9d77d159912e991 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52c47cd2feeea75e9acef177adc560c3 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a52c47cd2feeea75e9acef177adc560c3"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterInit</b> = []</td></tr>
-<tr class="separator:a52c47cd2feeea75e9acef177adc560c3 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5c5eb9aeb3f3a0737444c2265ea49f8e inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5c5eb9aeb3f3a0737444c2265ea49f8e"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeCreate</b> = []</td></tr>
-<tr class="separator:a5c5eb9aeb3f3a0737444c2265ea49f8e inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ca328e6cbfb430e11c60a98e4878f87 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8ca328e6cbfb430e11c60a98e4878f87"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterCreate</b> = []</td></tr>
-<tr class="separator:a8ca328e6cbfb430e11c60a98e4878f87 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a846c03e06bdb39f9540824f635893733 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a846c03e06bdb39f9540824f635893733"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeRead</b> = []</td></tr>
-<tr class="separator:a846c03e06bdb39f9540824f635893733 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76213d307a75940b8367fba1cbfc269d inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76213d307a75940b8367fba1cbfc269d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterRead</b> = []</td></tr>
-<tr class="separator:a76213d307a75940b8367fba1cbfc269d inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a498e3f9566df3935237241c4dfa71aec inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a498e3f9566df3935237241c4dfa71aec"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeUpdate</b> = []</td></tr>
-<tr class="separator:a498e3f9566df3935237241c4dfa71aec inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7375e2b0cfdc12ad5ba769cd9ab397b0 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7375e2b0cfdc12ad5ba769cd9ab397b0"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterUpdate</b> = []</td></tr>
-<tr class="separator:a7375e2b0cfdc12ad5ba769cd9ab397b0 inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7f5ffca382e25ba16f0cb83d169b038f inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7f5ffca382e25ba16f0cb83d169b038f"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$beforeDelete</b> = []</td></tr>
-<tr class="separator:a7f5ffca382e25ba16f0cb83d169b038f inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a252c173607167a1e8652db85b958f4bc inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a252c173607167a1e8652db85b958f4bc"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>$afterDelete</b> = []</td></tr>
-<tr class="separator:a252c173607167a1e8652db85b958f4bc inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0757912f01b92de85e424209cd8c295e inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0757912f01b92de85e424209cd8c295e"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$hooks</b> = null</td></tr>
+<tr class="separator:a0757912f01b92de85e424209cd8c295e inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5020952fa6494e5d957c450f03a73ed inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5020952fa6494e5d957c450f03a73ed"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$hookName</b> = null</td></tr>
+<tr class="separator:ae5020952fa6494e5d957c450f03a73ed inherit pro_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -266,11 +242,11 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>TBL_NAME_UPPERCASE</
 <tr class="memitem:a7ec4913032ea5da727690f40a93fe007 inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7ec4913032ea5da727690f40a93fe007"></a>
 const&#160;</td><td class="memItemRight" valign="bottom"><b>TBL_NAME_LOWERCASE</b> = 5</td></tr>
 <tr class="separator:a7ec4913032ea5da727690f40a93fe007 inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b9cdaffe17ad047b0f40dffd2c56821 inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a5b9cdaffe17ad047b0f40dffd2c56821">CALLBACK_BEFORE</a> = true</td></tr>
-<tr class="separator:a5b9cdaffe17ad047b0f40dffd2c56821 inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3869237d2f16d749451efbbb6d2c6d75 inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3869237d2f16d749451efbbb6d2c6d75"></a>
-const&#160;</td><td class="memItemRight" valign="bottom"><b>CALLBACK_AFTER</b> = false</td></tr>
-<tr class="separator:a3869237d2f16d749451efbbb6d2c6d75 inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a607730793a145f451d2a1ae931c2e01b inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a607730793a145f451d2a1ae931c2e01b">HOOK_BEFORE</a> = &quot;before&quot;</td></tr>
+<tr class="separator:a607730793a145f451d2a1ae931c2e01b inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a851e48efa27e5fd6ed35a33b313d1baf inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a851e48efa27e5fd6ed35a33b313d1baf"></a>
+const&#160;</td><td class="memItemRight" valign="bottom"><b>HOOK_AFTER</b> = &quot;after&quot;</td></tr>
+<tr class="separator:a851e48efa27e5fd6ed35a33b313d1baf inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b163bc347904c2df68878fa5a18541b inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a0b163bc347904c2df68878fa5a18541b">JOIN_INNER</a> = &quot;INNER JOIN&quot;</td></tr>
 <tr class="separator:a0b163bc347904c2df68878fa5a18541b inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4d98e4d18f48193d7dc40ddb89d144a inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac4d98e4d18f48193d7dc40ddb89d144a"></a>
@@ -294,8 +270,10 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>SDEL_VAL_TIMESTAMP</
 &#160;</td><td class="memItemRight" valign="bottom"><b>$table</b> = &quot;&quot;</td></tr>
 <tr class="separator:a3caf0b960e282584b403dc8f0d05e15b inherit pub_attribs_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classSlaxWeb_1_1Database_1_1BaseModel')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html">SlaxWeb\Database\BaseModel</a></td></tr>
-<tr class="memitem:a6beb5aa9869de9124e2304def4378de9 inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a6beb5aa9869de9124e2304def4378de9">invokeCallback</a> (string $name, bool $before=self::CALLBACK_BEFORE)</td></tr>
-<tr class="separator:a6beb5aa9869de9124e2304def4378de9 inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ab9d5a34c5defd9880098b3f190e459 inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a4ab9d5a34c5defd9880098b3f190e459">invokeHook</a> (string $modelMethod, string $before=self::HOOK_BEFORE)</td></tr>
+<tr class="separator:a4ab9d5a34c5defd9880098b3f190e459 inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35ed73eed6901f99dc35543ef93e948c inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a35ed73eed6901f99dc35543ef93e948c">getClassName</a> ()</td></tr>
+<tr class="separator:a35ed73eed6901f99dc35543ef93e948c inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a721273a621688af3a874227b6088cfec inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a721273a621688af3a874227b6088cfec">setTable</a> ()</td></tr>
 <tr class="separator:a721273a621688af3a874227b6088cfec inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad008afdc5e34b09ebffa65e55d4af5a inherit pro_methods_classSlaxWeb_1_1Database_1_1BaseModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aad008afdc5e34b09ebffa65e55d4af5a">setSoftDelete</a> ()</td></tr>
@@ -412,7 +390,7 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>SDEL_VAL_TIMESTAMP</
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 25 2017 09:23:33 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

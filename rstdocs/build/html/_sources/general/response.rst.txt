@@ -55,6 +55,8 @@ the value of the second parameter::
     $app["response.service"]->redirect("https://google.com", false);
     echo "this will still run";
 
+.. _gen topcis response output:
+
 Output component
 ----------------
 

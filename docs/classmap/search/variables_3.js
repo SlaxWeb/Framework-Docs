@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['l_5ftype_5ffile',['L_TYPE_FILE',['../d9/d4f/classSlaxWeb_1_1Logger_1_1Helper.html#a26b3eba2a8e925ecf9f02a1566d4ea6b',1,'SlaxWeb::Logger::Helper']]]
+  ['join_5finner',['JOIN_INNER',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a0b163bc347904c2df68878fa5a18541b',1,'SlaxWeb::Database::BaseModel']]]
 ];

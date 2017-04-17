@@ -134,6 +134,8 @@ const&#160;</td><td class="memItemRight" valign="bottom"><b>TPL_OUTPUT</b> = 201
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
+<tr class="memitem:a6a063481ae796e706cb2005db5c47052"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1b/classSlaxWeb_1_1View_1_1AbstractLoader.html#a6a063481ae796e706cb2005db5c47052">combineData</a> (array $data, int $cacheData)</td></tr>
+<tr class="separator:a6a063481ae796e706cb2005db5c47052"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a467422bbc1c872b86ccbf36bb2dc3040"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1b/classSlaxWeb_1_1View_1_1AbstractLoader.html#a467422bbc1c872b86ccbf36bb2dc3040">load</a> (string $template, array $data)</td></tr>
 <tr class="separator:a467422bbc1c872b86ccbf36bb2dc3040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -191,11 +193,54 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a6a063481ae796e706cb2005db5c47052"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\View\AbstractLoader::combineData </td>
+          <td>(</td>
+          <td class="paramtype">array&#160;</td>
+          <td class="paramname"><em>$data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>$cacheData</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Combine data</p>
+<p>Combines the received data and the already cached data, depending on the *$cacheData* parameter passed as the second parameter. The first parameter holds an array of data that will be combined with the cached data.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$data</td><td>Template data to be passed to the template. Default [] </td></tr>
+    <tr><td class="paramtype">int</td><td class="paramname">$cacheData</td><td>Cache template data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>array </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a467422bbc1c872b86ccbf36bb2dc3040"></a>
 <div class="memitem">
 <div class="memproto">
@@ -393,7 +438,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Mar 25 2017 09:23:34 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

@@ -226,6 +226,7 @@
 <li class="toctree-l4"><a class="reference internal" href="routing.html#response">Response</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#route-specific-hooks">Route specific hooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="routing.html#parameters">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="routing.html#examples">Examples</a></li>
@@ -325,6 +326,22 @@
 <li class="toctree-l3"><a class="reference internal" href="hooks.html#framework-hooks-points">Framework hooks points</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cache.html">Cache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cache.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#handler">handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#location">location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#maxage">maxAge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cache.html#using-the-cache">Using the cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cache.html#write-and-read">Write and read</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#write">write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#read">read</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#remove">remove</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="libraries.html#registering-libraries">Registering libraries</a></li>
 </ul>
@@ -356,6 +373,19 @@
 <li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#executing-queries">Executing queries</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#callback-hooks">Callback hooks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#custom-model-name">Custom model name</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/caching.html">Query Caching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#using-the-model">Using the model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#custom-cache-name">Custom cache name</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/caching.html#automatic-removal-on-update">Automatic removal on update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#skipping-cache">Skipping cache</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database/execqueries.html">Executing Queries</a><ul>
@@ -401,7 +431,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#grouping">Grouping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#ordering">Ordering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#limit">Limit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#enabled">enabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#createdcolumn">createdColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#updatedcolumn">updatedColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#function">function</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#sql-functions">SQL functions</a></li>
 </ul>
 </li>
@@ -539,6 +575,7 @@ automatically, which it attempts to do by default.</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// ...</span>
 <span class="nv">$view</span> <span class="o">=</span> <span class="nv">$application</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;My/View&quot;</span><span class="p">);</span>
+<span class="c1">// ...</span>
 </pre></div>
 </div>
 <p>This will attempt to instantiate the <strong>\App\View\My\View</strong> class, and return
@@ -547,6 +584,25 @@ Read on to find out more about Views.</p>
 <p>If the second parameter is omitted and <strong>defaultLayout</strong> in the <strong>view.php</strong> configuration
 file is set, the loader will attempt to load the <a class="reference internal" href="#gen-topics-viewtpl-layout"><span class="std std-ref">Layouts</span></a>
 View and already set it to your View as the Layout.</p>
+<div class="section" id="avoiding-the-view">
+<h4>Avoiding the View<a class="headerlink" href="#avoiding-the-view" title="Permalink to this headline">¶</a></h4>
+<p>The View Class can be avoided completely if it is not required, and the only purpose
+is to load a template that will require no upfront preparation of view data. The
+View component already provides the <em>Base</em> View Class which already holds all the
+necesarry functionality to properly load and render the desired template. To load
+a Template without creating a View Class the <a class="reference internal" href="application.html#gen-topics-application"><span class="std std-ref">Application object</span></a> provides
+a <strong>loadTemplate.service</strong> which can be used just as the <strong>loadView.service</strong>:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// ...</span>
+<span class="nv">$view</span> <span class="o">=</span> <span class="nv">$application</span><span class="p">[</span><span class="s2">&quot;loadTemplate.service&quot;</span><span class="p">](</span><span class="s2">&quot;My/View&quot;</span><span class="p">);</span>
+<span class="c1">// ...</span>
+</pre></div>
+</div>
+<p>Loading the template directly will instantiate the <strong>\SlaxWeb\View\Base</strong> class
+and set the template to its object. Further operations remain all the same, the
+Template still has to be rendered manually or with the <span class="xref std std-ref">gen topics response
+output</span>.</p>
+</div>
 </div>
 <div class="section" id="setting-the-template">
 <h3>Setting the template<a class="headerlink" href="#setting-the-template" title="Permalink to this headline">¶</a></h3>
@@ -633,6 +689,24 @@ sub-view into the homepage view:</p>
 main views parameters with the <strong>subview_</strong> prepending the name of the Sub View.
 In our example the Sub View would be available in the <strong>subview_login</strong> template
 variable.</p>
+<p>Multiple Sub Views added to the main view are concatenated into the same template
+variable in the order that they were added.</p>
+<div class="section" id="sub-templates">
+<h4>Sub-Templates<a class="headerlink" href="#sub-templates" title="Permalink to this headline">¶</a></h4>
+<p>Sub Templates are the same as the Sub Views, except they do not require their own
+View class, since they reuse the already available base View class <strong>\SlaxWeb\View\Base</strong>.
+This makes loading simpler and faster since you do not need to invoke the View loader
+service to load a view, and instantiate a class. Example:</p>
+<div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
+<span class="c1">// ...</span>
+<span class="nv">$homepage</span> <span class="o">=</span> <span class="nv">$application</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;HomePage&quot;</span><span class="p">);</span>
+<span class="nv">$homepage</span><span class="o">-&gt;</span><span class="na">addSubView</span><span class="p">(</span><span class="s2">&quot;login&quot;</span><span class="p">,</span> <span class="s2">&quot;Login&quot;</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">();</span>
+</pre></div>
+</div>
+<p>Code is also a bit shorter, and there is no need to create an empty View class just
+to load a simple Sub Template. They are loaded into the same View variable, so the
+above example will also be available as <strong>subview_login</strong> in your main template.</p>
+</div>
 </div>
 <div class="section" id="layouts">
 <span id="gen-topics-viewtpl-layout"></span><h3>Layouts<a class="headerlink" href="#layouts" title="Permalink to this headline">¶</a></h3>
@@ -647,7 +721,7 @@ example we will load the homepage view, and use the <em>DefaultLayout</em> as th
 <div class="highlight-php"><div class="highlight"><pre><span class="o">&lt;?</span><span class="nx">php</span>
 <span class="c1">// ...</span>
 <span class="nv">$layout</span> <span class="o">=</span> <span class="nv">$application</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;DefaultLayout&quot;</span><span class="p">);</span>
-<span class="nv">$homepage</span> <span class="o">=</span> <span class="nv">$application</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;HomePage&quot;</span><span class="p">);</span>
+<span class="nv">$homepage</span> <span class="o">=</span> <span class="nv">$application</span><span class="p">[</span><span class="s2">&quot;loadView.service&quot;</span><span class="p">](</span><span class="s2">&quot;HomePage&quot;</span><span class="p">,</span> <span class="k">false</span><span class="p">);</span>
 <span class="nv">$homepage</span><span class="o">-&gt;</span><span class="na">setLayout</span><span class="p">(</span><span class="nv">$layout</span><span class="p">)</span><span class="o">-&gt;</span><span class="na">render</span><span class="p">();</span>
 </pre></div>
 </div>
@@ -656,6 +730,21 @@ as if loading a regular view. The Layout View in fact is just a regular view, wh
 makes it a layout is the way we use it. The main view will then render the main
 view, store it in a variable, and inject it into the layout view before rendering
 the layout template.</p>
+<div class="section" id="default-layout">
+<h4>Default layout<a class="headerlink" href="#default-layout" title="Permalink to this headline">¶</a></h4>
+<p>In the <strong>view.php</strong> configuration file a default layout may be set. If a default
+layout is set, and the second parameter to the <strong>loadView.service</strong> or the <strong>loadTemplate.service</strong>
+is omitted or set to <em>true</em>, the loader will automatically load and set the default
+layout for that view.</p>
+</div>
+<div class="section" id="layout-view">
+<h4>Layout View<a class="headerlink" href="#layout-view" title="Permalink to this headline">¶</a></h4>
+<p>Just as by normal templates, the View class can be omitted for the Layout Template.
+If the loader does not find the Layout View Class it will use the <strong>\SlaxWeb\View\Base</strong>
+class as the View class. If special processing is required for the layout template
+then a class with the same name must be found in the <strong>classNamespace**(**view.php</strong>)
+defined namespace.</p>
+</div>
 </div>
 </div>
 </div>

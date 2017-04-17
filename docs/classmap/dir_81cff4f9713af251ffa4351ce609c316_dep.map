@@ -1,7 +1,8 @@
 <map id="/opt/slax0rDev/slaxweb/bootstrap/src" name="/opt/slax0rDev/slaxweb/bootstrap/src">
-<area shape="rect" id="node2" href="dir_f7e72d705036b61b62283c056c9a7b84.html" title="Controller" alt="" coords="238,63,317,111"/>
-<area shape="rect" id="node3" href="dir_9197d884259b411b5bf25a024ddef675.html" title="Exception" alt="" coords="133,63,213,111"/>
-<area shape="rect" id="node4" href="dir_a26dc23229f47ec061c9a79fd4166901.html" title="Service" alt="" coords="37,63,109,111"/>
-<area shape="rect" id="clust2" href="dir_81cff4f9713af251ffa4351ce609c316.html" alt="" coords="27,52,424,121"/>
-<area shape="rect" id="clust1" href="dir_484e16b7f23165de9367bba0deb2c68e.html" title="bootstrap" alt="" coords="16,16,435,132"/>
+<area shape="rect" id="node2" href="dir_5c8ac17a102cc5a8d7b0a188e3fb0424.html" title="Commands" alt="" coords="341,63,430,111"/>
+<area shape="rect" id="node3" href="dir_f7e72d705036b61b62283c056c9a7b84.html" title="Controller" alt="" coords="238,63,317,111"/>
+<area shape="rect" id="node4" href="dir_9197d884259b411b5bf25a024ddef675.html" title="Exception" alt="" coords="133,63,213,111"/>
+<area shape="rect" id="node5" href="dir_a26dc23229f47ec061c9a79fd4166901.html" title="Service" alt="" coords="37,63,109,111"/>
+<area shape="rect" id="clust2" href="dir_81cff4f9713af251ffa4351ce609c316.html" alt="" coords="27,52,537,121"/>
+<area shape="rect" id="clust1" href="dir_484e16b7f23165de9367bba0deb2c68e.html" title="bootstrap" alt="" coords="16,16,548,132"/>
 </map>

@@ -226,6 +226,7 @@
 <li class="toctree-l4"><a class="reference internal" href="routing.html#response">Response</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="routing.html#route-specific-hooks">Route specific hooks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="routing.html#segment-based-uri-matching">Segment-based URI matching</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="routing.html#parameters">Parameters</a></li>
 <li class="toctree-l4"><a class="reference internal" href="routing.html#examples">Examples</a></li>
@@ -325,6 +326,22 @@
 <li class="toctree-l3"><a class="reference internal" href="hooks.html#framework-hooks-points">Framework hooks points</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="cache.html">Cache</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cache.html#configuration">Configuration</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#handler">handler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#location">location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#maxage">maxAge</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cache.html#using-the-cache">Using the cache</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cache.html#write-and-read">Write and read</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#write">write</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#read">read</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html#remove">remove</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="libraries.html">Libraries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="libraries.html#registering-libraries">Registering libraries</a></li>
 </ul>
@@ -356,6 +373,19 @@
 <li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#executing-queries">Executing queries</a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../database/basemodel.html#callback-hooks">Callback hooks</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/basemodel.html#custom-model-name">Custom model name</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../database/caching.html">Query Caching</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#using-the-model">Using the model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#custom-cache-name">Custom cache name</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/caching.html#automatic-removal-on-update">Automatic removal on update</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../database/caching.html#skipping-cache">Skipping cache</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database/execqueries.html">Executing Queries</a><ul>
@@ -401,7 +431,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#grouping">Grouping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#ordering">Ordering</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#limit">Limit</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#timestamps">Timestamps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#enabled">enabled</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#createdcolumn">createdColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#updatedcolumn">updatedColumn</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../database/querybuilder.html#function">function</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../database/querybuilder.html#sql-functions">SQL functions</a></li>
 </ul>
 </li>
@@ -543,7 +579,7 @@ the value of the second parameter:</p>
 </div>
 </div>
 <div class="section" id="output-component">
-<h2>Output component<a class="headerlink" href="#output-component" title="Permalink to this headline">¶</a></h2>
+<span id="gen-topcis-response-output"></span><h2>Output component<a class="headerlink" href="#output-component" title="Permalink to this headline">¶</a></h2>
 <div class="admonition attention">
 <p class="first admonition-title">Attention</p>
 <p class="last">This has not yet been implemented, and this documentation is the second draft

@@ -5,5 +5,6 @@ var searchData=
   ['joincols',['joinCols',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#ad01dc55511976c660dd2b5b418ce9202',1,'SlaxWeb\Database\BaseModel\joinCols()'],['../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html#a096162fcdb473a1769d7da8d913cfc49',1,'SlaxWeb\Database\Query\Builder\joinCols()']]],
   ['joincond',['joinCond',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#a51d9f3ed74e5411de0de1f2693043d9c',1,'SlaxWeb\Database\BaseModel\joinCond()'],['../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html#a75a2f08fc2a012e2a9092f8e9ca6c86a',1,'SlaxWeb\Database\Query\Builder\joinCond()']]],
   ['joinmodel',['joinModel',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#af4605d0b479d350e8a57d39218d25013',1,'SlaxWeb::Database::BaseModel']]],
-  ['json',['Json',['../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html',1,'SlaxWeb::Output::Handler']]]
+  ['json',['Json',['../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html',1,'SlaxWeb::Output::Handler']]],
+  ['jsonhandler',['JsonHandler',['../db/d86/classSlaxWeb_1_1Config_1_1JsonHandler.html',1,'SlaxWeb::Config']]]
 ];

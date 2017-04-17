@@ -7,14 +7,15 @@
 <area shape="rect" id="node7" href="$d5/de3/classSlaxWeb_1_1Bootstrap_1_1Service_1_1OutputProvider.html" title="SlaxWeb\\Bootstrap\\Service\l\\OutputProvider" alt="" coords="221,318,404,359"/>
 <area shape="rect" id="node8" href="$dd/db1/classSlaxWeb_1_1Bootstrap_1_1Service_1_1RouteCollection.html" title="SlaxWeb\\Bootstrap\\Service\l\\RouteCollection" alt="" coords="221,383,404,425"/>
 <area shape="rect" id="node9" href="$dc/dbd/classSlaxWeb_1_1Bootstrap_1_1Service_1_1RouterProvider.html" title="SlaxWeb\\Bootstrap\\Service\l\\RouterProvider" alt="" coords="221,449,404,490"/>
-<area shape="rect" id="node10" href="$da/d43/classSlaxWeb_1_1Cache_1_1Service_1_1Provider.html" title="SlaxWeb\\Cache\\Service\l\\Provider" alt="" coords="230,514,395,555"/>
-<area shape="rect" id="node11" href="$dd/d19/classSlaxWeb_1_1Database_1_1Service_1_1Provider.html" title="SlaxWeb\\Database\\Service\l\\Provider" alt="" coords="221,579,404,621"/>
-<area shape="rect" id="node12" href="$d4/df0/classSlaxWeb_1_1DatabasePDO_1_1Service_1_1Provider.html" title="SlaxWeb\\DatabasePDO\l\\Service\\Provider" alt="" coords="231,645,395,686"/>
-<area shape="rect" id="node13" href="$da/d9b/classSlaxWeb_1_1Hooks_1_1Service_1_1Definition.html" title="SlaxWeb\\Hooks\\Service\l\\Definition" alt="" coords="230,710,395,751"/>
-<area shape="rect" id="node14" href="$d7/d33/classSlaxWeb_1_1Router_1_1Service_1_1Provider.html" title="SlaxWeb\\Router\\Service\l\\Provider" alt="" coords="229,775,396,817"/>
-<area shape="rect" id="node15" href="$d7/d43/classSlaxWeb_1_1Session_1_1Service_1_1Provider.html" title="SlaxWeb\\Session\\Service\l\\Provider" alt="" coords="225,841,400,882"/>
-<area shape="rect" id="node16" href="$d7/d34/classSlaxWeb_1_1Slaxer_1_1Service_1_1Provider.html" title="SlaxWeb\\Slaxer\\Service\l\\Provider" alt="" coords="231,906,395,947"/>
-<area shape="rect" id="node17" href="$d5/df6/classSlaxWeb_1_1View_1_1Service_1_1PHPLoaderProvider.html" title="SlaxWeb\\View\\Service\l\\PHPLoaderProvider" alt="" coords="235,971,391,1013"/>
-<area shape="rect" id="node18" href="$d6/d71/classSlaxWeb_1_1View_1_1Service_1_1Provider.html" title="SlaxWeb\\View\\Service\l\\Provider" alt="" coords="235,1037,391,1078"/>
-<area shape="rect" id="node19" href="$d5/d78/classSlaxWeb_1_1ViewTwig_1_1Service_1_1Provider.html" title="SlaxWeb\\ViewTwig\\Service\l\\Provider" alt="" coords="221,1102,405,1143"/>
+<area shape="rect" id="node10" href="$d1/dbd/classSlaxWeb_1_1Cache_1_1Database_1_1Service_1_1Provider.html" title="SlaxWeb\\Cache\\Database\l\\Service\\Provider" alt="" coords="224,514,401,555"/>
+<area shape="rect" id="node11" href="$da/d43/classSlaxWeb_1_1Cache_1_1Service_1_1Provider.html" title="SlaxWeb\\Cache\\Service\l\\Provider" alt="" coords="230,579,395,621"/>
+<area shape="rect" id="node12" href="$dd/d19/classSlaxWeb_1_1Database_1_1Service_1_1Provider.html" title="SlaxWeb\\Database\\Service\l\\Provider" alt="" coords="221,645,404,686"/>
+<area shape="rect" id="node13" href="$d4/df0/classSlaxWeb_1_1DatabasePDO_1_1Service_1_1Provider.html" title="SlaxWeb\\DatabasePDO\l\\Service\\Provider" alt="" coords="231,710,395,751"/>
+<area shape="rect" id="node14" href="$da/d9b/classSlaxWeb_1_1Hooks_1_1Service_1_1Definition.html" title="SlaxWeb\\Hooks\\Service\l\\Definition" alt="" coords="230,775,395,817"/>
+<area shape="rect" id="node15" href="$d7/d33/classSlaxWeb_1_1Router_1_1Service_1_1Provider.html" title="SlaxWeb\\Router\\Service\l\\Provider" alt="" coords="229,841,396,882"/>
+<area shape="rect" id="node16" href="$d7/d43/classSlaxWeb_1_1Session_1_1Service_1_1Provider.html" title="SlaxWeb\\Session\\Service\l\\Provider" alt="" coords="225,906,400,947"/>
+<area shape="rect" id="node17" href="$d7/d34/classSlaxWeb_1_1Slaxer_1_1Service_1_1Provider.html" title="SlaxWeb\\Slaxer\\Service\l\\Provider" alt="" coords="231,971,395,1013"/>
+<area shape="rect" id="node18" href="$d5/df6/classSlaxWeb_1_1View_1_1Service_1_1PHPLoaderProvider.html" title="SlaxWeb\\View\\Service\l\\PHPLoaderProvider" alt="" coords="235,1037,391,1078"/>
+<area shape="rect" id="node19" href="$d6/d71/classSlaxWeb_1_1View_1_1Service_1_1Provider.html" title="SlaxWeb\\View\\Service\l\\Provider" alt="" coords="235,1102,391,1143"/>
+<area shape="rect" id="node20" href="$d5/d78/classSlaxWeb_1_1ViewTwig_1_1Service_1_1Provider.html" title="SlaxWeb\\ViewTwig\\Service\l\\Provider" alt="" coords="221,1167,405,1209"/>
 </map>
