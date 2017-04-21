@@ -134,6 +134,11 @@ port **80**::
 SlaxWeb App Server
 ------------------
 
+.. NOTE::
+   The App Server has been abandoned, since the tests did not yield significant
+   performance improvement. The component is still available for installation and
+   use, but will not receive any further updates.
+
 The SlaxWeb App Server aims to provide a fast web server to squeeze the last bits
 of performance out of your application. To achieve this, it relies on the high performance
 `swoole extension for php`_.
