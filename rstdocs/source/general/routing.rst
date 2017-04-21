@@ -113,11 +113,6 @@ even if the leading URI is the same.
 .. NOTE::
    The Router will automatically add an optional trailing slash to the Routes URI,
    so the above example will match **example.com/news/list** as well as **example.com/news/list/**.
-   If you do not wish to have such behaviour, disable it in the Configuration!
-
-.. ATTENTION::
-   Automatic optional trailing slash as explained in the *NOTE* above is not yet
-   implemented!
 
 URL contains URI
 ````````````````
