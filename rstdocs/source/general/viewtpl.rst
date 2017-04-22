@@ -189,6 +189,8 @@ variable.
 Multiple Sub Views added to the main view are concatenated into the same template
 variable in the order that they were added.
 
+.. _gen topics viewtpl subtemplates:
+
 Sub-Templates
 '''''''''''''
 
