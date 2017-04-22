@@ -67,8 +67,10 @@ If the second parameter is omitted and **defaultLayout** in the **view.php** con
 file is set, the loader will attempt to load the :ref:`gen topics viewtpl layout`
 View and already set it to your View as the Layout.
 
-Avoiding the View
-'''''''''''''''''
+.. _gen topics viewtpl avoid view:
+
+Avoiding the View class
+''''''''''''''''''''''''
 
 The View Class can be avoided completely if it is not required, and the only purpose
 is to load a template that will require no upfront preparation of view data. The

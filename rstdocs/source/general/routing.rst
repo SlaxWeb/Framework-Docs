@@ -42,8 +42,8 @@ can be found in *app/Routes/DefaultCollection.php* file. You can define further
 the **\\SlaxWeb\\Router\\Service\\RouteCollection** class.
 
 .. TIP::
-   Read the Configuration segment of the General Topics to learn how to register
-   new providers with the framework.
+   Read the :ref:`gen topics config` segment of the General Topics to learn how
+   to register new providers with the framework.
 
 The Route Collection class must define a **define** method. The **define** method
 is called when the Route Collection Service Provider class is registered with the
@@ -182,11 +182,6 @@ Route.The Action must be of type callable and gets the following parameters as i
 * *\\SlaxWeb\\Router\\Request* - Request object
 * *\\SlaxWeb\\Router\\Response* - Response object
 * *\\SlaxWeb\\Bootstrap\\Application* - :ref:`gen topics application`
-
-.. ATTENTION::
-   The Request and Response objects are not deprecated, only the input parameters
-   are deprecated. In the future only the Application object will be injected, as
-   both Request and Response objects can be obtained through the Application object.
 
 Request
 ```````
