@@ -609,8 +609,8 @@ Read on to find out more about Views.</p>
 <p>If the second parameter is omitted and <strong>defaultLayout</strong> in the <strong>view.php</strong> configuration
 file is set, the loader will attempt to load the <a class="reference internal" href="#gen-topics-viewtpl-layout"><span class="std std-ref">Layouts</span></a>
 View and already set it to your View as the Layout.</p>
-<div class="section" id="avoiding-the-view">
-<h4>Avoiding the View<a class="headerlink" href="#avoiding-the-view" title="Permalink to this headline">¶</a></h4>
+<div class="section" id="avoiding-the-view-class">
+<span id="gen-topics-viewtpl-avoid-view"></span><h4>Avoiding the View class<a class="headerlink" href="#avoiding-the-view-class" title="Permalink to this headline">¶</a></h4>
 <p>The View Class can be avoided completely if it is not required, and the only purpose
 is to load a template that will require no upfront preparation of view data. The
 View component already provides the <em>Base</em> View Class which already holds all the
@@ -717,7 +717,7 @@ variable.</p>
 <p>Multiple Sub Views added to the main view are concatenated into the same template
 variable in the order that they were added.</p>
 <div class="section" id="sub-templates">
-<h4>Sub-Templates<a class="headerlink" href="#sub-templates" title="Permalink to this headline">¶</a></h4>
+<span id="gen-topics-viewtpl-subtemplates"></span><h4>Sub-Templates<a class="headerlink" href="#sub-templates" title="Permalink to this headline">¶</a></h4>
 <p>Sub Templates are the same as the Sub Views, except they do not require their own
 View class, since they reuse the already available base View class <strong>\SlaxWeb\View\Base</strong>.
 This makes loading simpler and faster since you do not need to invoke the View loader

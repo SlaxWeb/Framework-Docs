@@ -106,8 +106,6 @@ Inheritance diagram for SlaxWeb\Bootstrap\Commands\Component\BaseCommand:</div>
 Collaboration diagram for SlaxWeb\Bootstrap\Commands\Component\BaseCommand:</div>
 <div class="dyncontent">
 <div class="center"><img src="../../d9/d70/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand__coll__graph.png" border="0" usemap="#SlaxWeb_0CBootstrap_0CCommands_0CComponent_0CBaseCommand_coll__map" alt="Collaboration graph"/></div>
-<map name="SlaxWeb_0CBootstrap_0CCommands_0CComponent_0CBaseCommand_coll__map" id="SlaxWeb_0CBootstrap_0CCommands_0CComponent_0CBaseCommand_coll__map">
-</map>
 <center><span class="legend">[<a href="../../graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -126,6 +124,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5a89712be64b5b06fbb76050eee2de45"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f0028146a88e0e69cdd2bd1e3916ea6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dfb/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand.html#a3f0028146a88e0e69cdd2bd1e3916ea6">checkComposer</a> ()</td></tr>
 <tr class="separator:a3f0028146a88e0e69cdd2bd1e3916ea6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accc6fedbbd64c75dfcb6cf63778dcc89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dfb/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand.html#accc6fedbbd64c75dfcb6cf63778dcc89">installComposer</a> ()</td></tr>
+<tr class="separator:accc6fedbbd64c75dfcb6cf63778dcc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a855559c3fa6cf1a5ace98d9b171151e6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dfb/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand.html#a855559c3fa6cf1a5ace98d9b171151e6">componentExists</a> (string $component)</td></tr>
 <tr class="separator:a855559c3fa6cf1a5ace98d9b171151e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63a64b2cf4b6d7648e03897407f38ec5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dfb/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand.html#a63a64b2cf4b6d7648e03897407f38ec5">isInstalled</a> (string $component)</td></tr>
@@ -241,7 +241,7 @@ Protected Attributes</h2></td></tr>
 <p>Check Composer Command</p>
 <p>Set the composer command. Returns bool(false) if no composer found.</p>
 <dl class="section return"><dt>Returns</dt><dd>bool</dd></dl>
-<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000004">Todo:</a></b></dt><dd>: Install composer locally if not found </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000002">Todo:</a></b></dt><dd>: Install composer locally if not found </dd></dl>
 
 </div>
 </div>
@@ -377,6 +377,32 @@ Protected Attributes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>void </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="accc6fedbbd64c75dfcb6cf63778dcc89"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SlaxWeb\Bootstrap\Commands\Component\BaseCommand::installComposer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Install composer</p>
+<p>Download and install composer and set the $composer property to the newly installed composer executable. Returns a bool status.</p>
+<dl class="section return"><dt>Returns</dt><dd>bool </dd></dl>
 
 </div>
 </div>
@@ -576,7 +602,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 17 2017 12:29:03 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Apr 25 2017 21:56:56 for SlaxWeb Framework by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="../../doxygen.png" alt="doxygen"/>
 </a> 1.8.8
 </small></address>

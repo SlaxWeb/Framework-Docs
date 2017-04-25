@@ -86,13 +86,13 @@ Where the URI can be a *RegExp*, the HTTP Method can be one of the following:
 
 And the *Action* has to be a callable.
 
-This array has to be added to the **$_routes** class property as an array item.
+This array has to be added to the **$routes** class property as an array item.
 Since the Route Collection parent class automatically executes the **define** method
 we put our route definitions into the body of the **define** method::
 
     public function define()
     {
-        $this->_routes[] = [
+        $this->routes[] = [
             "uri"       =>  "",
             "method"    =>  Route::METHOD_GET,
             "action"    =>  function (

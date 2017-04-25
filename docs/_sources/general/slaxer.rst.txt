@@ -35,10 +35,6 @@ Slaxer uses `Composer <https://getcomposer.org>`_ for component manipulation, an
 such is advised that the **composer** executable is made available. If the **composer**
 executable is not found, Slaxer will try to install composer by itself.
 
-.. NOTE::
-   Slaxer does not yet install composer on its own. This feature is coming in **version
-   0.5.0**.
-
 Install
 ```````
 To install a component you need a name of the component. The name of the component

@@ -1,6 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$d2/d9f/classSlaxWeb_1_1AppServer_1_1ServerCommand.html" title="SlaxWeb\\AppServer\\Server\lCommand" alt="" coords="148,5,331,47"/>
-<area shape="rect" id="node3" href="$dc/dfb/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand.html" title="SlaxWeb\\Bootstrap\\Commands\l\\Component\\BaseCommand" alt="" coords="136,71,343,112"/>
-<area shape="rect" id="node4" href="$db/da3/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1InstallCommand.html" title="SlaxWeb\\Bootstrap\\Commands\l\\Component\\InstallCommand" alt="" coords="391,37,597,79"/>
-<area shape="rect" id="node5" href="$d6/d01/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1RemoveCommand.html" title="SlaxWeb\\Bootstrap\\Commands\l\\Component\\RemoveCommand" alt="" coords="391,103,597,144"/>
+<area shape="rect" id="node2" href="$dc/dfb/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1BaseCommand.html" title="SlaxWeb\\Bootstrap\\Commands\l\\Component\\BaseCommand" alt="" coords="136,39,343,80"/>
+<area shape="rect" id="node3" href="$db/da3/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1InstallCommand.html" title="SlaxWeb\\Bootstrap\\Commands\l\\Component\\InstallCommand" alt="" coords="391,5,597,47"/>
+<area shape="rect" id="node4" href="$d6/d01/classSlaxWeb_1_1Bootstrap_1_1Commands_1_1Component_1_1RemoveCommand.html" title="SlaxWeb\\Bootstrap\\Commands\l\\Component\\RemoveCommand" alt="" coords="391,71,597,112"/>
 </map>

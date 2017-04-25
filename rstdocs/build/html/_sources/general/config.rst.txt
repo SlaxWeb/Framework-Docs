@@ -57,4 +57,5 @@ so you can simply access configuration items. Continuing with the above example:
     $myConfigItem = $config["test.myConfigItem"];
 
 .. WARNING::
-   Changing of configuration items in runtime does not persist across multiple requests!
+   Changing of configuration items in runtime does not persist in the system. Changing
+   a value in the configuration is essentially changing an array item.

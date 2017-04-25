@@ -590,8 +590,8 @@ can be found in <em>app/Routes/DefaultCollection.php</em> file. You can define f
 the <strong>\SlaxWeb\Router\Service\RouteCollection</strong> class.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
-<p class="last">Read the Configuration segment of the General Topics to learn how to register
-new providers with the framework.</p>
+<p class="last">Read the <a class="reference internal" href="config.html#gen-topics-config"><span class="std std-ref">Configuration</span></a> segment of the General Topics to learn how
+to register new providers with the framework.</p>
 </div>
 <p>The Route Collection class must define a <strong>define</strong> method. The <strong>define</strong> method
 is called when the Route Collection Service Provider class is registered with the
@@ -655,13 +655,7 @@ even if the leading URI is the same.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">The Router will automatically add an optional trailing slash to the Routes URI,
-so the above example will match <strong>example.com/news/list</strong> as well as <strong>example.com/news/list/</strong>.
-If you do not wish to have such behaviour, disable it in the Configuration!</p>
-</div>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">Automatic optional trailing slash as explained in the <em>NOTE</em> above is not yet
-implemented!</p>
+so the above example will match <strong>example.com/news/list</strong> as well as <strong>example.com/news/list/</strong>.</p>
 </div>
 </div>
 <div class="section" id="url-contains-uri">
@@ -729,12 +723,6 @@ Route.The Action must be of type callable and gets the following parameters as i
 <li><em>\SlaxWeb\Router\Response</em> - Response object</li>
 <li><em>\SlaxWeb\Bootstrap\Application</em> - <a class="reference internal" href="application.html#gen-topics-application"><span class="std std-ref">Application object</span></a></li>
 </ul>
-<div class="admonition attention">
-<p class="first admonition-title">Attention</p>
-<p class="last">The Request and Response objects are not deprecated, only the input parameters
-are deprecated. In the future only the Application object will be injected, as
-both Request and Response objects can be obtained through the Application object.</p>
-</div>
 <div class="section" id="request">
 <h3>Request<a class="headerlink" href="#request" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>Request</strong> element of the Router Component reuses the <strong>Request</strong> element of

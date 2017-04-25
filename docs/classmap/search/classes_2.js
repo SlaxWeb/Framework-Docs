@@ -9,7 +9,7 @@ var searchData=
   ['configparseexception',['ConfigParseException',['../d3/df9/classSlaxWeb_1_1Config_1_1Exception_1_1ConfigParseException.html',1,'SlaxWeb::Config::Exception']]],
   ['configprovider',['ConfigProvider',['../d3/d81/classSlaxWeb_1_1Bootstrap_1_1Service_1_1ConfigProvider.html',1,'SlaxWeb::Bootstrap::Service']]],
   ['configresourcenotfoundexception',['ConfigResourceNotFoundException',['../dc/d52/classSlaxWeb_1_1Config_1_1Exception_1_1ConfigResourceNotFoundException.html',1,'SlaxWeb::Config::Exception']]],
-  ['container',['Container',['../d5/d9e/classSlaxWeb_1_1Router_1_1Container.html',1,'SlaxWeb::Router']]],
   ['container',['Container',['../d2/dbd/classSlaxWeb_1_1Config_1_1Container.html',1,'SlaxWeb::Config']]],
-  ['container',['Container',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html',1,'SlaxWeb::Hooks']]]
+  ['container',['Container',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html',1,'SlaxWeb::Hooks']]],
+  ['container',['Container',['../d5/d9e/classSlaxWeb_1_1Router_1_1Container.html',1,'SlaxWeb::Router']]]
 ];

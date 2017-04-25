@@ -60,12 +60,6 @@ the value of the second parameter::
 Output component
 ----------------
 
-.. ATTENTION::
-   This has not yet been implemented, and this documentation is the second draft
-   of the *Output component*. End implementation may be done differently, and there
-   is no guarantee that it will function in compliance to this documentation. First
-   draft on *Output component* can be found `here <https://github.com/SlaxWeb/Framework/wiki/Documentation#13-output>`_.
-
 The Output component helps with managing the output from your application, by setting
 the correct response codes, content type, and so on. It is disabled by default,
 and should be enabled in its configuration file **output.php** which can be found

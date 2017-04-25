@@ -110,6 +110,12 @@ file when rendering the view.
 Be sure to create the View classes for **Head** and **Foot** as well! We are going
 to need them.
 
+.. NOTE:
+   As of v0.6 Templates do no longer require a *View* object, and can be loaded
+   directly. The same applies to Sub-Views, or Sub-Templates. For more information
+   please refer to the :ref:`gen topics viewtpl avoid view` and :ref:`gen topics
+   viewtpl subtemplates` sections of the documentation
+
 Rendering the view
 ------------------
 

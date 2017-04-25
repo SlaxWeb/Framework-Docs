@@ -4,7 +4,6 @@ var searchData=
   ['sdel_5fval_5fbool',['SDEL_VAL_BOOL',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#ac31c1b3748b6f272d119c932b2e5f57a',1,'SlaxWeb::Database::BaseModel']]],
   ['select',['select',['../df/d4e/classSlaxWeb_1_1Cache_1_1Database_1_1Model.html#a670e07ae9787ce7a0adfef3e83ebed3b',1,'SlaxWeb\Cache\Database\Model\select()'],['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#afbcc6dabb3c3afba863189def45f56da',1,'SlaxWeb\Database\BaseModel\select()'],['../db/dca/classSlaxWeb_1_1Database_1_1Query_1_1Builder.html#a81faddcf9be7ea04967aea2cb3a80949',1,'SlaxWeb\Database\Query\Builder\select()']]],
   ['send',['send',['../db/d6e/classSlaxWeb_1_1Router_1_1Response.html#abab2da17f2bf551c7e52bcb6e33abedf',1,'SlaxWeb::Router::Response']]],
-  ['servercommand',['ServerCommand',['../d2/d9f/classSlaxWeb_1_1AppServer_1_1ServerCommand.html',1,'SlaxWeb::AppServer']]],
   ['set',['set',['../d1/d84/classSlaxWeb_1_1Config_1_1Handler.html#abd7af9778ac4fa8446dc9446436055cf',1,'SlaxWeb\Config\Handler\set()'],['../de/d84/classSlaxWeb_1_1Router_1_1Route.html#a226ad9190c2cd973810b87a6b3e9767d',1,'SlaxWeb\Router\Route\set()']]],
   ['set404route',['set404Route',['../de/d84/classSlaxWeb_1_1Router_1_1Route.html#a0a7af13db76bd8c03d0a40131a2c5aaa',1,'SlaxWeb::Router::Route']]],
   ['setcache',['setCache',['../df/d4e/classSlaxWeb_1_1Cache_1_1Database_1_1Model.html#abe1c281e05c5c1e956768cfaf59b2251',1,'SlaxWeb::Cache::Database::Model']]],
@@ -19,7 +18,6 @@ var searchData=
   ['setlayout',['setLayout',['../da/da9/classSlaxWeb_1_1View_1_1Base.html#a2ca91b404259a0962788035315616c13',1,'SlaxWeb\View\Base\setLayout()'],['../d6/d71/classSlaxWeb_1_1View_1_1Service_1_1Provider.html#a396625cb560759b1ac9eecf816407b94',1,'SlaxWeb\View\Service\Provider\setLayout()']]],
   ['setoperator',['setOperator',['../d2/d4a/classSlaxWeb_1_1Database_1_1Query_1_1Where_1_1Predicate.html#aa50b1bebc89f177898dcf3d73acf33d6',1,'SlaxWeb::Database::Query::Where::Predicate']]],
   ['setparams',['setParams',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html#a534e0ed41236cf8e1eb975f17480ee78',1,'SlaxWeb::Hooks::Container']]],
-  ['setrequestdata',['setRequestData',['../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a62a5b4917bd5ff5bed90d78e95e5c64b',1,'SlaxWeb::AppServer::WebServer']]],
   ['setrequestproperties',['setRequestProperties',['../d9/dfb/classSlaxWeb_1_1Bootstrap_1_1Application.html#aa2e15a36bd3b717f129b2e452e9bd0e6',1,'SlaxWeb::Bootstrap::Application']]],
   ['setsoftdelete',['setSoftDelete',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aad008afdc5e34b09ebffa65e55d4af5a',1,'SlaxWeb::Database::BaseModel']]],
   ['setstatuscode',['setStatusCode',['../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#ab316ec131099b8adb156fc54c4106fce',1,'SlaxWeb::Output::Handler::Json']]],
@@ -32,6 +30,5 @@ var searchData=
   ['shutdownhandler',['shutdownHandler',['../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html#a2ca719de8350c81e42b790b3c19d71da',1,'SlaxWeb::Output::Manager']]],
   ['skipcache',['skipCache',['../df/d4e/classSlaxWeb_1_1Cache_1_1Database_1_1Model.html#a8aaf228bf6bbd60e4d4d0c4a66f57721',1,'SlaxWeb::Cache::Database::Model']]],
   ['slaxweb',['SlaxWeb',['../db/d46/namespaceSlaxWeb.html',1,'']]],
-  ['start',['start',['../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#aca357f31495799c07ff33d28be11e791',1,'SlaxWeb::AppServer::WebServer']]],
   ['stopexec',['stopExec',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html#a7240458bc3e3197acde2d880b62aad44',1,'SlaxWeb::Hooks::Container']]]
 ];

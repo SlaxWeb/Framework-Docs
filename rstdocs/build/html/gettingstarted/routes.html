@@ -628,12 +628,12 @@ we will add the full name of the class into the configuration file <strong>app/C
 <li><strong>SlaxWebRouterRoute::METHOD_ANY</strong> - any one option from above</li>
 </ul>
 <p>And the <em>Action</em> has to be a callable.</p>
-<p>This array has to be added to the <strong>$_routes</strong> class property as an array item.
+<p>This array has to be added to the <strong>$routes</strong> class property as an array item.
 Since the Route Collection parent class automatically executes the <strong>define</strong> method
 we put our route definitions into the body of the <strong>define</strong> method:</p>
 <div class="highlight-php"><div class="highlight"><pre><span class="k">public</span> <span class="k">function</span> <span class="nf">define</span><span class="p">()</span>
 <span class="p">{</span>
-    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">_routes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="nv">$this</span><span class="o">-&gt;</span><span class="na">routes</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s2">&quot;uri&quot;</span>       <span class="o">=&gt;</span>  <span class="s2">&quot;&quot;</span><span class="p">,</span>
         <span class="s2">&quot;method&quot;</span>    <span class="o">=&gt;</span>  <span class="nx">Route</span><span class="o">::</span><span class="na">METHOD_GET</span><span class="p">,</span>
         <span class="s2">&quot;action&quot;</span>    <span class="o">=&gt;</span>  <span class="k">function</span> <span class="p">(</span>

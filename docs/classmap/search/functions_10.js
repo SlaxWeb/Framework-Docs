@@ -16,7 +16,6 @@ var searchData=
   ['setlayout',['setLayout',['../da/da9/classSlaxWeb_1_1View_1_1Base.html#a2ca91b404259a0962788035315616c13',1,'SlaxWeb\View\Base\setLayout()'],['../d6/d71/classSlaxWeb_1_1View_1_1Service_1_1Provider.html#a396625cb560759b1ac9eecf816407b94',1,'SlaxWeb\View\Service\Provider\setLayout()']]],
   ['setoperator',['setOperator',['../d2/d4a/classSlaxWeb_1_1Database_1_1Query_1_1Where_1_1Predicate.html#aa50b1bebc89f177898dcf3d73acf33d6',1,'SlaxWeb::Database::Query::Where::Predicate']]],
   ['setparams',['setParams',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html#a534e0ed41236cf8e1eb975f17480ee78',1,'SlaxWeb::Hooks::Container']]],
-  ['setrequestdata',['setRequestData',['../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#a62a5b4917bd5ff5bed90d78e95e5c64b',1,'SlaxWeb::AppServer::WebServer']]],
   ['setrequestproperties',['setRequestProperties',['../d9/dfb/classSlaxWeb_1_1Bootstrap_1_1Application.html#aa2e15a36bd3b717f129b2e452e9bd0e6',1,'SlaxWeb::Bootstrap::Application']]],
   ['setsoftdelete',['setSoftDelete',['../d3/ded/classSlaxWeb_1_1Database_1_1BaseModel.html#aad008afdc5e34b09ebffa65e55d4af5a',1,'SlaxWeb::Database::BaseModel']]],
   ['setstatuscode',['setStatusCode',['../d2/d6e/classSlaxWeb_1_1Output_1_1Handler_1_1Json.html#ab316ec131099b8adb156fc54c4106fce',1,'SlaxWeb::Output::Handler::Json']]],
@@ -28,6 +27,5 @@ var searchData=
   ['setvalue',['setValue',['../d2/d4a/classSlaxWeb_1_1Database_1_1Query_1_1Where_1_1Predicate.html#a77f71c3727799c9b16e7bebd34afb324',1,'SlaxWeb::Database::Query::Where::Predicate']]],
   ['shutdownhandler',['shutdownHandler',['../d0/d19/classSlaxWeb_1_1Output_1_1Manager.html#a2ca719de8350c81e42b790b3c19d71da',1,'SlaxWeb::Output::Manager']]],
   ['skipcache',['skipCache',['../df/d4e/classSlaxWeb_1_1Cache_1_1Database_1_1Model.html#a8aaf228bf6bbd60e4d4d0c4a66f57721',1,'SlaxWeb::Cache::Database::Model']]],
-  ['start',['start',['../d5/df1/classSlaxWeb_1_1AppServer_1_1WebServer.html#aca357f31495799c07ff33d28be11e791',1,'SlaxWeb::AppServer::WebServer']]],
   ['stopexec',['stopExec',['../d8/d38/classSlaxWeb_1_1Hooks_1_1Container.html#a7240458bc3e3197acde2d880b62aad44',1,'SlaxWeb::Hooks::Container']]]
 ];
