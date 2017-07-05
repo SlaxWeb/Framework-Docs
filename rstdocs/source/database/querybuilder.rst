@@ -15,10 +15,10 @@ require you to write the queries by hand, and thus introduce a different languag
 into your PHP source code. The Query Builder does however, not just build the queries
 for you, it also executes them.
 
-The Query Builder is available in the :ref:`database basemodel` as well as in the
-Database Library. Both use same methods, but the Database Library methods have an
-extra input argument, the table name must be added as the first argument in every
-method call. For this reason it is recommended that you use the :ref:`database basemodel`
+The Query Builder is available in the :ref:`database basemodel` as well as a standalone
+object. They both work in the same way, except you have to manually set the table
+name and database object delimiter manually when using the standalone Query Builder
+object. For this reason it is recommended that you use the :ref:`database basemodel`
 and this documentation will cover only this scenario as well.
 
 Creating data
@@ -687,3 +687,82 @@ The above examples will generate and execute the following query:
 
 .. NOTE::
    As of version 0.5 SQL functions are also supported in where statements.
+
+Using the standalone Query Builder
+----------------------------------
+
+To use the Query Builder directly you may retrieve it from the :ref:`gen topics
+application` with the **queryBuilder.service** name::
+
+    <?php
+    // code ...
+    $qb = $app["queryBuilder.service"];
+    // code ...
+
+To properly prepare the Query Builder for further execution set the table name and
+the database object delimiter::
+
+    <?php
+    // code ...
+    $qb->table("table") // set the table name to "table"
+        ->setDelim("\""); // set the database object delimiter to double quote (")
+    // code ...
+
+.. NOTE::
+   If you are using *mySQL* you will want to set the delimiter to a backtick (`).
+
+Now the Query Builder is prepared for use. It will work exactly the same as described
+in above sections, except that methods **select**, **create**, **update**, and **delete**
+will generate the SQL statement and return it instead of executing it.
+
+Getting parameters
+``````````````````
+
+When the Query Builder creates a statement that includes data, it will replace them
+with placeholders in the query and store the values in an internal array. To retrieve
+that array call the *getParams* method::
+
+    <?php
+    // code ...
+    $params = $qb->getParams();
+    // code ...
+
+The *getParams* method will return all the parameters as an array, which can then
+be used when you will execute the query.
+
+Resetting
+`````````
+
+The Query Builder does not automatically reset itself after calling **select**,
+**create**, **update**, and **delete**. If you call one of the methods two times
+in a row, it will re-use the previously added parameters set to the Query Builder.
+
+::
+
+    <?php
+    // code ...
+    $qb->where("foo", "bar")->select(["col1"]);
+    // will generate: SELECT "table"."col1" FROM "table" WHERE 1=1 AND "table"."foo" = ?
+    // and put "bar" in the parameters array: ["bar"]
+    $qb->where("baz", "qux")->select(["col1"]);
+    // will generate: SELECT "table"."col1" FROM "table" WHERE 1=1 AND "table"."foo" = ? AND "table"."baz" = ?
+    // and append "qux" in the parameters array: ["bar", "qux"]
+    // code ...
+
+This might not be wanted, but the Query Builder can not automatically decide when
+to reset itself since it does not know if there will be more attempts to retrieve
+the query or the parameters. To reset it, call the **reset** method between::
+
+    <?php
+    // code ...
+    $qb->where("foo", "bar")->select(["col1"]);
+    // will generate: SELECT "table"."col1" FROM "table" WHERE 1=1 AND "table"."foo" = ?
+    // and put "bar" in the parameters array: ["bar"]
+    $db->reset();
+    $qb->where("baz", "qux")->select(["col1"]);
+    // will generate: SELECT "table"."col1" FROM "table" WHERE 1=1 AND "table"."baz" = ?
+    // and put "qux" in the parameters array: ["qux"]
+    // code ...
+
+.. WARNING::
+   The *reset* method does not reset the *table* nor the database object *delimiter*!
