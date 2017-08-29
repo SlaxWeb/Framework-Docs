@@ -18,3 +18,4 @@ for fast and easy interactions with a Database through a simple PHP syntax.
    caching
    execqueries
    querybuilder
+   migrations
